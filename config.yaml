@@ -1,0 +1,12 @@
+# config.yaml
+classical:
+  blur_kernel: 3           # Matches our fast 3x3 Gaussian
+  thresh_block_size: 15    # (Keep for compatibility)
+  thresh_c: 12             # Strict enough to ignore film grain
+  min_defect_area: 5       # Let tiny cracks through, block 1-pixel dust
+  min_circularity: 0.0
+  min_aspect_ratio: 0.0
+
+paths:
+  input_image: "data/processed/images/W0001_0001.png"
+  output_dir: "experiments/classical_results/"

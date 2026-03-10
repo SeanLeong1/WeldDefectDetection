@@ -1,51 +1,45 @@
 import cv2
+import yaml
 import time
-import numpy as np
-from src.algorithms.classical.morphology_detector import ClassicalMorphologyDetector
+import os
+from src.algorithms import MorphologyDetector
+from src.utils.visualisation import draw_detections
+
+def load_config(path: str) -> dict:
+    with open(path, "r") as f:
+        return yaml.safe_load(f)
 
 def main():
-    # 1. Configuration (Simulates a config.yaml)
-    config = {
-        'blur_kernel': (7, 7),
-        'min_area': 150,  # Minimum pixel size for a defect
-        'threshold': 40
-    }
-
-    # 2. Instantiate the chosen algorithm
-    # Later, you can swap this class for YoloDetector()
-    detector = ClassicalMorphologyDetector(config)
-    detector.load_model()
-
-    # 3. Load Sample Image (Replace with your RIAWELC/GDXray path)
-    image_path = "data/raw/RRT-13R_Img1_A80_S3_[10][24].png"
-    # Create a dummy image for testing if file doesn't exist
-    image = cv2.imread(image_path) 
-    if image is None:
-        print("Creating dummy weld image for demonstration...")
-        image = np.ones((512, 512, 3), dtype=np.uint8) * 200
-        cv2.circle(image, (256, 256), 20, (50, 50, 50), -1) # Simulate porosity
-
-    # 4. Measure "Operational Feasibility" (Latency)
-    start_time = time.time()
-    detections = detector.detect(image)
-    end_time = time.time()
+    # 1. Load Configuration
+    config = load_config("config.yaml")
     
+    # 2. Initialize Program 1 (Classical)
+    detector = MorphologyDetector(config)
+    print("Algorithm initialized: Classical Morphology")
+
+    # 3. Load Data
+    img_path = config["paths"]["input_image"]
+    if not os.path.exists(img_path):
+        print(f"Error: Image not found at {img_path}")
+        print("Please place a test image in data/raw/")
+        return
+
+    image = cv2.imread(img_path)
+
+    # 4. Run Inference & Measure "Operational Feasibility" (Latency)
+    start_time = time.time()
+    results = detector.detect(image)
+    end_time = time.time()
+
     latency_ms = (end_time - start_time) * 1000
 
-    # 5. Visualization
-    output_img = image.copy()
-    print(f"Algorithm: Classical Morphology")
-    print(f"Inference Time: {latency_ms:.2f} ms")
-    print(f"Defects Found: {len(detections)}")
+    # 5. Output Stats
+    print(f"Processing Time: {latency_ms:.2f} ms")
+    print(f"Defects Detected: {len(results)}")
 
-    for det in detections:
-        x_min, y_min, x_max, y_max = det.bbox
-        cv2.rectangle(output_img, (x_min, y_min), (x_max, y_max), (0, 0, 255), 2)
-        cv2.putText(output_img, det.label, (x_min, y_min-10), 
-                    cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 255), 1)
-
-    # Show result
-    cv2.imshow("Defect Detection", output_img)
+    # 6. Visualize
+    vis_image = draw_detections(image, results)
+    cv2.imshow("Classical Detection", vis_image)
     cv2.waitKey(0)
     cv2.destroyAllWindows()
 
