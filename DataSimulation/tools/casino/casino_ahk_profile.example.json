@@ -1,0 +1,68 @@
+{
+  "template_profile": true,
+  "window_title": "CASINO",
+  "launch_casino": true,
+  "launch_wait_ms": 2200,
+  "default_timeout_s": 90,
+  "actions": [
+    {
+      "type": "win_wait_active",
+      "title": "CASINO",
+      "timeout_s": 90
+    },
+    {
+      "type": "sleep_ms",
+      "ms": 500
+    },
+    {
+      "type": "click",
+      "x": 220,
+      "y": 120,
+      "button": "Left",
+      "clicks": 1,
+      "post_delay_ms": 120
+    },
+    {
+      "type": "send_text",
+      "text": "${beam.e0_kev}",
+      "post_delay_ms": 60
+    },
+    {
+      "type": "send_key",
+      "keys": "{Enter}",
+      "post_delay_ms": 100
+    },
+    {
+      "type": "click",
+      "x": 320,
+      "y": 120,
+      "button": "Left",
+      "clicks": 1,
+      "post_delay_ms": 120
+    },
+    {
+      "type": "send_text",
+      "text": "${beam.beam_current_ma}",
+      "post_delay_ms": 60
+    },
+    {
+      "type": "send_key",
+      "keys": "{Enter}",
+      "post_delay_ms": 100
+    },
+    {
+      "type": "sleep_ms",
+      "ms": 5000
+    }
+  ],
+  "output": {
+    "format": "csv_columns",
+    "path": "casino_quadrants.csv",
+    "columns": {
+      "A": "A",
+      "B": "B",
+      "C": "C",
+      "D": "D"
+    }
+  }
+}

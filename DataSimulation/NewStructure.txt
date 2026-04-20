@@ -1,0 +1,155 @@
+Part 1: Input Feature Specification
+Based on everything established in your thesis, the inputs divide into five categories. Each maps directly to a physical equation or constraint you've already written.
+Beam Parameters (from your Process Parameters section): accelerating voltage V_a (30–175 kV) which controls electron penetration depth via the Kanaya-Okayama range and couples to the focusing coil through the paraxial ray equation; beam current I_b (50–1000 mA) which controls BSE flux and therefore Poisson noise statistics; focusing coil current I_f which determines focal spot diameter d_f (0.3–0.8 mm) and therefore pixel resolution; and travel speed v which affects solidification ripple spatial frequency on the weld surface.
+Material Parameters (from your BSE physics section): mean atomic number Z which determines the backscatter coefficient η(Z) via the cubic polynomial; atomic weight A; material density ρ; and the asymmetry coefficient B from the Reimer-Riepenhausen correction which is material and energy dependent.
+Detector Geometry (from your 4-quadrant detector section): detector height h above the workpiece; mean collection radius R; the four quadrant angular positions (A, B, C, D); and the baseline take-off angle ψ₀ = arctan(h/R).
+Surface Geometry: 3D mesh or heightmap of the weld surface; procedural defect injection (pore diameter, depth, crack length/width, undercut groove depth/angle, LOF extent); weld bead profile (crown height, toe angle); and solidification ripple parameters (amplitude, wavelength).
+Noise and Drift Models (from your Practical Constraints section): Poisson shot noise scaled by dwell time and beam current; Johnson-Nyquist thermal noise scaled by detector temperature; beam-induced contamination darkening as a linear or exponential signal drift across the scan; and non-uniform vapour deposition on detector quadrants as a per-quadrant sensitivity offset.
+
+Part 2: Project Architecture
+Let me plan this as a professional would structure it — configuration-driven, modular, testable, and with clear separation between physics, geometry, rendering, and output.Let me lay out the full architecture first as a visual, then go through every file in detail.
+BSE physics renderer — module architecture
+
+config/
+  YAML files:
+    - beam
+    - material
+    - detector
+    - defect
+    - noise
+
+geometry/                         # Surface mesh + defect injection
+  - surface_mesh.py
+  - defect_injection.py
+
+physics/                          # BSE yield, emission, scattering
+  - bse_yield.py
+  - emission_model.py
+
+renderer/                         # Per-pixel BSE signal computation
+  - quadrant_detector.py
+  - image_formation.py
+
+noise/                            # Poisson, thermal, contamination drift
+
+output/                           # COMPO + TOPO images, labels
+
+domain_randomisation/             # Parameter sampling + batching
+
+validation/                       # Monte Carlo comparison
+
+visualisation/                    # 3D mesh + image preview
+
+pipeline/                         # CLI entry + batch generation
+
+entrypoints/
+  - main.py
+  - generate.py
+  
+Part 3: Complete File-by-File Implementation Plan
+Project Structure
+bse_renderer/
+├── config/
+│   ├── beam_params.yaml
+│   ├── material_params.yaml
+│   ├── detector_params.yaml
+│   ├── defect_params.yaml
+│   └── noise_params.yaml
+├── geometry/
+│   ├── __init__.py
+│   ├── surface_mesh.py
+│   ├── defect_injection.py
+│   ├── weld_profile.py
+│   └── cad_loader.py
+├── physics/
+│   ├── __init__.py
+│   ├── bse_yield.py
+│   ├── emission_model.py
+│   ├── interaction_volume.py
+│   └── energy_spectrum.py
+├── renderer/
+│   ├── __init__.py
+│   ├── quadrant_detector.py
+│   ├── image_formation.py
+│   └── scan_engine.py
+├── noise/
+│   ├── __init__.py
+│   ├── poisson_noise.py
+│   ├── thermal_drift.py
+│   └── contamination_model.py
+├── domain_randomisation/
+│   ├── __init__.py
+│   ├── parameter_sampler.py
+│   └── batch_generator.py
+├── output/
+│   ├── __init__.py
+│   ├── image_writer.py
+│   └── label_generator.py
+├── validation/
+│   ├── __init__.py
+│   ├── casino_comparison.py
+│   └── signal_tests.py
+├── visualisation/
+│   ├── __init__.py
+│   ├── mesh_viewer.py
+│   └── image_preview.py
+├── pipeline/
+│   ├── __init__.py
+│   └── generate.py
+├── tests/
+│   ├── test_bse_yield.py
+│   ├── test_emission_model.py
+│   ├── test_quadrant_detector.py
+│   ├── test_defect_injection.py
+│   └── test_image_formation.py
+├── main.py
+├── requirements.txt
+└── README.md
+
+Phase 1 — Configuration Layer (implement first)
+config/beam_params.yaml — Every beam parameter from your Process Parameters section becomes a named field. V_a in volts (30000–175000), I_b in amps (0.05–1.0), I_f as a normalised focusing strength (0.0–1.0 mapping to d_f of 0.3–0.8 mm), travel speed v in mm/min. The YAML also contains derived quantities: E_0 = e·V_a in keV for the physics module, and P = V_a·I_b in watts for reference. Each parameter has a min, max, default, and unit field so the domain randomisation module can sample from it.
+config/material_params.yaml — Z (atomic number), A (atomic weight g/mol), ρ (density g/cm³), the Reimer-Riepenhausen asymmetry coefficient B (material and energy dependent — tabulated for common EBW materials: steel Z≈26, titanium Z≈22, nickel alloys Z≈28), and the exponent n ≈ 9/√Z for the oblique yield formula. Includes presets for S275JR mild steel, 316L stainless, Ti-6Al-4V, and Inconel 718.
+config/detector_params.yaml — Detector height h above workpiece (5–20 mm), mean collection radius R, inner and outer annular radii, quadrant angular positions (A at 0°, B at 90°, C at 180°, D at 270°), and the derived baseline take-off angle ψ₀ = arctan(h/R). Also contains per-quadrant sensitivity scaling factors (nominally 1.0, adjustable by domain randomisation to simulate non-uniform vapour deposition).
+config/defect_params.yaml — Defect type enumeration (keyhole_pore, intrinsic_pore, crack_solidification, crack_liquidation, undercut, lack_of_fusion, cold_shut, spiking). Each type has geometric parameters: pores get diameter range, depth range, and sphericity; cracks get length, width, branching angle, and depth; undercut gets groove depth and toe angle; LOF gets extent and irregularity. Each type also has a probability weight for stochastic defect placement during batch generation.
+config/noise_params.yaml — Poisson noise enable/disable and dwell time (which sets N_BSE per pixel and therefore SNR = √N); Johnson-Nyquist thermal noise with detector temperature T and bandwidth B; contamination drift rate (signal darkening per scan line as a linear coefficient); and per-quadrant sensitivity imbalance range for vapour deposition simulation.
+
+Phase 2 — Physics Engine (implement second, test independently)
+physics/bse_yield.py — Implements three functions. First, eta_z(Z) returns the backscatter coefficient from the empirical cubic polynomial: η = −0.0254 + 0.016Z − 1.86×10⁻⁴Z² + 8.3×10⁻⁷Z³. This is a pure function, vectorised over numpy arrays of Z values. Second, eta_oblique(eta_0, alpha, Z) returns the yield at oblique incidence: η(α) = η₀ / cos^n(α) where n = 9/√Z. Alpha is the angle between the beam direction and the local surface normal at each pixel. Third, eta_void() returns 0.0 — a void has no material, no backscattering. Unit tests verify against published tabulated values from Goldstein [45] Table 3.3.
+physics/emission_model.py — Implements the angular emission distribution. The core function emission_distribution(phi, varphi, alpha, B) returns dη/dΩ for a given polar emission angle Φ, azimuthal angle φ, beam incidence angle α, and asymmetry coefficient B, using the Reimer-Riepenhausen formula: dη/dΩ ∝ cos(Φ)·[1 + B·sin(α)·sin(Φ)·cos(φ)]. The function also implements the pure Lambertian case (B=0) as a fast path for surfaces with tilt below 10–15° where the asymmetry is negligible. A second function solid_angle_integral(phi_min, phi_max, varphi_min, varphi_max, alpha, B) integrates the emission distribution over a rectangular solid angle segment, which is what each detector quadrant subtends. This is the computational core — it gets called four times per pixel (once per quadrant).
+physics/interaction_volume.py — Computes the Kanaya-Okayama range R_KO = (0.0276·A·E₀^1.67) / (Z^0.89·ρ) to determine how deep the primary beam penetrates. This is used to: (a) determine whether a subsurface defect at depth d is within the interaction volume (if d > R_KO, the defect is invisible to BSE); (b) attenuate the contrast signal for deep defects (the signal from a pore at depth d is attenuated by the overlying material column). The attenuation model uses an exponential decay based on the ratio d/R_KO, calibrated against Monte Carlo results.
+physics/energy_spectrum.py — Models the BSE energy distribution as the sum of a broad plateau component f_plateau(E) and a low-loss peak f_ll(E ≈ E₀). This module is needed for future extension to energy-selective detection but for the current implementation its primary role is computing the depth-dependent signal attenuation: high-loss BSE from deep in the interaction volume carry less energy and produce weaker signals. The function depth_attenuation(depth, R_KO) returns a scalar attenuation factor between 0 and 1.
+
+Phase 3 — Geometry Engine (implement third)
+geometry/surface_mesh.py — Generates or loads the 3D surface representation. Two modes. First, procedural generation: creates a weld bead surface as a parametric heightmap z(x, y) on a regular grid. The bead cross-section is a truncated Gaussian or trapezoidal profile with configurable crown height, bead width, and toe angle. Solidification ripples are added as a sinusoidal modulation: z_ripple = A_ripple · sin(2π·x / λ_ripple) where A_ripple and λ_ripple are configurable and derived from travel speed v. Second, CAD import: loads an STL or OBJ mesh file and resamples it onto the regular grid using barycentric interpolation. The output is always a regular grid heightmap with computed surface normals at each pixel using central differences: n_x = ∂z/∂x, n_y = ∂z/∂y, n_z = 1, normalised.
+geometry/defect_injection.py — Modifies the surface mesh to embed defects. Each defect type has a dedicated injection function. inject_pore(mesh, x, y, diameter, depth) creates a spherical void by subtracting a sphere from the heightmap — if the sphere intersects the surface it creates a surface-breaking pore with the characteristic concave geometry; if it sits below the surface it creates a subsurface pore visible only in COMPO. inject_crack(mesh, x, y, length, width, angle, depth) creates a narrow V-shaped groove along a linear or branching path. inject_undercut(mesh, x, y, depth, toe_angle) creates a concave groove along the weld toe by locally depressing the surface. inject_lof(mesh, x, y, extent, irregularity) creates an irregular subsurface unbonded region near the fusion boundary. Each function also returns a defect mask (binary image marking which pixels are defective) and a defect label (string class name) for the output labelling system.
+geometry/weld_profile.py — Generates the macroscopic weld bead geometry. Parametric cross-section defined by: bead width W_bead, crown height h_crown, reinforcement angle, toe radius, and fusion boundary depth. The profile is extruded along the weld length with optional curvature for circumferential welds. The fusion boundary is marked in a separate channel (a material-index map) so that the COMPO image can show the density contrast at the FZ/HAZ boundary as your thesis describes.
+geometry/cad_loader.py — Loads external 3D models in STL, OBJ, or PLY format using trimesh. Resamples the mesh onto the regular heightmap grid. Applies coordinate transforms (translation, rotation, scaling) to position the CAD model within the scan field. This allows you to import real weld surface scans from profilometry data or 3D-printed test specimens.
+
+Phase 4 — Renderer (implement fourth — this is where everything converges)
+renderer/quadrant_detector.py — Models the physical detector geometry. For each pixel position (x, y) on the surface mesh, computes the solid angle subtended by each of the four quadrants A, B, C, D. The detector is modelled as an annular plate at height h with inner radius R_inner and outer radius R_outer, divided into four 90° segments. The solid angle computation accounts for the pixel's position relative to the detector centre (off-axis pixels see asymmetric solid angles). Each quadrant's signal is computed by integrating the BSE emission distribution (from emission_model.py) over that quadrant's solid angle, weighted by the local BSE yield (from bse_yield.py). The four raw signals are returned as a 4-channel array: shape (H, W, 4).
+renderer/image_formation.py — Takes the 4-channel raw quadrant signals and computes the final image channels. COMPO = A + B + C + D. T_x = (A + D) − (B + C). T_y = (A + B) − (C + D). |T| = √(T_x² + T_y²). Also computes the normalised asymmetry ratio R_x = (A − C)/(A + C) for validation against the k·tan(θ) approximation. Each channel is output as a separate greyscale image. The function also handles the material-index map from the geometry module: at pixels where the material index changes (fusion boundary, base metal vs weld metal), the Z value changes and therefore the COMPO signal shows a contrast step.
+renderer/scan_engine.py — Orchestrates the full rendering pipeline for one image. Loads the configuration, instantiates the geometry (surface mesh + defect injection), runs the physics computations (yield, emission distribution), calls the quadrant detector for each pixel, applies image formation, and passes the result to the noise module. This is the main rendering loop and the function called by both the single-image CLI and the batch generator. The scan engine operates on the full heightmap using vectorised numpy operations — no per-pixel Python loops. The key optimisation is precomputing the surface normal array and the incidence angle array for the entire image in one pass, then vectorising the yield and emission calculations.
+
+Phase 5 — Noise Models (implement fifth)
+noise/poisson_noise.py — Adds Poisson shot noise to the rendered signal. The noise-free signal at each pixel represents the expected number of BSE detected. The actual detected count is drawn from a Poisson distribution with that expected value as the rate parameter: N_detected = Poisson(N_expected). Since N_expected = η · I_b · t_dwell / e, where t_dwell is the per-pixel dwell time, the SNR is √N_expected. Lower beam current or shorter dwell time produces noisier images, matching the physical behaviour described in your Practical Constraints section.
+noise/thermal_drift.py — Simulates the Johnson-Nyquist thermal noise and gradual baseline drift. The thermal noise adds a Gaussian random variable to each pixel with standard deviation proportional to √(k_B · T · B) where T is detector temperature and B is signal bandwidth. The baseline drift adds a linear ramp across the scan direction (left to right or top to bottom), simulating the gradual heating of the detector assembly during a scan session. The drift magnitude is configurable and represents the "combined systematic shift" your thesis identifies as a source of false positives.
+noise/contamination_model.py — Simulates beam-induced contamination darkening. The mean COMPO signal decreases progressively across the scan as carbon deposits accumulate on the scan area. Modelled as a multiplicative attenuation: signal_out = signal_in · (1 − k_contam · scan_progress), where scan_progress runs from 0 to 1 across the image and k_contam is the contamination rate coefficient. Also models the per-quadrant sensitivity imbalance from non-uniform vapour deposition: each quadrant's signal is multiplied by a sensitivity factor drawn from a uniform distribution around 1.0 with a configurable spread.
+
+Phase 6 — Domain Randomisation and Output (implement sixth)
+domain_randomisation/parameter_sampler.py — Samples beam, material, defect, and noise parameters from configurable distributions for each synthetic image. V_a is sampled uniformly from the operating range. I_b is sampled log-uniformly. Defect type is sampled from the probability weights in the defect config. Defect position is sampled uniformly across the weld area. Noise parameters are sampled to cover the expected operating envelope. The sampler ensures that physically impossible combinations are rejected (for example, V_a below the keyhole threshold for a given material). Each sample is a complete parameter dictionary that fully specifies one synthetic image.
+domain_randomisation/batch_generator.py — Generates N synthetic images in parallel using multiprocessing. For each image: samples parameters, builds geometry, runs the renderer, applies noise, writes output. Implements a progress bar and logging. Outputs a structured dataset directory with COMPO images, TOPO images, defect masks, and a JSON metadata file recording all parameters used for each image. The metadata enables full traceability from any training image back to its generating parameters.
+output/image_writer.py — Saves COMPO and TOPO images as 16-bit PNG (to preserve the full dynamic range of the BSE signal before quantisation) and optionally as 8-bit normalised PNG for direct use in training. Also saves the defect mask as a binary PNG and the material-index map as a labelled PNG.
+output/label_generator.py — Generates training labels in multiple formats. Classification labels (defect_type string) for image-level classification. Bounding box labels in COCO JSON and YOLO-format TXT for object detection (even though your thesis excludes YOLO, having the labels in standard format allows future comparison). Segmentation masks in PNG format for pixel-level classification.
+
+Phase 7 — Validation (implement seventh — proves the physics is correct)
+validation/casino_comparison.py — Runs CASINO Monte Carlo simulations for a small set of test geometries (flat surface at Z=26, tilted surface at 30°, surface with a 1mm pore) and compares the Monte Carlo BSE signal against the analytical model output. Computes the relative error between the analytical COMPO and TOPO signals and the Monte Carlo ground truth. This is the validation step described in your thesis: full Monte Carlo validates the fast analytical model for a few cases, then the analytical model generates thousands of training images.
+validation/signal_tests.py — Unit-level validation of individual physics functions. Verifies η(Z) against tabulated values for Z = 6 (carbon), 13 (aluminium), 26 (iron), 29 (copper), 79 (gold). Verifies the Lambertian distribution integrates to η over the hemisphere. Verifies that TOPO = 0 for a flat surface. Verifies that COMPO drops to zero over a void.
+
+Phase 8 — Visualisation (implement alongside, for debugging and thesis figures)
+visualisation/mesh_viewer.py — 3D visualisation of the surface mesh using matplotlib's plot_surface or pyvista. Shows the heightmap with defects highlighted in colour. Allows rotation, zoom, and cross-section views. This is for your thesis figures showing the 3D defect geometry before rendering, and for debugging the defect injection functions.
+visualisation/image_preview.py — Side-by-side display of COMPO and TOPO images for a given rendering. Overlays defect contours from the mask. Shows histograms of pixel intensity distributions. Allows comparison of noise-free vs noisy versions. This is for validating that the rendered images look physically plausible before committing to batch generation.
+
+Phase 9 — Pipeline Entry Points
+main.py — CLI entry point. Accepts a config directory path and a mode flag (single image, batch, or validation). Single mode renders one image from specified parameters and opens the preview. Batch mode calls the batch generator. Validation mode runs the CASINO comparison and signal tests.
+pipeline/generate.py — The batch generation orchestrator. Parses command-line arguments for: number of images, output directory, config override file, random seed, and number of parallel workers. Calls the parameter sampler, distributes rendering across workers, collects results, writes the dataset manifest, and prints summary statistics (images per defect class, parameter coverage, total generation time).
+requirements.txt — numpy, scipy, matplotlib, pyvista, trimesh, pyyaml, tqdm, Pillow, scikit-image. Optional: pycasino bindings for the validation module.

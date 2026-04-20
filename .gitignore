@@ -1,0 +1,28 @@
+# Track only the two project folders at the root.
+*
+!/.gitignore
+!/WeldDefectDetection/
+!/WeldDefectDetection/**
+!/DataSimulation/
+!/DataSimulation/**
+
+# Never include nested Git metadata backups.
+**/.git/
+**/.git_nested_backup/
+
+# Python/cache/runtime noise.
+**/__pycache__/
+**/.pytest_cache/
+**/.mypy_cache/
+**/.ruff_cache/
+**/.coverage
+**/htmlcov/
+**/.venv/
+**/venv/
+**/env/
+
+# Generated data/output/logs.
+**/data/output/
+**/experiments/
+**/*.log
+**/*.tmp

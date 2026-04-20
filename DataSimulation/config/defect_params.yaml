@@ -1,0 +1,38 @@
+probabilities:
+  keyhole_pore: 0.20
+  intrinsic_pore: 0.20
+  crack_solidification: 0.15
+  crack_liquidation: 0.05
+  undercut: 0.15
+  lack_of_fusion: 0.15
+  cold_shut: 0.05
+  spiking: 0.05
+ranges:
+  keyhole_pore:
+    diameter_mm: [0.3, 2.0]
+    depth_mm: [0.0, 2.0]
+  intrinsic_pore:
+    diameter_mm: [0.2, 1.5]
+    depth_mm: [0.2, 2.0]
+  crack_solidification:
+    length_mm: [0.8, 8.0]
+    width_mm: [0.05, 0.5]
+    depth_mm: [0.2, 2.0]
+  crack_liquidation:
+    length_mm: [0.6, 6.0]
+    width_mm: [0.05, 0.4]
+    depth_mm: [0.1, 1.5]
+  undercut:
+    groove_depth_mm: [0.1, 1.0]
+    toe_angle_deg: [10, 50]
+  lack_of_fusion:
+    extent_mm: [0.5, 6.0]
+    irregularity: [0.1, 1.0]
+    depth_mm: [0.2, 2.0]
+  cold_shut:
+    extent_mm: [0.4, 5.0]
+    depth_mm: [0.1, 1.2]
+  spiking:
+    spike_length_mm: [0.3, 3.0]
+    spike_width_mm: [0.05, 0.5]
+
