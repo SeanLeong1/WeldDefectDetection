@@ -31,8 +31,8 @@ def main():
     detector = MorphologyDetector(config)
 
     # 2. Select an image pair to debug (Let's use image 1)
-    img_name = "W0001_0001.png"
-    mask_name = "W0002_0001.png"
+    img_name = "W0001_0007.png"
+    mask_name = "W0002_0007.png"
     
     img_path = os.path.join("data/raw/W0001", img_name)
     mask_path = os.path.join("data/raw/W0002", mask_name)
