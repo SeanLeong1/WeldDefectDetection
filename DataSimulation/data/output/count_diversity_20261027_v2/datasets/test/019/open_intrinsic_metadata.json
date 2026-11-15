@@ -1,0 +1,442 @@
+{
+  "geometry": {
+    "version": "raised-crown-v1",
+    "radius_mm": 40.0,
+    "crown_height_mm": 3.0,
+    "crown_width_mm": 2.8,
+    "penetration_depth_mm": 7.0,
+    "fusion_surface_width_mm": 2.8,
+    "fusion_width_at_5mm": 1.2,
+    "pixel_size_mm": 0.05,
+    "electron_depth_cutoff_mm": null,
+    "datum": "original surface z=0",
+    "crown_width_status": "assumed equal to fusion surface width",
+    "crown_height_status": "user target, not measured calibration",
+    "plate_thickness_required": false,
+    "pore_bulge_status": "controlled displacement hypothesis; not inferred from pore presence",
+    "depth_policy": "No researched numerical electron depth implemented"
+  },
+  "profile": "raised",
+  "amplitude": 0.05,
+  "pore_records": [
+    {
+      "instance_id": 0,
+      "kind": "intrinsic_pore",
+      "effect": "open",
+      "diameter_mm": 0.1754680102632951,
+      "depth_mm": 0.2474444229283318,
+      "angle_rad": 1.1446801283913914,
+      "radial_offset_mm": -1.05,
+      "coupling_fraction": 0.0,
+      "roof_mm": 0.15,
+      "pore_volume_mm3": 0.0077687234409373395,
+      "integrated_surface_change_mm3": -0.0019269037022763625,
+      "coupling": "surface_cap",
+      "physical_validation": false
+    }
+  ],
+  "acquisition": {
+    "version": "raster_v2",
+    "profile": {
+      "effective_count_rate": 514096786.16532856,
+      "readout_rms": 0.0003226139955014856,
+      "reference_dwell_us": 8.0,
+      "baseline_rms": 0.00037737941135058034,
+      "common_gain_rms": 0.0016594345367923404,
+      "correlation_time_s": 0.7038448108660113,
+      "flyback_us": 20.0,
+      "contamination_per_s": 0.00031373169180721376,
+      "velocity_x_mm_s": 0.0,
+      "velocity_y_mm_s": 0.0,
+      "evidence": "assumed_sensitivity_range_not_measured"
+    },
+    "line_time_s": 0.021815954274194145,
+    "frame_time_s": 41.908428160726956,
+    "drift_sampling": "stationary OU at common raster line boundaries, linearly interpolated within each line",
+    "drift_line_interval_over_tau": 0.03099540401150614,
+    "geometry_and_acquisition_rng": "independent named SeedSequence streams",
+    "calibrated": false,
+    "legacy_temperature_bandwidth_contamination_rate_unused": true,
+    "legacy_session_progress_and_offsets_unused": true
+  },
+  "renderer_metadata": {
+    "operating_domain": {
+      "incidence_deg_quantiles": [
+        0.0,
+        0.0,
+        0.0,
+        56.9815559387207,
+        74.26049499511718,
+        76.20919036865234
+      ],
+      "incidence_histogram_1deg": [
+        3411690,
+        3562,
+        2562,
+        2160,
+        1964,
+        1689,
+        1622,
+        1491,
+        1458,
+        1393,
+        1402,
+        1399,
+        1291,
+        1286,
+        1293,
+        1232,
+        1267,
+        1243,
+        1226,
+        1251,
+        1232,
+        1255,
+        1190,
+        1294,
+        1313,
+        1255,
+        1268,
+        1319,
+        1309,
+        1303,
+        1318,
+        1339,
+        1311,
+        1354,
+        1377,
+        1425,
+        1485,
+        1460,
+        1530,
+        1647,
+        1621,
+        1606,
+        1657,
+        1784,
+        1766,
+        1821,
+        1922,
+        2023,
+        2018,
+        2159,
+        2152,
+        2401,
+        2376,
+        2527,
+        2689,
+        2858,
+        2939,
+        3120,
+        3362,
+        3481,
+        3828,
+        4109,
+        4440,
+        4731,
+        5218,
+        5758,
+        6411,
+        7185,
+        7947,
+        9555,
+        10826,
+        13683,
+        18139,
+        28285,
+        30857,
+        12820,
+        702,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "material_z_range": [
+        25.41469955444336,
+        25.41469955444336
+      ],
+      "base_material_z": 25.4147,
+      "modified_material_fraction": 0.0,
+      "detector_polar_deg": [
+        9.693027691687313,
+        53.67345580223908
+      ],
+      "topo_finite": true,
+      "topo_range": [
+        0.0,
+        0.8004504442214966
+      ],
+      "zero_quadrant_fraction": 0.3517938259316939,
+      "mask_pixels": 7
+    },
+    "seed": 2730100019,
+    "beam": {
+      "accelerating_voltage_kv": 60.0,
+      "beam_current_ma": 220.0,
+      "focusing_current_norm": 0.6,
+      "travel_speed_mm_min": 900.0,
+      "dwell_time_us": 11.346150064650779,
+      "focal_spot_mm": 0.4120942821215277,
+      "e0_kev": 60.0,
+      "power_w": 13200.0
+    },
+    "material": {
+      "name": "304SS",
+      "z": 25.4147,
+      "a": 54.5465,
+      "rho": 8.03,
+      "b": 0.19,
+      "n": 1.76
+    },
+    "detector": {
+      "height_mm": 17.779334976285398,
+      "radius_mm": 12.79454485410086,
+      "inner_radius_mm": 3.0368506514339533,
+      "outer_radius_mm": 24.180144711689692,
+      "quadrants_deg": {
+        "A": 0.0,
+        "B": 90.0,
+        "C": 180.0,
+        "D": 270.0
+      },
+      "sensitivity": {
+        "A": 0.9444336283650573,
+        "B": 1.1943616103417143,
+        "C": 1.126605526192673,
+        "D": 1.0671791257624335
+      },
+      "psi0_rad": 0.9470169190874809
+    },
+    "noise": {
+      "poisson_enabled": true,
+      "thermal_enabled": true,
+      "contamination_enabled": true,
+      "temperature_k": 349.6250970198288,
+      "bandwidth_hz": 16278.556046527465,
+      "contamination_rate": 0.1291751344610927,
+      "quadrant_offsets": {
+        "A": -0.126454425349838,
+        "B": 0.12050276279581298,
+        "C": -0.14810535486528387,
+        "D": -0.06714441531860672
+      }
+    },
+    "angular_frame_version": "local-beam-tangent/v2",
+    "render_coordinate_frame": "image_relief_frame_beam_minus_z",
+    "section_plane_role": "geometry_sampling_only",
+    "emission_b_diagnostic_only": false,
+    "depth_response_model": "surface_relief_with_empirical_calibration_gain",
+    "interaction_range_role": "diagnostic_only_not_penetration_attenuation",
+    "range_um": 9.816289886017362,
+    "effective_range_um": 9.816289886017362,
+    "beam_gain": 0.9398537643499886,
+    "beam_blur_px": 1.1741885642430554,
+    "beam_blur_scale": 1.0,
+    "tilt_blur_scale": 1.0,
+    "effective_beam_blur_scale": 1.0,
+    "beam_contrast_factor": 1.0,
+    "directional_gain": 1.142457931034483,
+    "yield_scale": 1.0,
+    "tilt_yield_scale": 1.0,
+    "effective_yield_scale_range": [
+      1.0,
+      1.0
+    ],
+    "obliquity_exponent_scale": 1.0,
+    "depth_response_scale": 1.0,
+    "tilt_depth_scale": 1.0,
+    "effective_depth_response_scale": 1.0,
+    "multi_weld_profile_profiles_used": [],
+    "multi_weld_profile_profile_count": 0,
+    "multi_weld_profile_yield_scale_range": [
+      1.0,
+      1.0
+    ],
+    "multi_weld_profile_blur_scale_range": [
+      1.0,
+      1.0
+    ],
+    "multi_weld_profile_depth_scale_range": [
+      1.0,
+      1.0
+    ],
+    "multi_weld_profile_topo_gain_range": [
+      1.0,
+      1.0
+    ],
+    "pore_visibility_scale": 1.0,
+    "groove_topography_scale": 1.0,
+    "cluster_visibility_scale": 1.0,
+    "section_plane_weight": 1.0,
+    "ebw_seam_depth_mm": 0.1866972441009689,
+    "ebw_reinforcement_mm": 3.0,
+    "ebw_width_mm": 2.8,
+    "ebw_haz_width_mm": 0.9275862068965517,
+    "ebw_focus_quality": 0.6,
+    "ebw_asymmetry_mm": -0.04482758620689656,
+    "weld_geometry_mode": "raised_crown",
+    "weld_layout": {
+      "mode": "circular_weld",
+      "seam_rotation_deg": 0.0,
+      "seam_offset_mm": 0.0,
+      "circle_radius_mm": 40.0,
+      "circle_position_deg": 90.0
+    },
+    "render_model_mode": "formula_only",
+    "emission_b": {
+      "mode": "lambertian",
+      "source_path": null,
+      "source_sha256": null,
+      "source_type": "explicit_uncalibrated_lambertian_fallback",
+      "formula": "B = 0 (Lambertian fallback)",
+      "incidence_tilt_deg": 0.0,
+      "b_stats": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0
+      }
+    },
+    "pixel_size_mm": 0.05,
+    "effective_pixel_size_mm": 0.05,
+    "session_progress": 1.0,
+    "calibration_source": null,
+    "calibration_sha256": null,
+    "requested_calibration_path": null,
+    "requested_render_model_mode": "formula_only",
+    "calibration_compo_scale": 1.0,
+    "calibration_topo_scale": 1.0,
+    "calibration_campaign_source": null,
+    "geometry_profiles_active": false,
+    "display_mapping": {
+      "compo": {
+        "mode": "linear",
+        "low": -0.06365560054779053,
+        "high": 0.7002116060256958
+      },
+      "topo": {
+        "mode": "linear",
+        "low": 0.0,
+        "high": 0.6702358946800238
+      },
+      "tx": {
+        "mode": "signed",
+        "center": 0.0,
+        "span": 0.4969419322013852
+      },
+      "ty": {
+        "mode": "signed",
+        "center": 0.0,
+        "span": 0.5021555671691892
+      },
+      "tmag": {
+        "mode": "linear",
+        "low": 0.0,
+        "high": 0.6702358946800238
+      },
+      "rx": {
+        "mode": "signed",
+        "center": 0.0,
+        "span": 1.08
+      }
+    },
+    "detector_frame": {
+      "quadrants_deg": {
+        "A": 0.0,
+        "B": 90.0,
+        "C": 180.0,
+        "D": 270.0
+      },
+      "tx_positive_pair": [
+        "A",
+        "D"
+      ],
+      "tx_negative_pair": [
+        "B",
+        "C"
+      ],
+      "ty_positive_pair": [
+        "A",
+        "B"
+      ],
+      "ty_negative_pair": [
+        "C",
+        "D"
+      ]
+    },
+    "planned_defects": [
+      "intrinsic_pore"
+    ],
+    "visible_defects": [
+      "intrinsic_pore"
+    ],
+    "excluded_nonvisible_defects": [],
+    "surface_visible_label_policy": true,
+    "defects_anchored_to_surface": true,
+    "slice_runtime": {
+      "voxel_depth_mm": 0.08,
+      "slice_offset_mm": 6.4,
+      "slice_tilt_deg": 0.0,
+      "slice_rotation_deg": 0.0
+    },
+    "randomize_defect_location": true,
+    "render_view_mode": "top_surface",
+    "slice_render": {
+      "mode": "top_surface",
+      "sampling_extent_mm": [
+        48.0,
+        48.0
+      ],
+      "surface_plane_index": 0,
+      "effective_pixel_size_mm": 0.05
+    },
+    "defects": [
+      "intrinsic_pore"
+    ],
+    "acquisition": {
+      "version": "raster_v2",
+      "profile": {
+        "effective_count_rate": 514096786.16532856,
+        "readout_rms": 0.0003226139955014856,
+        "reference_dwell_us": 8.0,
+        "baseline_rms": 0.00037737941135058034,
+        "common_gain_rms": 0.0016594345367923404,
+        "correlation_time_s": 0.7038448108660113,
+        "flyback_us": 20.0,
+        "contamination_per_s": 0.00031373169180721376,
+        "velocity_x_mm_s": 0.0,
+        "velocity_y_mm_s": 0.0,
+        "evidence": "assumed_sensitivity_range_not_measured"
+      },
+      "line_time_s": 0.021815954274194145,
+      "frame_time_s": 41.908428160726956,
+      "drift_sampling": "stationary OU at common raster line boundaries, linearly interpolated within each line",
+      "drift_line_interval_over_tau": 0.03099540401150614,
+      "geometry_and_acquisition_rng": "independent named SeedSequence streams",
+      "calibrated": false,
+      "legacy_temperature_bandwidth_contamination_rate_unused": true,
+      "legacy_session_progress_and_offsets_unused": true
+    },
+    "legacy_geometry_controls_unused": true,
+    "fusion_penetration_depth_mm": 7.0
+  },
+  "signal": "local-surface empirical BSE angular response; no electron tracking",
+  "material_contrast": "uniform 304SS; no artificial fusion atomic-number offset",
+  "visibility_limit": "Nonlocal ray horizons; parallel detector directions and constant local working-distance approximation",
+  "visibility_resolution": {
+    "radial_mm": 0.1,
+    "angular_stride": 4,
+    "ray_step_mm": 0.1
+  },
+  "physical_validation": false
+}

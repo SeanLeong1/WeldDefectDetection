@@ -1,0 +1,64 @@
+contract_version: weld-topo-segmentation/v2
+task: binary_surface_defect_segmentation
+description: >-
+  TOPO-only shared record contract for classical CV, CNN segmentation, and
+  sequential prediction-residual surface-defect experiments.
+
+record_file: samples.jsonl
+path_rule: The TOPO and mask paths are POSIX-style paths relative to the dataset root.
+
+normalization:
+  model_input: One fixed TOPO mapping fitted from the training split only.
+  raw_storage: Optional float32 NPY path in raw_channels.topo.
+  preview_rule: Per-image tone mapping is allowed for previews but not model inputs.
+
+required_fields:
+  contract_version: string
+  sample_id: string
+  sequence_id: string
+  frame_index: non_negative_integer
+  split: [train, val, test]
+  channels: mapping
+  mask_path: string
+  defect_type: string
+  defect_types: list_of_strings
+  is_defective: boolean
+  seed: integer
+  beam_regime: [low, mid, high, randomized]
+  emission_b_mode: string
+  emission_b_value: number
+  render_view_mode: top_surface
+  pixel_size_mm: positive_number
+  noise_enabled: false
+
+channels:
+  required: [topo]
+  prohibited: [compo]
+  optional: [tx, ty]
+
+mask:
+  encoding: binary
+  background_value: 0
+  defect_value: nonzero
+  semantics: surface_visible_defect_intersections_only
+
+split_policy:
+  grouping_key: sequence_id
+  rule: A sequence_id must occur in exactly one of train, val, or test.
+  reason: Prevent adjacent or otherwise correlated frames leaking across splits.
+
+static_dataset_policy:
+  sequence_id: Use a unique sequence_id for each independent image.
+  frame_index: 0
+
+sequential_dataset_policy:
+  sequence_id: Shared by all frames from one simulated or physical weld acquisition.
+  frame_index: Monotonically increasing acquisition index beginning at 0.
+  split_rule: Assign the complete sequence before constructing sliding windows.
+
+primary_task:
+  input: TOPO image only
+  target: binary mask
+  clean_label: defect_type=clean, defect_types=[], is_defective=false
+  defect_label: is_defective=true and defect_types contains every visible defect class
+  multiclass_note: Defect type metadata is retained for stratified reporting and later multiclass work.

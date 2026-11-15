@@ -1,0 +1,300 @@
+{
+  "status": "ok",
+  "manifest": "C:\\Users\\sfleo\\OneDrive\\CompSciEng\\Thesis\\Thesis\\Codebase2\\WeldDefectDetection\\completion_manifest_20260908.yaml",
+  "scope": "synthetic_functionality_only_no_real_sem_claim",
+  "checks": {
+    "static_development": {
+      "status": "ok",
+      "dataset_root": "C:\\Users\\sfleo\\OneDrive\\CompSciEng\\Thesis\\Thesis\\Codebase2\\DataSimulation\\data\\output\\completion_20260907\\final_static_lambertian_dev_v1",
+      "contract_status": "ok",
+      "record_count": 1400,
+      "split_counts": {
+        "test": 140,
+        "train": 980,
+        "val": 280
+      },
+      "clean_count": 200,
+      "defective_count": 1200,
+      "defect_instance_counts": {
+        "crack_liquidation": 200,
+        "crack_solidification": 200,
+        "intrinsic_pore": 200,
+        "keyhole_pore": 200,
+        "lack_of_fusion": 200,
+        "undercut": 200
+      },
+      "unique_seed_count": 1400,
+      "duplicate_seeds": [],
+      "unique_raw_sha256_count": 1400,
+      "duplicate_raw_hash_groups": [],
+      "zero_dynamic_range_count": 0,
+      "minimum_raw_dynamic_range": 0.024853385984897614,
+      "comparison": {},
+      "normalization": {
+        "method": "training_split_global_percentile",
+        "source_split": "train",
+        "low_quantile": 0.01,
+        "high_quantile": 0.99,
+        "pad_fraction": 0.08,
+        "raw_low": 0.0,
+        "raw_high": 0.1811692687869072,
+        "tone_curve": "sem_sqrt",
+        "raw_format": "float32_npy",
+        "application_policy": "fit_on_this_dataset_training_split",
+        "fit_performed_on_this_dataset": true
+      },
+      "errors": [],
+      "warnings": []
+    },
+    "static_confirmation": {
+      "status": "ok",
+      "dataset_root": "C:\\Users\\sfleo\\OneDrive\\CompSciEng\\Thesis\\Thesis\\Codebase2\\DataSimulation\\data\\output\\completion_20260907\\confirmation_static_lambertian_dev_v2",
+      "contract_status": "ok",
+      "record_count": 210,
+      "split_counts": {
+        "test": 21,
+        "train": 147,
+        "val": 42
+      },
+      "clean_count": 30,
+      "defective_count": 180,
+      "defect_instance_counts": {
+        "crack_liquidation": 30,
+        "crack_solidification": 30,
+        "intrinsic_pore": 30,
+        "keyhole_pore": 30,
+        "lack_of_fusion": 30,
+        "undercut": 30
+      },
+      "unique_seed_count": 210,
+      "duplicate_seeds": [],
+      "unique_raw_sha256_count": 210,
+      "duplicate_raw_hash_groups": [],
+      "zero_dynamic_range_count": 0,
+      "minimum_raw_dynamic_range": 0.04357350990176201,
+      "comparison": {
+        "C:\\Users\\sfleo\\OneDrive\\CompSciEng\\Thesis\\Thesis\\Codebase2\\DataSimulation\\data\\output\\completion_20260907\\final_static_lambertian_dev_v1": {
+          "shared_raw_sha256_count": 0,
+          "shared_seed_count": 0
+        }
+      },
+      "normalization": {
+        "method": "training_split_global_percentile",
+        "source_split": "train",
+        "low_quantile": 0.01,
+        "high_quantile": 0.99,
+        "pad_fraction": 0.08,
+        "raw_low": 0.0,
+        "raw_high": 0.1811692687869072,
+        "tone_curve": "sem_sqrt",
+        "raw_format": "float32_npy",
+        "application_policy": "frozen_external_training_mapping",
+        "fit_performed_on_this_dataset": false,
+        "frozen_from_dataset": "final_static_lambertian_dev_v1",
+        "source_sha256": "2ec922f00ef5b37eb77dbadfe23097a7744c41fb5c00a5064c7cbccaa980d1bd"
+      },
+      "errors": [],
+      "warnings": []
+    },
+    "sequence_development": {
+      "status": "ok",
+      "dataset_root": "C:\\Users\\sfleo\\OneDrive\\CompSciEng\\Thesis\\Thesis\\Codebase2\\DataSimulation\\data\\output\\completion_20260907\\final_sequences_ctx4_lambertian_dev_v1",
+      "contract_status": "ok",
+      "record_count": 1890,
+      "window_count": 1050,
+      "unique_raw_sha256_count": 1890,
+      "duplicate_raw_hash_groups": [],
+      "zero_dynamic_range_count": 0,
+      "minimum_raw_dynamic_range": 0.022865936160087585,
+      "sequence_seed_split_leakage": {},
+      "duplicate_sequence_seeds": [],
+      "eligible_target_frame_indices": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "planned_defect_target_frame_counts": {
+        "2": 36,
+        "3": 36,
+        "4": 36,
+        "5": 36,
+        "6": 36
+      },
+      "missing_planned_target_frame_indices": [],
+      "planned_target_visibility_errors": [],
+      "planned_defect_consistency_errors": [],
+      "multiple_defect_sequence_count": 60,
+      "window_defect_composition": {
+        "target_clean__context_clean": 346,
+        "target_clean__context_defective": 488,
+        "target_defective__context_clean": 139,
+        "target_defective__context_defective": 77
+      },
+      "mean_target_pixel_context_overlap_fraction": 0.0,
+      "maximum_target_pixel_context_overlap_fraction": 0.0,
+      "comparison": {},
+      "normalization": {
+        "method": "training_split_global_percentile",
+        "source_split": "train",
+        "low_quantile": 0.01,
+        "high_quantile": 0.99,
+        "pad_fraction": 0.08,
+        "raw_low": 0.0,
+        "raw_high": 0.2893619374185801,
+        "tone_curve": "sem_sqrt",
+        "raw_format": "float32_npy",
+        "application_policy": "fit_on_this_dataset_training_split",
+        "fit_performed_on_this_dataset": true
+      },
+      "errors": [],
+      "warnings": []
+    },
+    "sequence_confirmation": {
+      "status": "ok",
+      "dataset_root": "C:\\Users\\sfleo\\OneDrive\\CompSciEng\\Thesis\\Thesis\\Codebase2\\DataSimulation\\data\\output\\completion_20260907\\confirmation_sequences_ctx4_lambertian_dev_v2",
+      "contract_status": "ok",
+      "record_count": 378,
+      "window_count": 210,
+      "unique_raw_sha256_count": 378,
+      "duplicate_raw_hash_groups": [],
+      "zero_dynamic_range_count": 0,
+      "minimum_raw_dynamic_range": 0.050094492733478546,
+      "sequence_seed_split_leakage": {},
+      "duplicate_sequence_seeds": [],
+      "eligible_target_frame_indices": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "planned_defect_target_frame_counts": {
+        "2": 7,
+        "3": 8,
+        "4": 7,
+        "5": 7,
+        "6": 7
+      },
+      "missing_planned_target_frame_indices": [],
+      "planned_target_visibility_errors": [],
+      "planned_defect_consistency_errors": [],
+      "multiple_defect_sequence_count": 12,
+      "window_defect_composition": {
+        "target_clean__context_clean": 69,
+        "target_clean__context_defective": 95,
+        "target_defective__context_clean": 25,
+        "target_defective__context_defective": 21
+      },
+      "mean_target_pixel_context_overlap_fraction": 0.0,
+      "maximum_target_pixel_context_overlap_fraction": 0.0,
+      "comparison": {
+        "C:\\Users\\sfleo\\OneDrive\\CompSciEng\\Thesis\\Thesis\\Codebase2\\DataSimulation\\data\\output\\completion_20260907\\final_sequences_ctx4_lambertian_dev_v1": {
+          "shared_raw_sha256_count": 0,
+          "shared_seed_count": 0
+        }
+      },
+      "normalization": {
+        "method": "training_split_global_percentile",
+        "source_split": "train",
+        "low_quantile": 0.01,
+        "high_quantile": 0.99,
+        "pad_fraction": 0.08,
+        "raw_low": 0.0,
+        "raw_high": 0.2893619374185801,
+        "tone_curve": "sem_sqrt",
+        "raw_format": "float32_npy",
+        "application_policy": "frozen_external_training_mapping",
+        "fit_performed_on_this_dataset": false,
+        "frozen_from_dataset": "final_sequences_ctx4_lambertian_dev_v1",
+        "source_sha256": "6a39149bc4bb06a08a38db0750bdc9c955554c33e36cb0dab77d446836139990"
+      },
+      "errors": [],
+      "warnings": []
+    },
+    "paired_static_variants": {
+      "noiseless": {
+        "status": "ok",
+        "reference_root": "C:\\Users\\sfleo\\OneDrive\\CompSciEng\\Thesis\\Thesis\\Codebase2\\DataSimulation\\data\\output\\completion_20260907\\confirmation_static_lambertian_dev_v2",
+        "variant_root": "C:\\Users\\sfleo\\OneDrive\\CompSciEng\\Thesis\\Thesis\\Codebase2\\DataSimulation\\data\\output\\completion_20260908\\confirmation_static_lambertian_noiseless_v2",
+        "reference_record_count": 210,
+        "variant_record_count": 210,
+        "paired_record_count": 210,
+        "reference_noise_profiles": [
+          "development"
+        ],
+        "variant_noise_profiles": [
+          "none"
+        ],
+        "identical_raw_topo_count": 0,
+        "changed_raw_topo_count": 210,
+        "field_mismatches": [],
+        "mask_mismatches": [],
+        "reference_normalization": {
+          "raw_low": 0.0,
+          "raw_high": 0.1811692687869072,
+          "tone_curve": "sem_sqrt",
+          "source_sha256": "2ec922f00ef5b37eb77dbadfe23097a7744c41fb5c00a5064c7cbccaa980d1bd"
+        },
+        "variant_normalization": {
+          "raw_low": 0.0,
+          "raw_high": 0.1811692687869072,
+          "tone_curve": "sem_sqrt",
+          "source_sha256": "2ec922f00ef5b37eb77dbadfe23097a7744c41fb5c00a5064c7cbccaa980d1bd"
+        },
+        "errors": [],
+        "warnings": [
+          "Reference records predate planned_defect_parameters; mask equality is the authoritative paired-geometry check."
+        ]
+      }
+    },
+    "checkpoints": {
+      "cnn_seed_35012": {
+        "status": "ok",
+        "path": "C:\\Users\\sfleo\\OneDrive\\CompSciEng\\Thesis\\Thesis\\Codebase2\\WeldDefectDetection\\experiments\\completion_20260907\\cnn_final\\cnn_train_20260907-222736\\best.pt",
+        "expected_sha256": "175eacf613d6fe343181638f48668e175e128a2100a93e10f0231b99b997f5b2",
+        "actual_sha256": "175eacf613d6fe343181638f48668e175e128a2100a93e10f0231b99b997f5b2"
+      },
+      "learned_spatial_context_seed_45011": {
+        "status": "ok",
+        "path": "C:\\Users\\sfleo\\OneDrive\\CompSciEng\\Thesis\\Thesis\\Codebase2\\WeldDefectDetection\\experiments\\completion_20260907\\temporal_learned_final\\best.pt",
+        "expected_sha256": "f5b6648031212cbe3e8fe6621f2b6f28338717459908de9e9364664e33d0e52b",
+        "actual_sha256": "f5b6648031212cbe3e8fe6621f2b6f28338717459908de9e9364664e33d0e52b"
+      }
+    },
+    "evaluations": {
+      "development_noise_classical_confirmation": {
+        "path": "C:\\Users\\sfleo\\OneDrive\\CompSciEng\\Thesis\\Thesis\\Codebase2\\WeldDefectDetection\\experiments\\completion_20260908\\robustness_v2_development_classical\\summary.json",
+        "status": "ok",
+        "errors": []
+      },
+      "development_noise_cnn_confirmation": {
+        "path": "C:\\Users\\sfleo\\OneDrive\\CompSciEng\\Thesis\\Thesis\\Codebase2\\WeldDefectDetection\\experiments\\completion_20260908\\robustness_v2_development_cnn\\summary.json",
+        "status": "ok",
+        "errors": []
+      },
+      "noiseless_classical_robustness": {
+        "path": "C:\\Users\\sfleo\\OneDrive\\CompSciEng\\Thesis\\Thesis\\Codebase2\\WeldDefectDetection\\experiments\\completion_20260908\\robustness_v2_noiseless_classical\\summary.json",
+        "status": "ok",
+        "errors": []
+      },
+      "noiseless_cnn_robustness": {
+        "path": "C:\\Users\\sfleo\\OneDrive\\CompSciEng\\Thesis\\Thesis\\Codebase2\\WeldDefectDetection\\experiments\\completion_20260908\\robustness_v2_noiseless_cnn\\summary.json",
+        "status": "ok",
+        "errors": []
+      },
+      "mean_spatial_context_confirmation": {
+        "path": "C:\\Users\\sfleo\\OneDrive\\CompSciEng\\Thesis\\Thesis\\Codebase2\\WeldDefectDetection\\experiments\\completion_20260908\\confirmation_v2_temporal_mean_guarded\\summary.json",
+        "status": "ok",
+        "errors": []
+      },
+      "learned_spatial_context_confirmation": {
+        "path": "C:\\Users\\sfleo\\OneDrive\\CompSciEng\\Thesis\\Thesis\\Codebase2\\WeldDefectDetection\\experiments\\completion_20260908\\confirmation_v2_temporal_learned_guarded\\summary.json",
+        "status": "ok",
+        "errors": []
+      }
+    }
+  },
+  "errors": []
+}

@@ -1,0 +1,15 @@
+{
+  "declared_utc": "2026-11-10T05:43:51.774639+00:00",
+  "purpose": "Isolate region formation at each selected operating point, with no further fitting.",
+  "comparisons": [
+    {
+      "base": "growth",
+      "disable": "Set radius to zero and low threshold equal to high; retain selected minimum area and all other controls."
+    },
+    {
+      "base": "growth_merge",
+      "disable": "Set merge gap to zero; retain identical high/low thresholds, growth radius and area."
+    }
+  ],
+  "selection": "Descriptive frozen controls; do not use their confirmation scores to replace the validation winner."
+}

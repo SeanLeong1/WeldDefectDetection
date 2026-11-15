@@ -1,0 +1,11 @@
+iso_13919_1:
+  level: B
+  thickness_t_mm: 10.0
+  throat_s_mm: 5.0
+  pore_diameter_floor_mm: 0.5
+  # Derived from the balanced noiseless top-surface visibility pilot.
+  # COMPO and TOPO require separate cutoffs because their raw scales differ.
+  contrast_detection_threshold: 0.0005
+  compo_contrast_detection_threshold: 0.0005
+  topo_contrast_detection_threshold: 0.0015
+  confidence_z: 1.96

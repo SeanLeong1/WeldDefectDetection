@@ -1,0 +1,1168 @@
+{
+  "original": {
+    "name": "original",
+    "operating_point": {
+      "threshold": 12.0,
+      "closing": 3,
+      "min_area": 15,
+      "macro_f1": 0.19135648182933532,
+      "metrics": {
+        "tp": 131,
+        "fp": 1342,
+        "fn": 253,
+        "precision": 0.08893414799728445,
+        "recall": 0.3411458333333333,
+        "f1": 0.1410877759827679,
+        "pixel_iou": 0.08751050126015122,
+        "clean_rings": 192,
+        "clean_rings_flagged": 42,
+        "clean_ring_fa": 0.21875,
+        "clean_false_regions": 397,
+        "scenes": 576
+      },
+      "by_count": {
+        "1": {
+          "tp": 44,
+          "fp": 986,
+          "fn": 84,
+          "precision": 0.04271844660194175,
+          "recall": 0.34375,
+          "f1": 0.07599309153713299,
+          "pixel_iou": 0.07863923652204567,
+          "clean_rings": 64,
+          "clean_rings_flagged": 17,
+          "clean_ring_fa": 0.265625,
+          "clean_false_regions": 313,
+          "scenes": 192
+        },
+        "4": {
+          "tp": 46,
+          "fp": 198,
+          "fn": 82,
+          "precision": 0.1885245901639344,
+          "recall": 0.359375,
+          "f1": 0.24731182795698925,
+          "pixel_iou": 0.11408095359976599,
+          "clean_rings": 64,
+          "clean_rings_flagged": 12,
+          "clean_ring_fa": 0.1875,
+          "clean_false_regions": 49,
+          "scenes": 192
+        },
+        "64": {
+          "tp": 41,
+          "fp": 158,
+          "fn": 87,
+          "precision": 0.20603015075376885,
+          "recall": 0.3203125,
+          "f1": 0.25076452599388377,
+          "pixel_iou": 0.07816711590296496,
+          "clean_rings": 64,
+          "clean_rings_flagged": 13,
+          "clean_ring_fa": 0.203125,
+          "clean_false_regions": 35,
+          "scenes": 192
+        }
+      },
+      "sigma": 1.0
+    },
+    "macro_f1": 0.2504701002479101,
+    "metrics": {
+      "tp": 131,
+      "fp": 792,
+      "fn": 157,
+      "precision": 0.1419284940411701,
+      "recall": 0.4548611111111111,
+      "f1": 0.21635012386457472,
+      "pixel_iou": 0.2062584396615868,
+      "clean_rings": 144,
+      "clean_rings_flagged": 32,
+      "clean_ring_fa": 0.2222222222222222,
+      "clean_false_regions": 222,
+      "scenes": 432
+    },
+    "by_count": {
+      "1": {
+        "tp": 40,
+        "fp": 486,
+        "fn": 56,
+        "precision": 0.07604562737642585,
+        "recall": 0.4166666666666667,
+        "f1": 0.12861736334405144,
+        "pixel_iou": 0.17826855761250046,
+        "clean_rings": 48,
+        "clean_rings_flagged": 11,
+        "clean_ring_fa": 0.22916666666666666,
+        "clean_false_regions": 144,
+        "scenes": 144
+      },
+      "4": {
+        "tp": 46,
+        "fp": 180,
+        "fn": 50,
+        "precision": 0.20353982300884957,
+        "recall": 0.4791666666666667,
+        "f1": 0.2857142857142857,
+        "pixel_iou": 0.2353190887222301,
+        "clean_rings": 48,
+        "clean_rings_flagged": 10,
+        "clean_ring_fa": 0.20833333333333334,
+        "clean_false_regions": 50,
+        "scenes": 144
+      },
+      "64": {
+        "tp": 45,
+        "fp": 126,
+        "fn": 51,
+        "precision": 0.2631578947368421,
+        "recall": 0.46875,
+        "f1": 0.33707865168539325,
+        "pixel_iou": 0.2129997464288733,
+        "clean_rings": 48,
+        "clean_rings_flagged": 11,
+        "clean_ring_fa": 0.22916666666666666,
+        "clean_false_regions": 28,
+        "scenes": 144
+      }
+    },
+    "intervals": {
+      "f1": [
+        0.1260661073551669,
+        0.40006329113924016
+      ],
+      "recall": [
+        0.2951388888888889,
+        0.625
+      ],
+      "clean_ring_fa": [
+        0.0763888888888889,
+        0.3819444444444444
+      ]
+    },
+    "by_count_intervals": {
+      "1": {
+        "f1": [
+          0.06208383729785423,
+          0.35499651355356043
+        ],
+        "recall": [
+          0.2604166666666667,
+          0.5833333333333334
+        ],
+        "clean_ring_fa": [
+          0.08333333333333333,
+          0.3958333333333333
+        ]
+      },
+      "4": {
+        "f1": [
+          0.17513429656386031,
+          0.4589766714766709
+        ],
+        "recall": [
+          0.3125,
+          0.65625
+        ],
+        "clean_ring_fa": [
+          0.041666666666666664,
+          0.375
+        ]
+      },
+      "64": {
+        "f1": [
+          0.21052631578947367,
+          0.5050505050505051
+        ],
+        "recall": [
+          0.3020833333333333,
+          0.6458333333333334
+        ],
+        "clean_ring_fa": [
+          0.0625,
+          0.3958333333333333
+        ]
+      }
+    },
+    "by_size": {
+      "small": {
+        "tp": 34,
+        "fp": 402,
+        "fn": 62,
+        "precision": 0.0779816513761468,
+        "recall": 0.3541666666666667,
+        "f1": 0.12781954887218044,
+        "pixel_iou": 0.04025650160313502,
+        "clean_rings": 144,
+        "clean_rings_flagged": 32,
+        "clean_ring_fa": 0.2222222222222222,
+        "clean_false_regions": 222,
+        "scenes": 240
+      },
+      "medium": {
+        "tp": 46,
+        "fp": 288,
+        "fn": 38,
+        "precision": 0.1377245508982036,
+        "recall": 0.5476190476190477,
+        "f1": 0.22009569377990432,
+        "pixel_iou": 0.12531942451079917,
+        "clean_rings": 144,
+        "clean_rings_flagged": 32,
+        "clean_ring_fa": 0.2222222222222222,
+        "clean_false_regions": 222,
+        "scenes": 228
+      },
+      "large": {
+        "tp": 51,
+        "fp": 546,
+        "fn": 57,
+        "precision": 0.08542713567839195,
+        "recall": 0.4722222222222222,
+        "f1": 0.14468085106382977,
+        "pixel_iou": 0.21385906852853337,
+        "clean_rings": 144,
+        "clean_rings_flagged": 32,
+        "clean_ring_fa": 0.2222222222222222,
+        "clean_false_regions": 222,
+        "scenes": 252
+      }
+    }
+  },
+  "retuned": {
+    "name": "retuned",
+    "operating_point": {
+      "sigma": 1.0,
+      "threshold": 16.0,
+      "closing": 3,
+      "min_area": 8,
+      "macro_f1": 0.221603842411891,
+      "fp": 409,
+      "by_count": {
+        "1": {
+          "tp": 31,
+          "fp": 245,
+          "fn": 97,
+          "f1": 0.15346534653465346
+        },
+        "4": {
+          "tp": 30,
+          "fp": 59,
+          "fn": 98,
+          "f1": 0.2764976958525346
+        },
+        "64": {
+          "tp": 31,
+          "fp": 105,
+          "fn": 97,
+          "f1": 0.23484848484848486
+        }
+      },
+      "pixel_iou": 0.1703401292390923
+    },
+    "macro_f1": 0.24362093003294225,
+    "metrics": {
+      "tp": 75,
+      "fp": 263,
+      "fn": 213,
+      "precision": 0.22189349112426035,
+      "recall": 0.2604166666666667,
+      "f1": 0.23961661341853036,
+      "pixel_iou": 0.318111068691081,
+      "clean_rings": 144,
+      "clean_rings_flagged": 6,
+      "clean_ring_fa": 0.041666666666666664,
+      "clean_false_regions": 22,
+      "scenes": 432
+    },
+    "by_count": {
+      "1": {
+        "tp": 26,
+        "fp": 131,
+        "fn": 70,
+        "precision": 0.16560509554140126,
+        "recall": 0.2708333333333333,
+        "f1": 0.20553359683794467,
+        "pixel_iou": 0.3022470011826322,
+        "clean_rings": 48,
+        "clean_rings_flagged": 5,
+        "clean_ring_fa": 0.10416666666666667,
+        "clean_false_regions": 20,
+        "scenes": 144
+      },
+      "4": {
+        "tp": 22,
+        "fp": 68,
+        "fn": 74,
+        "precision": 0.24444444444444444,
+        "recall": 0.22916666666666666,
+        "f1": 0.23655913978494625,
+        "pixel_iou": 0.3264020163831128,
+        "clean_rings": 48,
+        "clean_rings_flagged": 1,
+        "clean_ring_fa": 0.020833333333333332,
+        "clean_false_regions": 2,
+        "scenes": 144
+      },
+      "64": {
+        "tp": 27,
+        "fp": 64,
+        "fn": 69,
+        "precision": 0.2967032967032967,
+        "recall": 0.28125,
+        "f1": 0.2887700534759358,
+        "pixel_iou": 0.32672910662824206,
+        "clean_rings": 48,
+        "clean_rings_flagged": 0,
+        "clean_ring_fa": 0.0,
+        "clean_false_regions": 0,
+        "scenes": 144
+      }
+    },
+    "intervals": {
+      "f1": [
+        0.09838945138147266,
+        0.4039751822864406
+      ],
+      "recall": [
+        0.1111111111111111,
+        0.4201388888888889
+      ],
+      "clean_ring_fa": [
+        0.0,
+        0.09722222222222222
+      ]
+    },
+    "by_count_intervals": {
+      "1": {
+        "f1": [
+          0.0858397807865893,
+          0.39773032746823067
+        ],
+        "recall": [
+          0.125,
+          0.4270833333333333
+        ],
+        "clean_ring_fa": [
+          0.0,
+          0.22916666666666666
+        ]
+      },
+      "4": {
+        "f1": [
+          0.08289087121414454,
+          0.4067796610169492
+        ],
+        "recall": [
+          0.08333333333333333,
+          0.3854166666666667
+        ],
+        "clean_ring_fa": [
+          0.0,
+          0.0625
+        ]
+      },
+      "64": {
+        "f1": [
+          0.12830829301417537,
+          0.4631578947368421
+        ],
+        "recall": [
+          0.125,
+          0.4479166666666667
+        ],
+        "clean_ring_fa": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "by_size": {
+      "small": {
+        "tp": 21,
+        "fp": 77,
+        "fn": 75,
+        "precision": 0.21428571428571427,
+        "recall": 0.21875,
+        "f1": 0.21649484536082475,
+        "pixel_iou": 0.1767458603311735,
+        "clean_rings": 144,
+        "clean_rings_flagged": 6,
+        "clean_ring_fa": 0.041666666666666664,
+        "clean_false_regions": 22,
+        "scenes": 240
+      },
+      "medium": {
+        "tp": 30,
+        "fp": 79,
+        "fn": 54,
+        "precision": 0.27522935779816515,
+        "recall": 0.35714285714285715,
+        "f1": 0.31088082901554404,
+        "pixel_iou": 0.3863452733638567,
+        "clean_rings": 144,
+        "clean_rings_flagged": 6,
+        "clean_ring_fa": 0.041666666666666664,
+        "clean_false_regions": 22,
+        "scenes": 228
+      },
+      "large": {
+        "tp": 24,
+        "fp": 151,
+        "fn": 84,
+        "precision": 0.13714285714285715,
+        "recall": 0.2222222222222222,
+        "f1": 0.1696113074204947,
+        "pixel_iou": 0.30679531923629644,
+        "clean_rings": 144,
+        "clean_rings_flagged": 6,
+        "clean_ring_fa": 0.041666666666666664,
+        "clean_false_regions": 22,
+        "scenes": 252
+      }
+    }
+  },
+  "shift": {
+    "name": "shift",
+    "operating_point": {
+      "sigma": 2.0,
+      "threshold": 12.0,
+      "closing": 3,
+      "min_area": 24,
+      "macro_f1": 0.16552581868987856,
+      "fp": 426,
+      "by_count": {
+        "1": {
+          "tp": 23,
+          "fp": 151,
+          "fn": 105,
+          "f1": 0.152317880794702
+        },
+        "4": {
+          "tp": 25,
+          "fp": 135,
+          "fn": 103,
+          "f1": 0.1736111111111111
+        },
+        "64": {
+          "tp": 25,
+          "fp": 140,
+          "fn": 103,
+          "f1": 0.17064846416382254
+        }
+      },
+      "pixel_iou": 0.06138384359640292
+    },
+    "macro_f1": 0.3175119011011716,
+    "metrics": {
+      "tp": 117,
+      "fp": 336,
+      "fn": 171,
+      "precision": 0.2582781456953642,
+      "recall": 0.40625,
+      "f1": 0.3157894736842105,
+      "pixel_iou": 0.20691934006562243,
+      "clean_rings": 144,
+      "clean_rings_flagged": 34,
+      "clean_ring_fa": 0.2361111111111111,
+      "clean_false_regions": 86,
+      "scenes": 432
+    },
+    "by_count": {
+      "1": {
+        "tp": 41,
+        "fp": 141,
+        "fn": 55,
+        "precision": 0.22527472527472528,
+        "recall": 0.4270833333333333,
+        "f1": 0.2949640287769784,
+        "pixel_iou": 0.28247373447946517,
+        "clean_rings": 48,
+        "clean_rings_flagged": 9,
+        "clean_ring_fa": 0.1875,
+        "clean_false_regions": 40,
+        "scenes": 144
+      },
+      "4": {
+        "tp": 37,
+        "fp": 86,
+        "fn": 59,
+        "precision": 0.3008130081300813,
+        "recall": 0.3854166666666667,
+        "f1": 0.3378995433789954,
+        "pixel_iou": 0.2553100742130854,
+        "clean_rings": 48,
+        "clean_rings_flagged": 8,
+        "clean_ring_fa": 0.16666666666666666,
+        "clean_false_regions": 19,
+        "scenes": 144
+      },
+      "64": {
+        "tp": 39,
+        "fp": 109,
+        "fn": 57,
+        "precision": 0.2635135135135135,
+        "recall": 0.40625,
+        "f1": 0.319672131147541,
+        "pixel_iou": 0.14202794697241133,
+        "clean_rings": 48,
+        "clean_rings_flagged": 17,
+        "clean_ring_fa": 0.3541666666666667,
+        "clean_false_regions": 27,
+        "scenes": 144
+      }
+    },
+    "intervals": {
+      "f1": [
+        0.19206051401736593,
+        0.4716435093290987
+      ],
+      "recall": [
+        0.24296875,
+        0.5799479166666662
+      ],
+      "clean_ring_fa": [
+        0.1111111111111111,
+        0.375
+      ]
+    },
+    "by_count_intervals": {
+      "1": {
+        "f1": [
+          0.17686538337732569,
+          0.4831527237872091
+        ],
+        "recall": [
+          0.2604166666666667,
+          0.6041666666666666
+        ],
+        "clean_ring_fa": [
+          0.041666666666666664,
+          0.3541666666666667
+        ]
+      },
+      "4": {
+        "f1": [
+          0.19909146904835232,
+          0.5152883446630351
+        ],
+        "recall": [
+          0.21875,
+          0.5625
+        ],
+        "clean_ring_fa": [
+          0.041666666666666664,
+          0.3125
+        ]
+      },
+      "64": {
+        "f1": [
+          0.1956436820652174,
+          0.46775570416994483
+        ],
+        "recall": [
+          0.23958333333333334,
+          0.5729166666666666
+        ],
+        "clean_ring_fa": [
+          0.16666666666666666,
+          0.5421874999999972
+        ]
+      }
+    },
+    "by_size": {
+      "small": {
+        "tp": 8,
+        "fp": 127,
+        "fn": 88,
+        "precision": 0.05925925925925926,
+        "recall": 0.08333333333333333,
+        "f1": 0.06926406926406926,
+        "pixel_iou": 0.015534963401339355,
+        "clean_rings": 144,
+        "clean_rings_flagged": 34,
+        "clean_ring_fa": 0.2361111111111111,
+        "clean_false_regions": 86,
+        "scenes": 240
+      },
+      "medium": {
+        "tp": 69,
+        "fp": 149,
+        "fn": 15,
+        "precision": 0.3165137614678899,
+        "recall": 0.8214285714285714,
+        "f1": 0.45695364238410596,
+        "pixel_iou": 0.1444991287867209,
+        "clean_rings": 144,
+        "clean_rings_flagged": 34,
+        "clean_ring_fa": 0.2361111111111111,
+        "clean_false_regions": 86,
+        "scenes": 228
+      },
+      "large": {
+        "tp": 40,
+        "fp": 232,
+        "fn": 68,
+        "precision": 0.14705882352941177,
+        "recall": 0.37037037037037035,
+        "f1": 0.21052631578947367,
+        "pixel_iou": 0.20716216656352798,
+        "clean_rings": 144,
+        "clean_rings_flagged": 34,
+        "clean_ring_fa": 0.2361111111111111,
+        "clean_false_regions": 86,
+        "scenes": 252
+      }
+    }
+  },
+  "extent": {
+    "name": "extent",
+    "operating_point": {
+      "sigma": 1.0,
+      "threshold": 16.0,
+      "closing": 3,
+      "min_area": 8,
+      "macro_f1": 0.221603842411891,
+      "fp": 409,
+      "by_count": {
+        "1": {
+          "tp": 31,
+          "fp": 245,
+          "fn": 97,
+          "f1": 0.15346534653465346
+        },
+        "4": {
+          "tp": 30,
+          "fp": 59,
+          "fn": 98,
+          "f1": 0.2764976958525346
+        },
+        "64": {
+          "tp": 31,
+          "fp": 105,
+          "fn": 97,
+          "f1": 0.23484848484848486
+        }
+      },
+      "pixel_iou": 0.1703401292390923
+    },
+    "macro_f1": 0.25100189253311933,
+    "metrics": {
+      "tp": 76,
+      "fp": 262,
+      "fn": 212,
+      "precision": 0.22485207100591717,
+      "recall": 0.2638888888888889,
+      "f1": 0.24281150159744408,
+      "pixel_iou": 0.38597399091031814,
+      "clean_rings": 144,
+      "clean_rings_flagged": 6,
+      "clean_ring_fa": 0.041666666666666664,
+      "clean_false_regions": 22,
+      "scenes": 432
+    },
+    "by_count": {
+      "1": {
+        "tp": 22,
+        "fp": 135,
+        "fn": 74,
+        "precision": 0.14012738853503184,
+        "recall": 0.22916666666666666,
+        "f1": 0.17391304347826086,
+        "pixel_iou": 0.3452716056776666,
+        "clean_rings": 48,
+        "clean_rings_flagged": 5,
+        "clean_ring_fa": 0.10416666666666667,
+        "clean_false_regions": 20,
+        "scenes": 144
+      },
+      "4": {
+        "tp": 27,
+        "fp": 63,
+        "fn": 69,
+        "precision": 0.3,
+        "recall": 0.28125,
+        "f1": 0.2903225806451613,
+        "pixel_iou": 0.41335935805682067,
+        "clean_rings": 48,
+        "clean_rings_flagged": 1,
+        "clean_ring_fa": 0.020833333333333332,
+        "clean_false_regions": 2,
+        "scenes": 144
+      },
+      "64": {
+        "tp": 27,
+        "fp": 64,
+        "fn": 69,
+        "precision": 0.2967032967032967,
+        "recall": 0.28125,
+        "f1": 0.2887700534759358,
+        "pixel_iou": 0.4075883874676631,
+        "clean_rings": 48,
+        "clean_rings_flagged": 0,
+        "clean_ring_fa": 0.0,
+        "clean_false_regions": 0,
+        "scenes": 144
+      }
+    },
+    "intervals": {
+      "f1": [
+        0.11146630236794171,
+        0.3954071143934448
+      ],
+      "recall": [
+        0.12152777777777778,
+        0.4166666666666667
+      ],
+      "clean_ring_fa": [
+        0.0,
+        0.09722222222222222
+      ]
+    },
+    "by_count_intervals": {
+      "1": {
+        "f1": [
+          0.0704163577958982,
+          0.32879262605654314
+        ],
+        "recall": [
+          0.10390625000000002,
+          0.375
+        ],
+        "clean_ring_fa": [
+          0.0,
+          0.22916666666666666
+        ]
+      },
+      "4": {
+        "f1": [
+          0.13114396162932207,
+          0.4571600688468157
+        ],
+        "recall": [
+          0.125,
+          0.4375
+        ],
+        "clean_ring_fa": [
+          0.0,
+          0.0625
+        ]
+      },
+      "64": {
+        "f1": [
+          0.13021998742928975,
+          0.45918367346938777
+        ],
+        "recall": [
+          0.125,
+          0.4479166666666667
+        ],
+        "clean_ring_fa": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "by_size": {
+      "small": {
+        "tp": 18,
+        "fp": 80,
+        "fn": 78,
+        "precision": 0.1836734693877551,
+        "recall": 0.1875,
+        "f1": 0.18556701030927836,
+        "pixel_iou": 0.15106344301036176,
+        "clean_rings": 144,
+        "clean_rings_flagged": 6,
+        "clean_ring_fa": 0.041666666666666664,
+        "clean_false_regions": 22,
+        "scenes": 240
+      },
+      "medium": {
+        "tp": 34,
+        "fp": 75,
+        "fn": 50,
+        "precision": 0.3119266055045872,
+        "recall": 0.40476190476190477,
+        "f1": 0.35233160621761656,
+        "pixel_iou": 0.37197077690662866,
+        "clean_rings": 144,
+        "clean_rings_flagged": 6,
+        "clean_ring_fa": 0.041666666666666664,
+        "clean_false_regions": 22,
+        "scenes": 228
+      },
+      "large": {
+        "tp": 24,
+        "fp": 151,
+        "fn": 84,
+        "precision": 0.13714285714285715,
+        "recall": 0.2222222222222222,
+        "f1": 0.1696113074204947,
+        "pixel_iou": 0.41023130170521693,
+        "clean_rings": 144,
+        "clean_rings_flagged": 6,
+        "clean_ring_fa": 0.041666666666666664,
+        "clean_false_regions": 22,
+        "scenes": 252
+      }
+    }
+  },
+  "combined": {
+    "name": "combined",
+    "operating_point": {
+      "sigma": 1.0,
+      "threshold": 16.0,
+      "closing": 3,
+      "min_area": 8,
+      "macro_f1": 0.221603842411891,
+      "fp": 409,
+      "by_count": {
+        "1": {
+          "tp": 31,
+          "fp": 245,
+          "fn": 97,
+          "f1": 0.15346534653465346
+        },
+        "4": {
+          "tp": 30,
+          "fp": 59,
+          "fn": 98,
+          "f1": 0.2764976958525346
+        },
+        "64": {
+          "tp": 31,
+          "fp": 105,
+          "fn": 97,
+          "f1": 0.23484848484848486
+        }
+      },
+      "pixel_iou": 0.1703401292390923
+    },
+    "macro_f1": 0.355045379960816,
+    "metrics": {
+      "tp": 108,
+      "fp": 230,
+      "fn": 180,
+      "precision": 0.31952662721893493,
+      "recall": 0.375,
+      "f1": 0.3450479233226837,
+      "pixel_iou": 0.42394936232293284,
+      "clean_rings": 144,
+      "clean_rings_flagged": 6,
+      "clean_ring_fa": 0.041666666666666664,
+      "clean_false_regions": 22,
+      "scenes": 432
+    },
+    "by_count": {
+      "1": {
+        "tp": 33,
+        "fp": 124,
+        "fn": 63,
+        "precision": 0.21019108280254778,
+        "recall": 0.34375,
+        "f1": 0.2608695652173913,
+        "pixel_iou": 0.3753275926619244,
+        "clean_rings": 48,
+        "clean_rings_flagged": 5,
+        "clean_ring_fa": 0.10416666666666667,
+        "clean_false_regions": 20,
+        "scenes": 144
+      },
+      "4": {
+        "tp": 37,
+        "fp": 53,
+        "fn": 59,
+        "precision": 0.4111111111111111,
+        "recall": 0.3854166666666667,
+        "f1": 0.3978494623655914,
+        "pixel_iou": 0.45438011518642013,
+        "clean_rings": 48,
+        "clean_rings_flagged": 1,
+        "clean_ring_fa": 0.020833333333333332,
+        "clean_false_regions": 2,
+        "scenes": 144
+      },
+      "64": {
+        "tp": 38,
+        "fp": 53,
+        "fn": 58,
+        "precision": 0.4175824175824176,
+        "recall": 0.3958333333333333,
+        "f1": 0.40641711229946526,
+        "pixel_iou": 0.4523952997890931,
+        "clean_rings": 48,
+        "clean_rings_flagged": 0,
+        "clean_ring_fa": 0.0,
+        "clean_false_regions": 0,
+        "scenes": 144
+      }
+    },
+    "intervals": {
+      "f1": [
+        0.1927962669047383,
+        0.5265117643588112
+      ],
+      "recall": [
+        0.21180555555555555,
+        0.5382812499999995
+      ],
+      "clean_ring_fa": [
+        0.0,
+        0.09722222222222222
+      ]
+    },
+    "by_count_intervals": {
+      "1": {
+        "f1": [
+          0.12942305169246915,
+          0.45949371030016173
+        ],
+        "recall": [
+          0.1875,
+          0.5208333333333334
+        ],
+        "clean_ring_fa": [
+          0.0,
+          0.22916666666666666
+        ]
+      },
+      "4": {
+        "f1": [
+          0.22797927461139897,
+          0.5803282484730945
+        ],
+        "recall": [
+          0.21875,
+          0.5520833333333334
+        ],
+        "clean_ring_fa": [
+          0.0,
+          0.0625
+        ]
+      },
+      "64": {
+        "f1": [
+          0.23074712643678164,
+          0.590168872210152
+        ],
+        "recall": [
+          0.22916666666666666,
+          0.5625
+        ],
+        "clean_ring_fa": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "by_size": {
+      "small": {
+        "tp": 15,
+        "fp": 83,
+        "fn": 81,
+        "precision": 0.15306122448979592,
+        "recall": 0.15625,
+        "f1": 0.15463917525773196,
+        "pixel_iou": 0.15303140978816654,
+        "clean_rings": 144,
+        "clean_rings_flagged": 6,
+        "clean_ring_fa": 0.041666666666666664,
+        "clean_false_regions": 22,
+        "scenes": 240
+      },
+      "medium": {
+        "tp": 69,
+        "fp": 40,
+        "fn": 15,
+        "precision": 0.6330275229357798,
+        "recall": 0.8214285714285714,
+        "f1": 0.7150259067357513,
+        "pixel_iou": 0.4588826709665181,
+        "clean_rings": 144,
+        "clean_rings_flagged": 6,
+        "clean_ring_fa": 0.041666666666666664,
+        "clean_false_regions": 22,
+        "scenes": 228
+      },
+      "large": {
+        "tp": 24,
+        "fp": 151,
+        "fn": 84,
+        "precision": 0.13714285714285715,
+        "recall": 0.2222222222222222,
+        "f1": 0.1696113074204947,
+        "pixel_iou": 0.43495576780742257,
+        "clean_rings": 144,
+        "clean_rings_flagged": 6,
+        "clean_ring_fa": 0.041666666666666664,
+        "clean_false_regions": 22,
+        "scenes": 252
+      }
+    }
+  },
+  "cnn": {
+    "name": "cnn",
+    "unchanged_frozen_model": true,
+    "macro_f1": 0.8897513066884762,
+    "metrics": {
+      "tp": 253,
+      "fp": 29,
+      "fn": 35,
+      "precision": 0.8971631205673759,
+      "recall": 0.8784722222222222,
+      "f1": 0.887719298245614,
+      "pixel_iou": 0.8116087445650522,
+      "clean_rings": 144,
+      "clean_rings_flagged": 4,
+      "clean_ring_fa": 0.027777777777777776,
+      "clean_false_regions": 7,
+      "scenes": 432
+    },
+    "by_count": {
+      "1": {
+        "tp": 77,
+        "fp": 24,
+        "fn": 19,
+        "precision": 0.7623762376237624,
+        "recall": 0.8020833333333334,
+        "f1": 0.7817258883248731,
+        "pixel_iou": 0.7548683736025965,
+        "clean_rings": 48,
+        "clean_rings_flagged": 3,
+        "clean_ring_fa": 0.0625,
+        "clean_false_regions": 6,
+        "scenes": 144
+      },
+      "4": {
+        "tp": 86,
+        "fp": 5,
+        "fn": 10,
+        "precision": 0.945054945054945,
+        "recall": 0.8958333333333334,
+        "f1": 0.9197860962566845,
+        "pixel_iou": 0.8342516069788797,
+        "clean_rings": 48,
+        "clean_rings_flagged": 1,
+        "clean_ring_fa": 0.020833333333333332,
+        "clean_false_regions": 1,
+        "scenes": 144
+      },
+      "64": {
+        "tp": 90,
+        "fp": 0,
+        "fn": 6,
+        "precision": 1.0,
+        "recall": 0.9375,
+        "f1": 0.967741935483871,
+        "pixel_iou": 0.8467039515907215,
+        "clean_rings": 48,
+        "clean_rings_flagged": 0,
+        "clean_ring_fa": 0.0,
+        "clean_false_regions": 0,
+        "scenes": 144
+      }
+    },
+    "intervals": {
+      "f1": [
+        0.7865459279644919,
+        0.9703341679945366
+      ],
+      "recall": [
+        0.7743055555555556,
+        0.9652777777777778
+      ],
+      "clean_ring_fa": [
+        0.0,
+        0.0625
+      ]
+    },
+    "by_count_intervals": {
+      "1": {
+        "f1": [
+          0.6197015425888664,
+          0.9319371727748691
+        ],
+        "recall": [
+          0.6666666666666666,
+          0.9166666666666666
+        ],
+        "clean_ring_fa": [
+          0.0,
+          0.125
+        ]
+      },
+      "4": {
+        "f1": [
+          0.8,
+          1.0
+        ],
+        "recall": [
+          0.7708333333333334,
+          1.0
+        ],
+        "clean_ring_fa": [
+          0.0,
+          0.0625
+        ]
+      },
+      "64": {
+        "f1": [
+          0.9090909090909091,
+          1.0
+        ],
+        "recall": [
+          0.8333333333333334,
+          1.0
+        ],
+        "clean_ring_fa": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "by_size": {
+      "small": {
+        "tp": 63,
+        "fp": 25,
+        "fn": 33,
+        "precision": 0.7159090909090909,
+        "recall": 0.65625,
+        "f1": 0.6847826086956522,
+        "pixel_iou": 0.46482602118003025,
+        "clean_rings": 144,
+        "clean_rings_flagged": 4,
+        "clean_ring_fa": 0.027777777777777776,
+        "clean_false_regions": 7,
+        "scenes": 240
+      },
+      "medium": {
+        "tp": 84,
+        "fp": 7,
+        "fn": 0,
+        "precision": 0.9230769230769231,
+        "recall": 1.0,
+        "f1": 0.96,
+        "pixel_iou": 0.8278877128393926,
+        "clean_rings": 144,
+        "clean_rings_flagged": 4,
+        "clean_ring_fa": 0.027777777777777776,
+        "clean_false_regions": 7,
+        "scenes": 228
+      },
+      "large": {
+        "tp": 106,
+        "fp": 11,
+        "fn": 2,
+        "precision": 0.905982905982906,
+        "recall": 0.9814814814814815,
+        "f1": 0.9422222222222222,
+        "pixel_iou": 0.8360553287226065,
+        "clean_rings": 144,
+        "clean_rings_flagged": 4,
+        "clean_ring_fa": 0.027777777777777776,
+        "clean_false_regions": 7,
+        "scenes": 252
+      }
+    }
+  }
+}

@@ -1,0 +1,669 @@
+{
+  "campaign": "count_diversity_20261027_v2",
+  "arm": "mixed_96",
+  "seed": 1027001,
+  "training_patch": {
+    "scene_id": "train-000-open_intrinsic-c4-r0",
+    "radial_centre": 64,
+    "angular_centre": 16,
+    "mask_pixels": 70,
+    "selection": "valid candidate patch with largest target area; illustration only"
+  },
+  "parameters": 262777,
+  "block_parameters": {
+    "enc1": 5496,
+    "enc2": 31296,
+    "bottleneck": 124800,
+    "up2": 18480,
+    "dec2": 62400,
+    "up1": 4632,
+    "dec1": 15648,
+    "head": 25
+  },
+  "layer_stats": [
+    {
+      "name": "enc1.block.0",
+      "type": "Conv2d",
+      "input": [
+        1,
+        1,
+        64,
+        64
+      ],
+      "output": [
+        1,
+        24,
+        64,
+        64
+      ],
+      "parameters": 216,
+      "kernel": [
+        3,
+        3
+      ]
+    },
+    {
+      "name": "enc1.block.1",
+      "type": "BatchNorm2d",
+      "input": [
+        1,
+        24,
+        64,
+        64
+      ],
+      "output": [
+        1,
+        24,
+        64,
+        64
+      ],
+      "parameters": 48,
+      "kernel": null
+    },
+    {
+      "name": "enc1.block.3",
+      "type": "Conv2d",
+      "input": [
+        1,
+        24,
+        64,
+        64
+      ],
+      "output": [
+        1,
+        24,
+        64,
+        64
+      ],
+      "parameters": 5184,
+      "kernel": [
+        3,
+        3
+      ]
+    },
+    {
+      "name": "enc1.block.4",
+      "type": "BatchNorm2d",
+      "input": [
+        1,
+        24,
+        64,
+        64
+      ],
+      "output": [
+        1,
+        24,
+        64,
+        64
+      ],
+      "parameters": 48,
+      "kernel": null
+    },
+    {
+      "name": "pool1",
+      "type": "MaxPool2d",
+      "input": [
+        1,
+        24,
+        64,
+        64
+      ],
+      "output": [
+        1,
+        24,
+        32,
+        32
+      ],
+      "parameters": 0,
+      "kernel": 2
+    },
+    {
+      "name": "enc2.block.0",
+      "type": "Conv2d",
+      "input": [
+        1,
+        24,
+        32,
+        32
+      ],
+      "output": [
+        1,
+        48,
+        32,
+        32
+      ],
+      "parameters": 10368,
+      "kernel": [
+        3,
+        3
+      ]
+    },
+    {
+      "name": "enc2.block.1",
+      "type": "BatchNorm2d",
+      "input": [
+        1,
+        48,
+        32,
+        32
+      ],
+      "output": [
+        1,
+        48,
+        32,
+        32
+      ],
+      "parameters": 96,
+      "kernel": null
+    },
+    {
+      "name": "enc2.block.3",
+      "type": "Conv2d",
+      "input": [
+        1,
+        48,
+        32,
+        32
+      ],
+      "output": [
+        1,
+        48,
+        32,
+        32
+      ],
+      "parameters": 20736,
+      "kernel": [
+        3,
+        3
+      ]
+    },
+    {
+      "name": "enc2.block.4",
+      "type": "BatchNorm2d",
+      "input": [
+        1,
+        48,
+        32,
+        32
+      ],
+      "output": [
+        1,
+        48,
+        32,
+        32
+      ],
+      "parameters": 96,
+      "kernel": null
+    },
+    {
+      "name": "pool2",
+      "type": "MaxPool2d",
+      "input": [
+        1,
+        48,
+        32,
+        32
+      ],
+      "output": [
+        1,
+        48,
+        16,
+        16
+      ],
+      "parameters": 0,
+      "kernel": 2
+    },
+    {
+      "name": "bottleneck.block.0",
+      "type": "Conv2d",
+      "input": [
+        1,
+        48,
+        16,
+        16
+      ],
+      "output": [
+        1,
+        96,
+        16,
+        16
+      ],
+      "parameters": 41472,
+      "kernel": [
+        3,
+        3
+      ]
+    },
+    {
+      "name": "bottleneck.block.1",
+      "type": "BatchNorm2d",
+      "input": [
+        1,
+        96,
+        16,
+        16
+      ],
+      "output": [
+        1,
+        96,
+        16,
+        16
+      ],
+      "parameters": 192,
+      "kernel": null
+    },
+    {
+      "name": "bottleneck.block.3",
+      "type": "Conv2d",
+      "input": [
+        1,
+        96,
+        16,
+        16
+      ],
+      "output": [
+        1,
+        96,
+        16,
+        16
+      ],
+      "parameters": 82944,
+      "kernel": [
+        3,
+        3
+      ]
+    },
+    {
+      "name": "bottleneck.block.4",
+      "type": "BatchNorm2d",
+      "input": [
+        1,
+        96,
+        16,
+        16
+      ],
+      "output": [
+        1,
+        96,
+        16,
+        16
+      ],
+      "parameters": 192,
+      "kernel": null
+    },
+    {
+      "name": "up2",
+      "type": "ConvTranspose2d",
+      "input": [
+        1,
+        96,
+        16,
+        16
+      ],
+      "output": [
+        1,
+        48,
+        32,
+        32
+      ],
+      "parameters": 18480,
+      "kernel": [
+        2,
+        2
+      ]
+    },
+    {
+      "name": "dec2.block.0",
+      "type": "Conv2d",
+      "input": [
+        1,
+        96,
+        32,
+        32
+      ],
+      "output": [
+        1,
+        48,
+        32,
+        32
+      ],
+      "parameters": 41472,
+      "kernel": [
+        3,
+        3
+      ]
+    },
+    {
+      "name": "dec2.block.1",
+      "type": "BatchNorm2d",
+      "input": [
+        1,
+        48,
+        32,
+        32
+      ],
+      "output": [
+        1,
+        48,
+        32,
+        32
+      ],
+      "parameters": 96,
+      "kernel": null
+    },
+    {
+      "name": "dec2.block.3",
+      "type": "Conv2d",
+      "input": [
+        1,
+        48,
+        32,
+        32
+      ],
+      "output": [
+        1,
+        48,
+        32,
+        32
+      ],
+      "parameters": 20736,
+      "kernel": [
+        3,
+        3
+      ]
+    },
+    {
+      "name": "dec2.block.4",
+      "type": "BatchNorm2d",
+      "input": [
+        1,
+        48,
+        32,
+        32
+      ],
+      "output": [
+        1,
+        48,
+        32,
+        32
+      ],
+      "parameters": 96,
+      "kernel": null
+    },
+    {
+      "name": "up1",
+      "type": "ConvTranspose2d",
+      "input": [
+        1,
+        48,
+        32,
+        32
+      ],
+      "output": [
+        1,
+        24,
+        64,
+        64
+      ],
+      "parameters": 4632,
+      "kernel": [
+        2,
+        2
+      ]
+    },
+    {
+      "name": "dec1.block.0",
+      "type": "Conv2d",
+      "input": [
+        1,
+        48,
+        64,
+        64
+      ],
+      "output": [
+        1,
+        24,
+        64,
+        64
+      ],
+      "parameters": 10368,
+      "kernel": [
+        3,
+        3
+      ]
+    },
+    {
+      "name": "dec1.block.1",
+      "type": "BatchNorm2d",
+      "input": [
+        1,
+        24,
+        64,
+        64
+      ],
+      "output": [
+        1,
+        24,
+        64,
+        64
+      ],
+      "parameters": 48,
+      "kernel": null
+    },
+    {
+      "name": "dec1.block.3",
+      "type": "Conv2d",
+      "input": [
+        1,
+        24,
+        64,
+        64
+      ],
+      "output": [
+        1,
+        24,
+        64,
+        64
+      ],
+      "parameters": 5184,
+      "kernel": [
+        3,
+        3
+      ]
+    },
+    {
+      "name": "dec1.block.4",
+      "type": "BatchNorm2d",
+      "input": [
+        1,
+        24,
+        64,
+        64
+      ],
+      "output": [
+        1,
+        24,
+        64,
+        64
+      ],
+      "parameters": 48,
+      "kernel": null
+    },
+    {
+      "name": "head",
+      "type": "Conv2d",
+      "input": [
+        1,
+        24,
+        64,
+        64
+      ],
+      "output": [
+        1,
+        1,
+        64,
+        64
+      ],
+      "parameters": 25,
+      "kernel": [
+        1,
+        1
+      ]
+    }
+  ],
+  "feature_channels": {
+    "enc1": [
+      21,
+      14,
+      20,
+      12
+    ],
+    "enc2": [
+      11,
+      27,
+      17,
+      42
+    ],
+    "bottleneck": [
+      74,
+      17,
+      6,
+      10
+    ],
+    "dec2": [
+      14,
+      22,
+      4,
+      36
+    ],
+    "dec1": [
+      15,
+      10,
+      0,
+      9
+    ]
+  },
+  "epochs": [
+    10,
+    20
+  ],
+  "sigma_validation": [
+    {
+      "sigma": 0,
+      "threshold": 12.0,
+      "min_area": 15,
+      "closing": 3,
+      "macro_f1": 0.16074250520397435
+    },
+    {
+      "sigma": 0.5,
+      "threshold": 12.0,
+      "min_area": 8,
+      "closing": 3,
+      "macro_f1": 0.16423754821921013
+    },
+    {
+      "sigma": 1,
+      "threshold": 12.0,
+      "min_area": 15,
+      "closing": 3,
+      "macro_f1": 0.19135648182933532
+    },
+    {
+      "sigma": 2,
+      "threshold": 12.0,
+      "min_area": 15,
+      "closing": 3,
+      "macro_f1": 0.1535918757632939
+    },
+    {
+      "sigma": 4,
+      "threshold": 8.0,
+      "min_area": 15,
+      "closing": 3,
+      "macro_f1": 0.09986403935227921
+    },
+    {
+      "sigma": 8,
+      "threshold": 8.0,
+      "min_area": 15,
+      "closing": 1,
+      "macro_f1": 0.0495263528674681
+    }
+  ],
+  "table": [
+    [
+      "1\u00d7",
+      "0.127",
+      "0.774"
+    ],
+    [
+      "4\u00d7",
+      "0.178",
+      "0.885"
+    ],
+    [
+      "64\u00d7",
+      "0.192",
+      "0.909"
+    ]
+  ],
+  "failures": {
+    "test-004-open_intrinsic-c64-r0": {
+      "diameter_mm": 0.6164776878265563,
+      "truth_pixels": 104,
+      "methods": {
+        "median": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 1,
+          "predicted_pixels": 49,
+          "best_box_iou": 0.34285714285714286
+        },
+        "cnn": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predicted_pixels": 61,
+          "best_box_iou": 0.6818181818181818
+        }
+      }
+    },
+    "test-006-open_intrinsic-c64-r0": {
+      "diameter_mm": 0.15645213250698012,
+      "truth_pixels": 5,
+      "methods": {
+        "median": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "predicted_pixels": 0,
+          "best_box_iou": 0.0
+        },
+        "cnn": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "predicted_pixels": 0,
+          "best_box_iou": 0.0
+        }
+      }
+    }
+  },
+  "source_hashes": {
+    "DataSimulation\\data\\output\\count_diversity_20261027_v2\\frozen_models.json": "9c5212ab762532cf590d393f1592eb11d179567ffeaa9cc5cfee68c0721326dd",
+    "DataSimulation\\data\\output\\count_diversity_20261027_v2\\normalization.json": "9421b2140352ad9b79d48e4d095affe14161d570a0a6e4ea59bce553ec6f0b41",
+    "DataSimulation\\data\\output\\count_diversity_20261027_v2\\results.json": "29c743177c00cf4e2a6c7e49d475fb7de50bf1d8bfff27310873887aff0b2982",
+    "DataSimulation\\data\\output\\count_diversity_20261027_v2\\development\\mixed_96\\cnn_1027001_e10.pt": "2a8090f05472b2616f20ec82343143871a88795d92a6e015ffcd44259fe20607",
+    "DataSimulation\\data\\output\\count_diversity_20261027_v2\\development\\mixed_96\\cnn_1027001_e20.pt": "1616e8eb5422ac53673474046c6f00b225d6c56724e03aac7253b5ead4fa2076",
+    "DataSimulation\\data\\output\\count_diversity_20261027_v2\\datasets\\train\\000\\open_intrinsic_c4_r0.npy": "ca3cf5ee54d2d62852092a0cef6d21b15d96ed62d148d44e2a44b19258ab62f4",
+    "DataSimulation\\data\\output\\count_diversity_20261027_v2\\datasets\\train\\000\\open_intrinsic_geometry.npz": "16afe5a17bd246d6c094b0ec3e94b59a58530da7543022d6cdd0cef7fdb6b2c3",
+    "DataSimulation\\data\\output\\count_diversity_20261027_v2\\development\\mixed_96\\cnn_1027001_resume.pt": "bc94f4def7a535adab81ad7c42e37a9ce5e7fd818f1e02369d54f80029eb89a1",
+    "DataSimulation\\data\\output\\count_diversity_20261027_v2\\datasets\\test\\004\\open_intrinsic_c64_r0.npy": "f79d2b79bd5a21742c4a82a75be90e327244d66806b578c965783e53e5cc2a77",
+    "DataSimulation\\data\\output\\count_diversity_20261027_v2\\datasets\\test\\004\\open_intrinsic_geometry.npz": "5aab04537c35e5dfe729799d754d644a5b2b8e8879c5bfbe7771661d63851aa8",
+    "DataSimulation\\data\\output\\count_diversity_20261027_v2\\datasets\\test\\006\\open_intrinsic_c64_r0.npy": "23b222b26c809a49c0e9fa8bff554203f0b5ecae88759a5379097832d0e7bc57",
+    "DataSimulation\\data\\output\\count_diversity_20261027_v2\\datasets\\test\\006\\open_intrinsic_geometry.npz": "3c1b10f0cef586c894976f0ec398591292f5e35cbb9a9e93124edff7849f1ed1"
+  },
+  "interpretation": "Activations describe response to one patch. They do not identify physical feature semantics. Checkpoint comparisons use the same channels/scales.",
+  "changes_to_frozen_artifacts": false
+}

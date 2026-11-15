@@ -1,0 +1,24 @@
+{
+  "review_date": "2026-09-14",
+  "record_type": "summary_of_observed_pytest_tool_output",
+  "interpreter": "Python 3.12.14 from bundled Codex runtime",
+  "libraries": "workspace .venv/Lib/site-packages",
+  "pytest": "9.1.1 installed into tmp/codebase_audit_20260914/deps",
+  "successful_run": {
+    "working_directory": "DataSimulation",
+    "suites": ["tests", "../WeldDefectDetection/tests"],
+    "passed": 153,
+    "failed": 0,
+    "simulation_tests": 127,
+    "detection_tests": 26,
+    "seconds": 45.39,
+    "arguments": ["-q", "-p", "no:cacheprovider", "--basetemp=../tmp/codebase_audit_20260914/pytest_project", "--junitxml=../tmp/codebase_audit_20260914/tests.xml"]
+  },
+  "root_working_directory_run": {
+    "passed": 144,
+    "failed": 9,
+    "seconds": 37.02,
+    "failure_cause": "relative config directory lookup; imports explicitly configured"
+  },
+  "limitations": ["No GUI or external simulator execution", "No model training or dataset regeneration"]
+}

@@ -1,0 +1,64 @@
+from pathlib import Path
+import json,hashlib,shutil,sys
+import numpy as np
+ROOT=Path.cwd(); P=ROOT/'docs/overleaf_thesis_20261030'
+B=ROOT/'.tmp/thesis_before_selected_median_20261110';B.mkdir(exist_ok=True)
+for f in [*P.glob('*.tex'),*(P/'ThesisC/chapters').glob('*.tex')]:
+ q=B/f.relative_to(P);q.parent.mkdir(parents=True,exist_ok=True);shutil.copy2(f,q)
+M=ROOT/'DataSimulation/data/output/median_localisation_20261110_v1'
+G=M.with_name('median_region_growth_20261110_v1')
+E=P/'evidence/selected_methods_20261110';E.mkdir(exist_ok=True)
+read=lambda p:json.loads(p.read_text(encoding='utf-8'))
+sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
+a=read(M/'frozen.json');b=read(G/'frozen.json')
+assert a['original']==b['original']
+assert a['selection']['combined']==b['previous']
+indices=[read(d/'datasets/test/index.json') for d in [M,G]]
+for field in ['seed','acquisition_seed']:
+ assert not {r[field] for r in indices[0]} & {r[field] for r in indices[1]}
+rows={'cnn':[],'median':[]};batch={};sources={}
+for tag,d,median in [('A',M,'combined'),('B',G,'previous')]:
+ batch[tag]={}
+ for key,name in [('cnn','cnn'),('median',median)]:
+  path=d/'confirmation'/f'{name}.json';f=read(path);sources[str(path.relative_to(ROOT))]=sha(path)
+  assert len(f['rows'])==432
+  batch[tag][key]=f['by_count']
+  for r in f['rows']:
+   rows[key].append(dict(r,background_id=tag+':'+r['background_id'],batch=tag))
+ for name in ['frozen.json','final_audit.json']:
+  f=d/name;sources[str(f.relative_to(ROOT))]=sha(f);shutil.copy2(f,E/f'{tag}_{name}')
+summary={};rng=np.random.default_rng(20261110);intervals={}
+for count in [1,4,64]:
+ summary[str(count)]={};aggregates={}
+ for method in rows:
+  rr=[r for r in rows[method] if r['count_multiplier']==count]
+  assert len(rr)==288 and len({r['background_id'] for r in rr})==48
+  t={k:sum(r[k] for r in rr) for k in ['tp','fp','fn','intersection','union']}
+  t.update(f1=2*t['tp']/(2*t['tp']+t['fp']+t['fn']),precision=t['tp']/(t['tp']+t['fp']),recall=t['tp']/(t['tp']+t['fn']),
+           clean_images=sum(r['source_class']=='clean' for r in rr),clean_flagged=sum(r['source_class']=='clean' and r['fp']>0 for r in rr),
+           pixel_iou=t['intersection']/t['union'])
+  summary[str(count)][method]=t
+  keys=sorted({r['background_id'] for r in rr})
+  aggregates[method]=np.array([[sum(r[k] for r in rr if r['background_id']==bg) for k in ['tp','fp','fn']] for bg in keys])
+ draw=rng.integers(0,48,(2000,48));scores={}
+ for method,arr in aggregates.items():
+  z=arr[draw].sum(1);scores[method]=2*z[:,0]/np.maximum(1,2*z[:,0]+z[:,1]+z[:,2])
+  summary[str(count)][method]['f1_ci']=np.quantile(scores[method],[.025,.975]).tolist()
+ intervals[str(count)]={'delta':summary[str(count)]['cnn']['f1']-summary[str(count)]['median']['f1'],
+                       'ci':np.quantile(scores['cnn']-scores['median'],[.025,.975]).tolist()}
+sys.path.insert(0,str(ROOT/'WeldDefectDetection'))
+from circular_study import metrics
+diagnostics={}
+for tag in ['A','B','pooled']:
+ rr=[r for r in rows['median'] if r['count_multiplier']==64 and r['source_class']!='clean' and (tag=='pooled' or r['batch']==tag)]
+ diagnostics[tag]={'pore_acquisitions':len(rr),'matched':sum(r['tp'] for r in rr),
+ 'partial_only':sum(r['tp']==0 and any(metrics.circular_iou(p,t,5024)>0 for p in r['predicted_boxes'] for t in r['truth_boxes']) for r in rr),
+ 'no_overlap':sum(not any(metrics.circular_iou(p,t,5024)>0 for p in r['predicted_boxes'] for t in r['truth_boxes']) for r in rr)}
+result={'scope':'Descriptive pooling of two prospectively generated confirmation sets; both methods identical and frozen before either set. Original training-design test population stays separate.',
+ 'selected_median':a['selection']['combined'],'cnn_identical_between_sets':True,'disjoint_seeds':True,
+ 'sets':{'A':str(M.relative_to(ROOT)),'B':str(G.relative_to(ROOT))},'by_count':summary,'batch_metrics':batch,
+ 'paired_cnn_minus_median':intervals,'bootstrap':{'replicates':2000,'seed':20261110,'unit':'48 batch-prefixed background IDs, all repeats retained','conditional_on_selected_models':True},
+ 'low_noise_median_localisation':diagnostics,'sources':sources}
+(E/'summary.json').write_text(json.dumps(result,indent=2))
+shutil.copy2(__file__,E/'summarise_selected_methods.py.txt')
+print(json.dumps({'by_count':summary,'paired':intervals,'diagnostics':diagnostics},indent=2))

@@ -1,0 +1,129 @@
+{
+  "scope": "Descriptive analysis after confirmation; no parameter changes or model selection.",
+  "methods": {
+    "original": {
+      "counts": {
+        "pore_images": 96,
+        "matched": 45,
+        "no_prediction_anywhere": 12,
+        "no_prediction_overlapping_pore": 12,
+        "overlap_but_failed_iou": 39,
+        "unmatched_overlapping_regions": 41,
+        "unmatched_elsewhere_regions": 57
+      },
+      "by_size": {
+        "large": {
+          "n": 36,
+          "tp": 18,
+          "no_overlap": 0,
+          "poor_localisation": 18
+        },
+        "small": {
+          "n": 32,
+          "tp": 13,
+          "no_overlap": 12,
+          "poor_localisation": 7
+        },
+        "medium": {
+          "n": 28,
+          "tp": 14,
+          "no_overlap": 0,
+          "poor_localisation": 14
+        }
+      }
+    },
+    "retuned": {
+      "counts": {
+        "pore_images": 96,
+        "matched": 27,
+        "no_prediction_anywhere": 19,
+        "no_prediction_overlapping_pore": 19,
+        "overlap_but_failed_iou": 50,
+        "unmatched_overlapping_regions": 64,
+        "unmatched_elsewhere_regions": 0
+      },
+      "by_size": {
+        "large": {
+          "n": 36,
+          "tp": 8,
+          "no_overlap": 4,
+          "poor_localisation": 24
+        },
+        "small": {
+          "n": 32,
+          "tp": 9,
+          "no_overlap": 15,
+          "poor_localisation": 8
+        },
+        "medium": {
+          "n": 28,
+          "tp": 10,
+          "no_overlap": 0,
+          "poor_localisation": 18
+        }
+      }
+    },
+    "combined": {
+      "counts": {
+        "pore_images": 96,
+        "matched": 38,
+        "no_prediction_anywhere": 19,
+        "no_prediction_overlapping_pore": 19,
+        "overlap_but_failed_iou": 39,
+        "unmatched_overlapping_regions": 53,
+        "unmatched_elsewhere_regions": 0
+      },
+      "by_size": {
+        "large": {
+          "n": 36,
+          "tp": 8,
+          "no_overlap": 4,
+          "poor_localisation": 24
+        },
+        "small": {
+          "n": 32,
+          "tp": 7,
+          "no_overlap": 15,
+          "poor_localisation": 10
+        },
+        "medium": {
+          "n": 28,
+          "tp": 23,
+          "no_overlap": 0,
+          "poor_localisation": 5
+        }
+      }
+    },
+    "cnn": {
+      "counts": {
+        "pore_images": 96,
+        "matched": 90,
+        "no_prediction_anywhere": 6,
+        "no_prediction_overlapping_pore": 6,
+        "overlap_but_failed_iou": 0,
+        "unmatched_overlapping_regions": 0,
+        "unmatched_elsewhere_regions": 0
+      },
+      "by_size": {
+        "large": {
+          "n": 36,
+          "tp": 36,
+          "no_overlap": 0,
+          "poor_localisation": 0
+        },
+        "small": {
+          "n": 32,
+          "tp": 26,
+          "no_overlap": 6,
+          "poor_localisation": 0
+        },
+        "medium": {
+          "n": 28,
+          "tp": 28,
+          "no_overlap": 0,
+          "poor_localisation": 0
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,59 @@
+# Chapter 5: reference, claim and figure register
+
+Current prose review: [Chapters 4–6 framing amendments](FRAMING_REVIEW_CHAPTERS_4_TO_6_20261030.md). The earlier chapter-check receipt identifies the pre-revision prose; the framing receipt records the current text and verifies preservation of equations, tables, figures and references.
+
+Review date: 30 October 2026. Chapter: [Results and discussion](05_results_and_discussion.md). Campaign: `count_diversity_20261027_v2`. This chapter reports frozen evidence; report generation changes no acquisition, training, selection or confirmation settings.
+
+## Literature verification
+
+| Chapter reference / BibTeX key | Primary record checked | Supported use and limit |
+|---|---|---|
+| 1 / `cawley2010selection` | [JMLR journal record](https://www.jmlr.org/papers/v11/cawley10a.html), authors, title, year, volume and pages | Selection bias motivates preserving validation choices. The paper does not quantify bias for this experiment. |
+| 2 / `geirhos2020shortcut` | [Author manuscript record](https://arxiv.org/abs/2004.07780), consistent with the previously checked [journal DOI](https://doi.org/10.1038/s42256-020-00257-z) | Shortcut learning motivates a transfer limitation. The chapter does not diagnose a shortcut in this CNN. |
+| 3 / `tobin2017randomization` | [Author preprint record](https://arxiv.org/abs/1703.06907), authors, title, year and abstract | Domain randomisation achieved transfer in robotic localisation. That result does not validate weld simulation or transfer. The citation identifies the preprint. |
+
+All three keys already exist in [references.bib](references.bib). This chapter adds no duplicate entry. Literature supports the interpretation; campaign artifacts support the numerical findings.
+
+## Claim-to-evidence mapping
+
+The chapter's P1–P8 entries provide working relative links to the following sources. The [machine-readable receipt](evidence/chapter5_results_provenance.json) records source hashes and the checked values.
+
+| Destination | Evidence and fields | Verification or interpretation boundary |
+|---|---|---|
+| Table 5.1 | Independent audit, final delivery verification, frozen model timestamp, noise and method checks | 3168 scenes, 96/32/48 backgrounds, 3696 data hashes, 26 confirmation methods and freeze chronology. Computational checks do not validate physical response. |
+| Equation 5.1 and Figure 5.1 | `measured_noise.json`; raw repeat arrays; `reporting.py` | RMS of the repeat difference divided by square root of two, over scored rows 16:144. Recompute all 144 clean pairs, verify input hashes and compare the saved statistic exactly. This measures repeat variability, not deterministic image bias. |
+| Table 5.2 | `results.json`, selected `mixed_96_cnn_1027001` and `mixed_96_median`, `by_count` | TP/FP/FN, precision, recall, F1, pixel IoU and clean-acquisition counts. Keep acquisition and independent-background denominators distinct. |
+| Tables 5.3 and 5.4 | `paired_comparisons.json` | Replay all 21 saved differences with the original 2000-replicate paired background procedure. Intervals condition on fitted models and lack multiplicity adjustment. |
+| Figures 5.2 and 5.3 | All `results.json` seed records; validation selections in `frozen_models.json` | Preserve selected seeds despite higher confirmation values for other seeds. Seed ranges are not confidence intervals. No new mixed-versus-4× significance test. |
+| Table 5.5 | Mixed-method `by_size` summaries and scene-level diameter/background records | 12/17/19 independent backgrounds and 144/204/228 truth acquisitions. Each size group also includes all clean scenes; the groups do not partition the entire dataset. |
+| Figures 5.4 and 5.5 | Saved TOPO, geometry truth, confirmation scores and frozen operating points | Recompute full-ring masks and compare TP/FP/FN, predicted area and intersection with saved records before cropping. Record box IoUs in the receipt. |
+| Section 5.6.1 | `diagnostic_results.json` and diagnostic construction in `reporting.py` | One independent fixed background with a 0.2 mm nominal pore, noiseless/shot-only/full acquisition. This diagnostic supports case-specific conclusions, not population frequency estimates. |
+| Table 5.6 | Retained CNN and median summaries in `results.json` | Current confirmation population, original retained-model settings. Do not compare these values directly with historical-population scores as a causal improvement curve. |
+| Section 5.6.3 | `train_seconds` in frozen records; `prediction_seconds` in results; timer placement in `learning.py` | Training epochs include mining but exclude validation. Prediction includes loading, normalisation and score writing; it excludes subsequent postprocessing, metrics and bootstrap. These are workflow times, not isolated inference latency. |
+| Section 5.7 | Frozen grid selections, source, above evidence and literature | Six median arms select boundary threshold 12 and area 15. The finite search does not establish a global optimum. Mechanistic explanations remain hypotheses unless the specific diagnostic or mask supplies direct evidence. |
+
+## Reproduction and figure provenance
+
+From the repository root, run:
+
+```powershell
+.\.venv\Scripts\python.exe docs/thesis_draft_20261030/make_results_figures.py
+```
+
+The script verifies frozen generation/development sources, reads saved evidence and writes only chapter artifacts. It independently recomputes 182 metric aggregate groups from scene records, reproduces 21 paired comparisons and checks 144 clean repeat pairs. It verifies the chosen input hashes and full-ring prediction accounting for eight illustrated scenes. The receipt records the generator hash and all 15 PNG/PDF/SVG export hashes.
+
+| Figure | Selection and presentation |
+|---|---|
+| 5.1 | All 48 clean backgrounds. Panel (a) groups 12 backgrounds per dwell interval; panel (b) divides within background before taking medians. The shot-only reference is not a fit to total variability. |
+| 5.2 | Six arms, three count levels and validation-selected methods; common 0–1 F1 colour scale across panels. |
+| 5.3 | All three seeds per arm, selected seed marker and observed range; no confirmation reselection. |
+| 5.4 | Predetermined first confirmation background `test-000`, clean/intrinsic, repeat 0, all three counts. Same 64-pixel crop and normalisation; titles retain full-ring errors outside the crop. |
+| 5.5 | Post-hoc illustrations: first large case `test-004-open_intrinsic-c64-r0` and first small CNN miss `test-006-open_intrinsic-c64-r0` in saved order. Same 32-pixel crop rule. These examples belong to confirmation, not the independent diagnostic. |
+
+Visual review covered all five figures. Labels, legends, count/size units, common scales and crop boundaries remain readable. The error-figure title explicitly distinguishes confirmation examples from the separate diagnostic. The figures display actual saved image/mask evidence or saved metrics, not generated illustrative images.
+
+## Writing and assembly checks
+
+The chapter uses active subjects throughout authored prose and avoids first-person language. The discussion separates observed errors from possible mechanisms, avoids calling TOPO magnitude a height measurement and limits its conclusions to simulated surface-opening pores. It reports the strong 4× specialist, unresolved diversity comparisons and boundary-selected median settings alongside the CNN advantage.
+
+The [final chapter check](evidence/chapter5_editorial_checks.json) confirms 26 numerical table rows against saved results and intervals, 45 local links across the chapter and supporting registers, three valid bibliography keys, no duplicate shared keys, existing section targets, 308 source hashes and 15 figure hashes. Manual review covers the seven audit-table rows and complete clauses, including adjectival uses that a passive-voice pattern search can flag. The prose count is approximately 4200 words, including headings, tables and captions but excluding equations and reference registers. [The editorial register](EDITORIAL_REVIEW_20261030.md) records completion. The completed Chapter 6 now supplies the former forward-reference target. Final assembly must replace temporary P-labels, apply LaTeX labels/citation keys and compile the report; Markdown checks do not establish a clean LaTeX build.

@@ -1,0 +1,146 @@
+{
+  "campaign": "count_diversity_20261027_v2",
+  "selection": "First training background, 1x repeat 0; frozen mixed_96 median",
+  "input_hashes": {
+    "DataSimulation\\data\\output\\count_diversity_20261027_v2\\datasets\\train\\000\\clean_c1_r0.npy": "92ec5c560f71a63de82dfcd7bcfb79b6cc4bd3be7c99cc5ed7d2ce245f3d743d",
+    "DataSimulation\\data\\output\\count_diversity_20261027_v2\\datasets\\train\\000\\clean_geometry.npz": "cdbcbbb7d71250369f24c1662a995f14da09f3bdac73354298815306de48f723",
+    "DataSimulation\\data\\output\\count_diversity_20261027_v2\\datasets\\train\\000\\open_intrinsic_c1_r0.npy": "1382d869cd9e084273bdc33d52404359d0e418bdedcf9e1061261bdcbbc18d06",
+    "DataSimulation\\data\\output\\count_diversity_20261027_v2\\datasets\\train\\000\\open_intrinsic_geometry.npz": "16afe5a17bd246d6c094b0ec3e94b59a58530da7543022d6cdd0cef7fdb6b2c3",
+    "DataSimulation\\data\\output\\count_diversity_20261027_v2\\frozen_models.json": "9c5212ab762532cf590d393f1592eb11d179567ffeaa9cc5cfee68c0721326dd",
+    "DataSimulation\\data\\output\\count_diversity_20261027_v2\\normalization.json": "9421b2140352ad9b79d48e4d095affe14161d570a0a6e4ea59bce553ec6f0b41",
+    "DataSimulation\\data\\output\\count_diversity_20261027_v2\\development_protocol.json": "ca0cd0bf533bbbf199f0d9ead979a15e6e399096dec2b58989421c19651be91a",
+    "DataSimulation\\data\\output\\count_diversity_20261027_v2\\datasets\\train\\index.json": "9c35b4c32285138fe22b77666a447372b017795a501e053ec700910f3f61f84c",
+    "DataSimulation\\data\\output\\count_diversity_20261027_v2\\datasets\\val\\index.json": "8a3fe233587088ab4f39233085d7897bfe19ba34cf37cd07cac1aadef0e4579d",
+    "DataSimulation\\data\\output\\count_diversity_20261027_v2\\datasets\\test\\index.json": "ee952045dfca2618bc553134a6abac156010095bab96d7b794ac838d7317d91b"
+  },
+  "normalization": {
+    "low": 0.0,
+    "high": 1.10034207634628,
+    "tone": "sqrt",
+    "source": "24 nested training backgrounds, all count levels; no validation/test pixels"
+  },
+  "median_settings": {
+    "sigma": 1.0,
+    "threshold": 12.0,
+    "closing": 3,
+    "min_area": 15
+  },
+  "example_stats": [
+    {
+      "scene_id": "train-000-clean-c1-r0",
+      "full_ring_predicted_regions": 3,
+      "crop_positive_pixels": 0
+    },
+    {
+      "scene_id": "train-000-open_intrinsic-c1-r0",
+      "full_ring_predicted_regions": 5,
+      "crop_positive_pixels": 72
+    }
+  ],
+  "split_counts": {
+    "train": {
+      "backgrounds": 96,
+      "scenes": 1728,
+      "nominal_size_bins": [
+        26,
+        38,
+        32
+      ]
+    },
+    "val": {
+      "backgrounds": 32,
+      "scenes": 576,
+      "nominal_size_bins": [
+        15,
+        11,
+        6
+      ]
+    },
+    "test": {
+      "backgrounds": 48,
+      "scenes": 864,
+      "nominal_size_bins": [
+        12,
+        17,
+        19
+      ]
+    }
+  },
+  "network_shapes": {
+    "enc1": [
+      1,
+      24,
+      64,
+      64
+    ],
+    "pool1": [
+      1,
+      24,
+      32,
+      32
+    ],
+    "enc2": [
+      1,
+      48,
+      32,
+      32
+    ],
+    "pool2": [
+      1,
+      48,
+      16,
+      16
+    ],
+    "bottleneck": [
+      1,
+      96,
+      16,
+      16
+    ],
+    "up2": [
+      1,
+      48,
+      32,
+      32
+    ],
+    "dec2": [
+      1,
+      48,
+      32,
+      32
+    ],
+    "up1": [
+      1,
+      24,
+      64,
+      64
+    ],
+    "dec1": [
+      1,
+      24,
+      64,
+      64
+    ],
+    "head": [
+      1,
+      1,
+      64,
+      64
+    ]
+  },
+  "parameters": 262777,
+  "source_hash_checks": "generation and development passed",
+  "figure_files": {
+    "figure_4_1_grouped_design.pdf": "4267167deac385faaacc111f9f60309157740712f6a7b66a4f6db9a1d8b2976e",
+    "figure_4_1_grouped_design.png": "4a983c6445e3b3cf5112d5a7791827c2caab7a534617ed15610a99499a8c5ab7",
+    "figure_4_1_grouped_design.svg": "01c7db4db920bf30cd72ea9188d50f3324790e51c16576598cde6f810d226d4f",
+    "figure_4_2_median_steps.pdf": "6c54c532912c05608c71fe61faf510e86d791540f52735c1e87c66412669570a",
+    "figure_4_2_median_steps.png": "bc426c489068eb80c68f11aa4c95bf12dfb77cde1c9f8da7bdeff280f436e16d",
+    "figure_4_2_median_steps.svg": "fd85d404cc706ecc9f0ea32d1111d6621e19aa46e2b7935bc27cc6cc069f98ff",
+    "figure_4_3_network.pdf": "cc631efdd34e58e157afa8f6ef416b8638dc3c17acc4e09413858a5555f7a155",
+    "figure_4_3_network.png": "3ab393bd5d9c80e791dcb2325ad5f2c41500d37598f54b5f2b177e5c8dd8b6a0",
+    "figure_4_3_network.svg": "5a321779c0a08073864f4cd09117a83ecc40e80c1abbb25ffb938385d9114396"
+  },
+  "generator_sha256": "ff0371a1d5f15b3a6f7a554fbe1f02b2287d47d6fdd850c6876743d6a7719102",
+  "campaign_mutations": false
+}

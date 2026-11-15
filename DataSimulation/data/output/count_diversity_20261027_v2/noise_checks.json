@@ -1,0 +1,30 @@
+{
+  "status": "passed",
+  "records": [
+    {
+      "multiplier": 1,
+      "measured_variance": 6.243417828954989e-06,
+      "expected_variance": 6.25e-06,
+      "bias": -2.4817034045554465e-06
+    },
+    {
+      "multiplier": 4,
+      "measured_variance": 1.5612953347954317e-06,
+      "expected_variance": 1.5625e-06,
+      "bias": -1.2542277545435354e-06
+    },
+    {
+      "multiplier": 64,
+      "measured_variance": 9.757768282270263e-08,
+      "expected_variance": 9.765625e-08,
+      "bias": -1.5528446795087802e-07
+    }
+  ],
+  "no_noise_identity": true,
+  "expected_std_ratios": [
+    1.0,
+    0.5,
+    0.125
+  ],
+  "calibrated_primary_electrons": false
+}

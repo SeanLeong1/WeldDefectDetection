@@ -1,0 +1,80 @@
+{
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "libraries": {
+    "numpy": "2.5.2",
+    "opencv": "5.0.0",
+    "torch": "2.13.0+cpu"
+  },
+  "angular_frame": {
+    "surface_tilt_deg": 30,
+    "detector_polar_deg": 40,
+    "b": 0,
+    "renderer_emission": 0.766044443118978,
+    "local_frame_emission": 0.9848077530122079,
+    "relative_difference": -0.22213808656979372
+  },
+  "range_only_change": {
+    "original_range_um": 17.54447438891189,
+    "replacement_range_um": 999999.0,
+    "max_abs_topo_difference": 0.0
+  },
+  "global_density_guard": {
+    "b": 2.0,
+    "alpha_deg": 60.0,
+    "domain_min_bracket": -0.7320508075688772,
+    "accepted_sample_value": 1.2810058857382318
+  },
+  "unused_solid_angle_helper": {
+    "hemisphere_integral_b0_default_grid": 3.294595241546631,
+    "analytic_value": 3.141592653589793
+  },
+  "calibration_object_mode": {
+    "declared_mode": "formula_only",
+    "active_topo_scale": 3.0
+  },
+  "mock_backend_parser": {
+    "quadrants": {
+      "A": 0.1,
+      "B": 0.2,
+      "C": 0.3,
+      "D": 0.4
+    },
+    "derived": {
+      "compo": 1.0,
+      "topo": 0.3999999999999999,
+      "tx": 0.0,
+      "ty": -0.3999999999999999,
+      "rx": -0.49999999999999994
+    },
+    "parser": "json"
+  },
+  "missing_quadrants_parser": {
+    "quadrants": {
+      "A": 0.0,
+      "B": 0.0,
+      "C": 0.0,
+      "D": 0.0
+    },
+    "derived": {
+      "compo": 0.0,
+      "topo": 0.0,
+      "tx": 0.0,
+      "ty": 0.0,
+      "rx": 0.0
+    },
+    "parser": "json"
+  },
+  "context_radius_one": "Given groups=1, weight of size [8, 4, 3, 3], expected input[1, 2, 32, 32] to have 4 channels, but got 2 channels instead",
+  "cnn_component_filter": {
+    "binary_mask_pixels": 1,
+    "detection_boxes": 0
+  },
+  "cnn_quantization_confirmation": {
+    "images": 210,
+    "max_input_difference": 0.0039063392900953176,
+    "max_probability_difference": 0.09299591183662415,
+    "changed_binary_pixels": 1324,
+    "images_with_changed_mask": 172,
+    "interpretation": "Diagnostic only; neither preprocessing policy was selected using these confirmation outcomes."
+  }
+}

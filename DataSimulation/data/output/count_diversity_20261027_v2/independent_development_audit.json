@@ -1,0 +1,53 @@
+{
+  "status": "passed",
+  "scope": "completed_development_only",
+  "data": {
+    "splits": {
+      "train": {
+        "backgrounds": 96,
+        "scenes": 1728
+      },
+      "val": {
+        "backgrounds": 32,
+        "scenes": 576
+      }
+    },
+    "checked_file_hashes": 2688,
+    "minimum_pore_area_px": 7,
+    "background_and_acquisition_seeds_disjoint": true,
+    "matched_variants": true
+  },
+  "selections": {
+    "single1_96": [
+      {
+        "method": "cnn",
+        "validation_scenes": 192,
+        "original_metric_replay": true,
+        "fresh_prediction_parity": true
+      },
+      {
+        "method": "median",
+        "validation_scenes": 192,
+        "original_metric_replay": true,
+        "fresh_prediction_parity": true
+      }
+    ],
+    "single4_96": [
+      {
+        "method": "cnn",
+        "validation_scenes": 192,
+        "original_metric_replay": true,
+        "fresh_prediction_parity": true
+      },
+      {
+        "method": "median",
+        "validation_scenes": 192,
+        "original_metric_replay": true,
+        "fresh_prediction_parity": true
+      }
+    ]
+  },
+  "no_model_or_selection_changes": true,
+  "source_sha256": "c2646c09e1b702c5d133df6596181fb6de4f89973741403eb553154d6a45d15b",
+  "utc": "2026-10-27T08:10:44Z"
+}

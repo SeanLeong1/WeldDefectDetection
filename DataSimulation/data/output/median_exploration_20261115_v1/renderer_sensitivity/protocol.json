@@ -1,0 +1,28 @@
+{
+  "created_utc": "2026-11-14T13:48:06.512225+00:00",
+  "indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "modes": [
+    "original",
+    "B0971",
+    "bounded_yield"
+  ],
+  "count_multiplier": 64,
+  "repeat": 0,
+  "comparison": "Same new background seeds, geometry, acquisition parameters, masks and frozen detectors. No retraining or threshold selection.",
+  "B0971": "Replace angular emission coefficient with .971 everywhere. This extrapolates the scalar law beyond the CASINO tilt coverage and is a sensitivity assumption, not qualified physics.",
+  "bounded_yield": "Replace eta0/cos(alpha)^p with eta0*(2/(1+cos(alpha)))^p, preserving eta0 at normal incidence; clip [0,1]. This tests a bounded tilt dependence, not a calibrated physical replacement.",
+  "dependencies": {
+    "C:\\Users\\sfleo\\OneDrive\\CompSciEng\\Thesis\\Thesis\\Codebase2\\WeldDefectDetection\\median_renderer_sensitivity_20261115.py": "4a1319096499a61ab09f99f74e38959777cbbc98c41fc981e26b81056e21bc0b",
+    "C:\\Users\\sfleo\\OneDrive\\CompSciEng\\Thesis\\Thesis\\Codebase2\\WeldDefectDetection\\median_exploration_20261115.py": "8ac4780ef81f1e226baa805d389e03fb0b764cad630fbbaefadaba26bb748f00",
+    "C:\\Users\\sfleo\\OneDrive\\CompSciEng\\Thesis\\Thesis\\Codebase2\\DataSimulation\\data\\output\\median_exploration_20261115_v1\\frozen.json": "32755f556811aabb5b560b0a5934e22db9956e7b15d7a0bce0871d0577e67816"
+  }
+}

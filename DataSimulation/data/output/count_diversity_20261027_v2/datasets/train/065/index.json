@@ -1,0 +1,1916 @@
+[
+  {
+    "scene_id": "train-065-clean-c1-r0",
+    "background_id": "train-065",
+    "index": 65,
+    "seed": 2710100065,
+    "split": "train",
+    "source_class": "clean",
+    "amplitude": 0.05,
+    "dwell_bin": 1,
+    "dwell_time_us": 0.526652541738606,
+    "count_multiplier": 1,
+    "repeat": 0,
+    "acquisition_seed": 2710100065,
+    "profile": {
+      "effective_count_rate": 1732344844.8430228,
+      "readout_rms": 0.0004435997302456282,
+      "reference_dwell_us": 8.0,
+      "baseline_rms": 0.0002511174423320932,
+      "common_gain_rms": 0.002654031686654751,
+      "correlation_time_s": 0.36505471470092765,
+      "flyback_us": 20.0,
+      "contamination_per_s": 0.00013381952989950532,
+      "velocity_x_mm_s": 0.0,
+      "velocity_y_mm_s": 0.0,
+      "evidence": "assumed_sensitivity_range_not_measured"
+    },
+    "parameters": {
+      "seed": 2710100065,
+      "beam": {
+        "accelerating_voltage_kv": 60.0,
+        "beam_current_ma": 420.0,
+        "focusing_current_norm": 0.85,
+        "travel_speed_mm_min": 500.0,
+        "dwell_time_us": 0.526652541738606,
+        "focal_spot_mm": 0.7925605109848586,
+        "e0_kev": 60.0,
+        "power_w": 25200.0
+      },
+      "material": {
+        "name": "304SS",
+        "z": 25.4147,
+        "a": 54.5465,
+        "rho": 8.03,
+        "b": 0.19,
+        "n": 1.76
+      },
+      "detector": {
+        "height_mm": 12.668747851300363,
+        "radius_mm": 10.75229553684629,
+        "inner_radius_mm": 5.6368043534389,
+        "outer_radius_mm": 15.185085777734555,
+        "quadrants_deg": {
+          "A": 0.0,
+          "B": 90.0,
+          "C": 180.0,
+          "D": 270.0
+        },
+        "sensitivity": {
+          "A": 1.0160941537855597,
+          "B": 1.1522138405818776,
+          "C": 1.1161919914444023,
+          "D": 1.1328840052838651
+        },
+        "psi0_rad": 0.8670423573110543
+      },
+      "noise": {
+        "poisson_enabled": true,
+        "thermal_enabled": true,
+        "contamination_enabled": true,
+        "temperature_k": 319.2799977850878,
+        "bandwidth_hz": 11139.377159300075,
+        "contamination_rate": 0.12786185415089701,
+        "quadrant_offsets": {
+          "A": 0.09468893568726164,
+          "B": -0.002929036272538821,
+          "C": -0.14848596362624683,
+          "D": -0.12325865390223402
+        }
+      },
+      "slice": {
+        "voxel_depth_mm": 0.08,
+        "slice_offset_mm": -6.4,
+        "slice_tilt_deg": 0.0,
+        "slice_rotation_deg": 0.0
+      },
+      "defects": [],
+      "randomize_defect_location": true
+    },
+    "raw_path": "C:\\Users\\sfleo\\OneDrive\\CompSciEng\\Thesis\\Thesis\\Codebase2\\DataSimulation\\data\\output\\count_diversity_20261027_v2\\datasets\\train\\065\\clean_c1_r0.npy",
+    "raw_sha256": "88bebb0c074027ae00dfe09dd4d53abef1309135575fe8996ee3e79415c72377",
+    "geometry_path": "C:\\Users\\sfleo\\OneDrive\\CompSciEng\\Thesis\\Thesis\\Codebase2\\DataSimulation\\data\\output\\count_diversity_20261027_v2\\datasets\\train\\065\\clean_geometry.npz",
+    "geometry_sha256": "82b4f3054c251e05ccffa4cfaf8bb59ba48011d775d37459aace4df6766c2bba",
+    "area_px": 0,
+    "diameter_mm": 0.0,
+    "residual_rms": 0.0327308289706707,
+    "physical_validation": false
+  },
+  {
+    "scene_id": "train-065-clean-c4-r0",
+    "background_id": "train-065",
+    "index": 65,
+    "seed": 2710100065,
+    "split": "train",
+    "source_class": "clean",
+    "amplitude": 0.05,
+    "dwell_bin": 1,
+    "dwell_time_us": 0.526652541738606,
+    "count_multiplier": 4,
+    "repeat": 0,
+    "acquisition_seed": 2710100065,
+    "profile": {
+      "effective_count_rate": 6929379379.372091,
+      "readout_rms": 0.0004435997302456282,
+      "reference_dwell_us": 8.0,
+      "baseline_rms": 0.0002511174423320932,
+      "common_gain_rms": 0.002654031686654751,
+      "correlation_time_s": 0.36505471470092765,
+      "flyback_us": 20.0,
+      "contamination_per_s": 0.00013381952989950532,
+      "velocity_x_mm_s": 0.0,
+      "velocity_y_mm_s": 0.0,
+      "evidence": "assumed_sensitivity_range_not_measured"
+    },
+    "parameters": {
+      "seed": 2710100065,
+      "beam": {
+        "accelerating_voltage_kv": 60.0,
+        "beam_current_ma": 420.0,
+        "focusing_current_norm": 0.85,
+        "travel_speed_mm_min": 500.0,
+        "dwell_time_us": 0.526652541738606,
+        "focal_spot_mm": 0.7925605109848586,
+        "e0_kev": 60.0,
+        "power_w": 25200.0
+      },
+      "material": {
+        "name": "304SS",
+        "z": 25.4147,
+        "a": 54.5465,
+        "rho": 8.03,
+        "b": 0.19,
+        "n": 1.76
+      },
+      "detector": {
+        "height_mm": 12.668747851300363,
+        "radius_mm": 10.75229553684629,
+        "inner_radius_mm": 5.6368043534389,
+        "outer_radius_mm": 15.185085777734555,
+        "quadrants_deg": {
+          "A": 0.0,
+          "B": 90.0,
+          "C": 180.0,
+          "D": 270.0
+        },
+        "sensitivity": {
+          "A": 1.0160941537855597,
+          "B": 1.1522138405818776,
+          "C": 1.1161919914444023,
+          "D": 1.1328840052838651
+        },
+        "psi0_rad": 0.8670423573110543
+      },
+      "noise": {
+        "poisson_enabled": true,
+        "thermal_enabled": true,
+        "contamination_enabled": true,
+        "temperature_k": 319.2799977850878,
+        "bandwidth_hz": 11139.377159300075,
+        "contamination_rate": 0.12786185415089701,
+        "quadrant_offsets": {
+          "A": 0.09468893568726164,
+          "B": -0.002929036272538821,
+          "C": -0.14848596362624683,
+          "D": -0.12325865390223402
+        }
+      },
+      "slice": {
+        "voxel_depth_mm": 0.08,
+        "slice_offset_mm": -6.4,
+        "slice_tilt_deg": 0.0,
+        "slice_rotation_deg": 0.0
+      },
+      "defects": [],
+      "randomize_defect_location": true
+    },
+    "raw_path": "C:\\Users\\sfleo\\OneDrive\\CompSciEng\\Thesis\\Thesis\\Codebase2\\DataSimulation\\data\\output\\count_diversity_20261027_v2\\datasets\\train\\065\\clean_c4_r0.npy",
+    "raw_sha256": "25d760c1873e819433e31ae38e84209b58ea4943c0b5c23fc59ebf1db8f719e6",
+    "geometry_path": "C:\\Users\\sfleo\\OneDrive\\CompSciEng\\Thesis\\Thesis\\Codebase2\\DataSimulation\\data\\output\\count_diversity_20261027_v2\\datasets\\train\\065\\clean_geometry.npz",
+    "geometry_sha256": "82b4f3054c251e05ccffa4cfaf8bb59ba48011d775d37459aace4df6766c2bba",
+    "area_px": 0,
+    "diameter_mm": 0.0,
+    "residual_rms": 0.030643701553344727,
+    "physical_validation": false
+  },
+  {
+    "scene_id": "train-065-clean-c64-r0",
+    "background_id": "train-065",
+    "index": 65,
+    "seed": 2710100065,
+    "split": "train",
+    "source_class": "clean",
+    "amplitude": 0.05,
+    "dwell_bin": 1,
+    "dwell_time_us": 0.526652541738606,
+    "count_multiplier": 64,
+    "repeat": 0,
+    "acquisition_seed": 2710100065,
+    "profile": {
+      "effective_count_rate": 110870070069.95346,
+      "readout_rms": 0.0004435997302456282,
+      "reference_dwell_us": 8.0,
+      "baseline_rms": 0.0002511174423320932,
+      "common_gain_rms": 0.002654031686654751,
+      "correlation_time_s": 0.36505471470092765,
+      "flyback_us": 20.0,
+      "contamination_per_s": 0.00013381952989950532,
+      "velocity_x_mm_s": 0.0,
+      "velocity_y_mm_s": 0.0,
+      "evidence": "assumed_sensitivity_range_not_measured"
+    },
+    "parameters": {
+      "seed": 2710100065,
+      "beam": {
+        "accelerating_voltage_kv": 60.0,
+        "beam_current_ma": 420.0,
+        "focusing_current_norm": 0.85,
+        "travel_speed_mm_min": 500.0,
+        "dwell_time_us": 0.526652541738606,
+        "focal_spot_mm": 0.7925605109848586,
+        "e0_kev": 60.0,
+        "power_w": 25200.0
+      },
+      "material": {
+        "name": "304SS",
+        "z": 25.4147,
+        "a": 54.5465,
+        "rho": 8.03,
+        "b": 0.19,
+        "n": 1.76
+      },
+      "detector": {
+        "height_mm": 12.668747851300363,
+        "radius_mm": 10.75229553684629,
+        "inner_radius_mm": 5.6368043534389,
+        "outer_radius_mm": 15.185085777734555,
+        "quadrants_deg": {
+          "A": 0.0,
+          "B": 90.0,
+          "C": 180.0,
+          "D": 270.0
+        },
+        "sensitivity": {
+          "A": 1.0160941537855597,
+          "B": 1.1522138405818776,
+          "C": 1.1161919914444023,
+          "D": 1.1328840052838651
+        },
+        "psi0_rad": 0.8670423573110543
+      },
+      "noise": {
+        "poisson_enabled": true,
+        "thermal_enabled": true,
+        "contamination_enabled": true,
+        "temperature_k": 319.2799977850878,
+        "bandwidth_hz": 11139.377159300075,
+        "contamination_rate": 0.12786185415089701,
+        "quadrant_offsets": {
+          "A": 0.09468893568726164,
+          "B": -0.002929036272538821,
+          "C": -0.14848596362624683,
+          "D": -0.12325865390223402
+        }
+      },
+      "slice": {
+        "voxel_depth_mm": 0.08,
+        "slice_offset_mm": -6.4,
+        "slice_tilt_deg": 0.0,
+        "slice_rotation_deg": 0.0
+      },
+      "defects": [],
+      "randomize_defect_location": true
+    },
+    "raw_path": "C:\\Users\\sfleo\\OneDrive\\CompSciEng\\Thesis\\Thesis\\Codebase2\\DataSimulation\\data\\output\\count_diversity_20261027_v2\\datasets\\train\\065\\clean_c64_r0.npy",
+    "raw_sha256": "8285f22fefad406da8f5186e8ad3120e9b298c9a29d6cd06a729438edc6d09ff",
+    "geometry_path": "C:\\Users\\sfleo\\OneDrive\\CompSciEng\\Thesis\\Thesis\\Codebase2\\DataSimulation\\data\\output\\count_diversity_20261027_v2\\datasets\\train\\065\\clean_geometry.npz",
+    "geometry_sha256": "82b4f3054c251e05ccffa4cfaf8bb59ba48011d775d37459aace4df6766c2bba",
+    "area_px": 0,
+    "diameter_mm": 0.0,
+    "residual_rms": 0.030028700828552246,
+    "physical_validation": false
+  },
+  {
+    "scene_id": "train-065-clean-c1-r1",
+    "background_id": "train-065",
+    "index": 65,
+    "seed": 2710100065,
+    "split": "train",
+    "source_class": "clean",
+    "amplitude": 0.05,
+    "dwell_bin": 1,
+    "dwell_time_us": 0.526652541738606,
+    "count_multiplier": 1,
+    "repeat": 1,
+    "acquisition_seed": 2810100065,
+    "profile": {
+      "effective_count_rate": 1732344844.8430228,
+      "readout_rms": 0.0004435997302456282,
+      "reference_dwell_us": 8.0,
+      "baseline_rms": 0.0002511174423320932,
+      "common_gain_rms": 0.002654031686654751,
+      "correlation_time_s": 0.36505471470092765,
+      "flyback_us": 20.0,
+      "contamination_per_s": 0.00013381952989950532,
+      "velocity_x_mm_s": 0.0,
+      "velocity_y_mm_s": 0.0,
+      "evidence": "assumed_sensitivity_range_not_measured"
+    },
+    "parameters": {
+      "seed": 2710100065,
+      "beam": {
+        "accelerating_voltage_kv": 60.0,
+        "beam_current_ma": 420.0,
+        "focusing_current_norm": 0.85,
+        "travel_speed_mm_min": 500.0,
+        "dwell_time_us": 0.526652541738606,
+        "focal_spot_mm": 0.7925605109848586,
+        "e0_kev": 60.0,
+        "power_w": 25200.0
+      },
+      "material": {
+        "name": "304SS",
+        "z": 25.4147,
+        "a": 54.5465,
+        "rho": 8.03,
+        "b": 0.19,
+        "n": 1.76
+      },
+      "detector": {
+        "height_mm": 12.668747851300363,
+        "radius_mm": 10.75229553684629,
+        "inner_radius_mm": 5.6368043534389,
+        "outer_radius_mm": 15.185085777734555,
+        "quadrants_deg": {
+          "A": 0.0,
+          "B": 90.0,
+          "C": 180.0,
+          "D": 270.0
+        },
+        "sensitivity": {
+          "A": 1.0160941537855597,
+          "B": 1.1522138405818776,
+          "C": 1.1161919914444023,
+          "D": 1.1328840052838651
+        },
+        "psi0_rad": 0.8670423573110543
+      },
+      "noise": {
+        "poisson_enabled": true,
+        "thermal_enabled": true,
+        "contamination_enabled": true,
+        "temperature_k": 319.2799977850878,
+        "bandwidth_hz": 11139.377159300075,
+        "contamination_rate": 0.12786185415089701,
+        "quadrant_offsets": {
+          "A": 0.09468893568726164,
+          "B": -0.002929036272538821,
+          "C": -0.14848596362624683,
+          "D": -0.12325865390223402
+        }
+      },
+      "slice": {
+        "voxel_depth_mm": 0.08,
+        "slice_offset_mm": -6.4,
+        "slice_tilt_deg": 0.0,
+        "slice_rotation_deg": 0.0
+      },
+      "defects": [],
+      "randomize_defect_location": true
+    },
+    "raw_path": "C:\\Users\\sfleo\\OneDrive\\CompSciEng\\Thesis\\Thesis\\Codebase2\\DataSimulation\\data\\output\\count_diversity_20261027_v2\\datasets\\train\\065\\clean_c1_r1.npy",
+    "raw_sha256": "c8a2ea3c90884f67248635880614b7bdc9c8f7767beed2484de904b76bd0a7cc",
+    "geometry_path": "C:\\Users\\sfleo\\OneDrive\\CompSciEng\\Thesis\\Thesis\\Codebase2\\DataSimulation\\data\\output\\count_diversity_20261027_v2\\datasets\\train\\065\\clean_geometry.npz",
+    "geometry_sha256": "82b4f3054c251e05ccffa4cfaf8bb59ba48011d775d37459aace4df6766c2bba",
+    "area_px": 0,
+    "diameter_mm": 0.0,
+    "residual_rms": 0.033211592584848404,
+    "physical_validation": false
+  },
+  {
+    "scene_id": "train-065-clean-c4-r1",
+    "background_id": "train-065",
+    "index": 65,
+    "seed": 2710100065,
+    "split": "train",
+    "source_class": "clean",
+    "amplitude": 0.05,
+    "dwell_bin": 1,
+    "dwell_time_us": 0.526652541738606,
+    "count_multiplier": 4,
+    "repeat": 1,
+    "acquisition_seed": 2810100065,
+    "profile": {
+      "effective_count_rate": 6929379379.372091,
+      "readout_rms": 0.0004435997302456282,
+      "reference_dwell_us": 8.0,
+      "baseline_rms": 0.0002511174423320932,
+      "common_gain_rms": 0.002654031686654751,
+      "correlation_time_s": 0.36505471470092765,
+      "flyback_us": 20.0,
+      "contamination_per_s": 0.00013381952989950532,
+      "velocity_x_mm_s": 0.0,
+      "velocity_y_mm_s": 0.0,
+      "evidence": "assumed_sensitivity_range_not_measured"
+    },
+    "parameters": {
+      "seed": 2710100065,
+      "beam": {
+        "accelerating_voltage_kv": 60.0,
+        "beam_current_ma": 420.0,
+        "focusing_current_norm": 0.85,
+        "travel_speed_mm_min": 500.0,
+        "dwell_time_us": 0.526652541738606,
+        "focal_spot_mm": 0.7925605109848586,
+        "e0_kev": 60.0,
+        "power_w": 25200.0
+      },
+      "material": {
+        "name": "304SS",
+        "z": 25.4147,
+        "a": 54.5465,
+        "rho": 8.03,
+        "b": 0.19,
+        "n": 1.76
+      },
+      "detector": {
+        "height_mm": 12.668747851300363,
+        "radius_mm": 10.75229553684629,
+        "inner_radius_mm": 5.6368043534389,
+        "outer_radius_mm": 15.185085777734555,
+        "quadrants_deg": {
+          "A": 0.0,
+          "B": 90.0,
+          "C": 180.0,
+          "D": 270.0
+        },
+        "sensitivity": {
+          "A": 1.0160941537855597,
+          "B": 1.1522138405818776,
+          "C": 1.1161919914444023,
+          "D": 1.1328840052838651
+        },
+        "psi0_rad": 0.8670423573110543
+      },
+      "noise": {
+        "poisson_enabled": true,
+        "thermal_enabled": true,
+        "contamination_enabled": true,
+        "temperature_k": 319.2799977850878,
+        "bandwidth_hz": 11139.377159300075,
+        "contamination_rate": 0.12786185415089701,
+        "quadrant_offsets": {
+          "A": 0.09468893568726164,
+          "B": -0.002929036272538821,
+          "C": -0.14848596362624683,
+          "D": -0.12325865390223402
+        }
+      },
+      "slice": {
+        "voxel_depth_mm": 0.08,
+        "slice_offset_mm": -6.4,
+        "slice_tilt_deg": 0.0,
+        "slice_rotation_deg": 0.0
+      },
+      "defects": [],
+      "randomize_defect_location": true
+    },
+    "raw_path": "C:\\Users\\sfleo\\OneDrive\\CompSciEng\\Thesis\\Thesis\\Codebase2\\DataSimulation\\data\\output\\count_diversity_20261027_v2\\datasets\\train\\065\\clean_c4_r1.npy",
+    "raw_sha256": "8fbde8800b8336abcb10b6697bdcd6a3d3d5dbf1d4928690f6e25818f9e1e7c2",
+    "geometry_path": "C:\\Users\\sfleo\\OneDrive\\CompSciEng\\Thesis\\Thesis\\Codebase2\\DataSimulation\\data\\output\\count_diversity_20261027_v2\\datasets\\train\\065\\clean_geometry.npz",
+    "geometry_sha256": "82b4f3054c251e05ccffa4cfaf8bb59ba48011d775d37459aace4df6766c2bba",
+    "area_px": 0,
+    "diameter_mm": 0.0,
+    "residual_rms": 0.03122892789542675,
+    "physical_validation": false
+  },
+  {
+    "scene_id": "train-065-clean-c64-r1",
+    "background_id": "train-065",
+    "index": 65,
+    "seed": 2710100065,
+    "split": "train",
+    "source_class": "clean",
+    "amplitude": 0.05,
+    "dwell_bin": 1,
+    "dwell_time_us": 0.526652541738606,
+    "count_multiplier": 64,
+    "repeat": 1,
+    "acquisition_seed": 2810100065,
+    "profile": {
+      "effective_count_rate": 110870070069.95346,
+      "readout_rms": 0.0004435997302456282,
+      "reference_dwell_us": 8.0,
+      "baseline_rms": 0.0002511174423320932,
+      "common_gain_rms": 0.002654031686654751,
+      "correlation_time_s": 0.36505471470092765,
+      "flyback_us": 20.0,
+      "contamination_per_s": 0.00013381952989950532,
+      "velocity_x_mm_s": 0.0,
+      "velocity_y_mm_s": 0.0,
+      "evidence": "assumed_sensitivity_range_not_measured"
+    },
+    "parameters": {
+      "seed": 2710100065,
+      "beam": {
+        "accelerating_voltage_kv": 60.0,
+        "beam_current_ma": 420.0,
+        "focusing_current_norm": 0.85,
+        "travel_speed_mm_min": 500.0,
+        "dwell_time_us": 0.526652541738606,
+        "focal_spot_mm": 0.7925605109848586,
+        "e0_kev": 60.0,
+        "power_w": 25200.0
+      },
+      "material": {
+        "name": "304SS",
+        "z": 25.4147,
+        "a": 54.5465,
+        "rho": 8.03,
+        "b": 0.19,
+        "n": 1.76
+      },
+      "detector": {
+        "height_mm": 12.668747851300363,
+        "radius_mm": 10.75229553684629,
+        "inner_radius_mm": 5.6368043534389,
+        "outer_radius_mm": 15.185085777734555,
+        "quadrants_deg": {
+          "A": 0.0,
+          "B": 90.0,
+          "C": 180.0,
+          "D": 270.0
+        },
+        "sensitivity": {
+          "A": 1.0160941537855597,
+          "B": 1.1522138405818776,
+          "C": 1.1161919914444023,
+          "D": 1.1328840052838651
+        },
+        "psi0_rad": 0.8670423573110543
+      },
+      "noise": {
+        "poisson_enabled": true,
+        "thermal_enabled": true,
+        "contamination_enabled": true,
+        "temperature_k": 319.2799977850878,
+        "bandwidth_hz": 11139.377159300075,
+        "contamination_rate": 0.12786185415089701,
+        "quadrant_offsets": {
+          "A": 0.09468893568726164,
+          "B": -0.002929036272538821,
+          "C": -0.14848596362624683,
+          "D": -0.12325865390223402
+        }
+      },
+      "slice": {
+        "voxel_depth_mm": 0.08,
+        "slice_offset_mm": -6.4,
+        "slice_tilt_deg": 0.0,
+        "slice_rotation_deg": 0.0
+      },
+      "defects": [],
+      "randomize_defect_location": true
+    },
+    "raw_path": "C:\\Users\\sfleo\\OneDrive\\CompSciEng\\Thesis\\Thesis\\Codebase2\\DataSimulation\\data\\output\\count_diversity_20261027_v2\\datasets\\train\\065\\clean_c64_r1.npy",
+    "raw_sha256": "2b3dbfc8d6449f83125a387d676997257095f2f4e171e5be835e7f6d91557df0",
+    "geometry_path": "C:\\Users\\sfleo\\OneDrive\\CompSciEng\\Thesis\\Thesis\\Codebase2\\DataSimulation\\data\\output\\count_diversity_20261027_v2\\datasets\\train\\065\\clean_geometry.npz",
+    "geometry_sha256": "82b4f3054c251e05ccffa4cfaf8bb59ba48011d775d37459aace4df6766c2bba",
+    "area_px": 0,
+    "diameter_mm": 0.0,
+    "residual_rms": 0.030637236312031746,
+    "physical_validation": false
+  },
+  {
+    "scene_id": "train-065-open_intrinsic-c1-r0",
+    "background_id": "train-065",
+    "index": 65,
+    "seed": 2710100065,
+    "split": "train",
+    "source_class": "open_intrinsic",
+    "amplitude": 0.05,
+    "dwell_bin": 1,
+    "dwell_time_us": 0.526652541738606,
+    "count_multiplier": 1,
+    "repeat": 0,
+    "acquisition_seed": 2710100065,
+    "profile": {
+      "effective_count_rate": 1732344844.8430228,
+      "readout_rms": 0.0004435997302456282,
+      "reference_dwell_us": 8.0,
+      "baseline_rms": 0.0002511174423320932,
+      "common_gain_rms": 0.002654031686654751,
+      "correlation_time_s": 0.36505471470092765,
+      "flyback_us": 20.0,
+      "contamination_per_s": 0.00013381952989950532,
+      "velocity_x_mm_s": 0.0,
+      "velocity_y_mm_s": 0.0,
+      "evidence": "assumed_sensitivity_range_not_measured"
+    },
+    "parameters": {
+      "seed": 2710100065,
+      "beam": {
+        "accelerating_voltage_kv": 60.0,
+        "beam_current_ma": 420.0,
+        "focusing_current_norm": 0.85,
+        "travel_speed_mm_min": 500.0,
+        "dwell_time_us": 0.526652541738606,
+        "focal_spot_mm": 0.7925605109848586,
+        "e0_kev": 60.0,
+        "power_w": 25200.0
+      },
+      "material": {
+        "name": "304SS",
+        "z": 25.4147,
+        "a": 54.5465,
+        "rho": 8.03,
+        "b": 0.19,
+        "n": 1.76
+      },
+      "detector": {
+        "height_mm": 12.668747851300363,
+        "radius_mm": 10.75229553684629,
+        "inner_radius_mm": 5.6368043534389,
+        "outer_radius_mm": 15.185085777734555,
+        "quadrants_deg": {
+          "A": 0.0,
+          "B": 90.0,
+          "C": 180.0,
+          "D": 270.0
+        },
+        "sensitivity": {
+          "A": 1.0160941537855597,
+          "B": 1.1522138405818776,
+          "C": 1.1161919914444023,
+          "D": 1.1328840052838651
+        },
+        "psi0_rad": 0.8670423573110543
+      },
+      "noise": {
+        "poisson_enabled": true,
+        "thermal_enabled": true,
+        "contamination_enabled": true,
+        "temperature_k": 319.2799977850878,
+        "bandwidth_hz": 11139.377159300075,
+        "contamination_rate": 0.12786185415089701,
+        "quadrant_offsets": {
+          "A": 0.09468893568726164,
+          "B": -0.002929036272538821,
+          "C": -0.14848596362624683,
+          "D": -0.12325865390223402
+        }
+      },
+      "slice": {
+        "voxel_depth_mm": 0.08,
+        "slice_offset_mm": -6.4,
+        "slice_tilt_deg": 0.0,
+        "slice_rotation_deg": 0.0
+      },
+      "defects": [
+        {
+          "type": "intrinsic_pore",
+          "params": {
+            "kind": "intrinsic_pore",
+            "effect": "open",
+            "diameter_mm": 0.20568363997482916,
+            "depth_mm": 0.20214211916197328,
+            "angle_rad": 4.172622254642307,
+            "radial_offset_mm": -1.05,
+            "coupling_fraction": 0.0,
+            "roof_mm": 0.15
+          }
+        }
+      ],
+      "randomize_defect_location": true
+    },
+    "raw_path": "C:\\Users\\sfleo\\OneDrive\\CompSciEng\\Thesis\\Thesis\\Codebase2\\DataSimulation\\data\\output\\count_diversity_20261027_v2\\datasets\\train\\065\\open_intrinsic_c1_r0.npy",
+    "raw_sha256": "afc5c8d2e23e1240fc7ec96668da8f52b78131c203d6933cbf5b64a8d3c53837",
+    "geometry_path": "C:\\Users\\sfleo\\OneDrive\\CompSciEng\\Thesis\\Thesis\\Codebase2\\DataSimulation\\data\\output\\count_diversity_20261027_v2\\datasets\\train\\065\\open_intrinsic_geometry.npz",
+    "geometry_sha256": "4b08e78c3be083cfe6aad8aeda14e1616fe63b56b28a4481a25f3e565b8fcdec",
+    "area_px": 14,
+    "diameter_mm": 0.20568363997482916,
+    "residual_rms": 0.032728370279073715,
+    "physical_validation": false
+  },
+  {
+    "scene_id": "train-065-open_intrinsic-c4-r0",
+    "background_id": "train-065",
+    "index": 65,
+    "seed": 2710100065,
+    "split": "train",
+    "source_class": "open_intrinsic",
+    "amplitude": 0.05,
+    "dwell_bin": 1,
+    "dwell_time_us": 0.526652541738606,
+    "count_multiplier": 4,
+    "repeat": 0,
+    "acquisition_seed": 2710100065,
+    "profile": {
+      "effective_count_rate": 6929379379.372091,
+      "readout_rms": 0.0004435997302456282,
+      "reference_dwell_us": 8.0,
+      "baseline_rms": 0.0002511174423320932,
+      "common_gain_rms": 0.002654031686654751,
+      "correlation_time_s": 0.36505471470092765,
+      "flyback_us": 20.0,
+      "contamination_per_s": 0.00013381952989950532,
+      "velocity_x_mm_s": 0.0,
+      "velocity_y_mm_s": 0.0,
+      "evidence": "assumed_sensitivity_range_not_measured"
+    },
+    "parameters": {
+      "seed": 2710100065,
+      "beam": {
+        "accelerating_voltage_kv": 60.0,
+        "beam_current_ma": 420.0,
+        "focusing_current_norm": 0.85,
+        "travel_speed_mm_min": 500.0,
+        "dwell_time_us": 0.526652541738606,
+        "focal_spot_mm": 0.7925605109848586,
+        "e0_kev": 60.0,
+        "power_w": 25200.0
+      },
+      "material": {
+        "name": "304SS",
+        "z": 25.4147,
+        "a": 54.5465,
+        "rho": 8.03,
+        "b": 0.19,
+        "n": 1.76
+      },
+      "detector": {
+        "height_mm": 12.668747851300363,
+        "radius_mm": 10.75229553684629,
+        "inner_radius_mm": 5.6368043534389,
+        "outer_radius_mm": 15.185085777734555,
+        "quadrants_deg": {
+          "A": 0.0,
+          "B": 90.0,
+          "C": 180.0,
+          "D": 270.0
+        },
+        "sensitivity": {
+          "A": 1.0160941537855597,
+          "B": 1.1522138405818776,
+          "C": 1.1161919914444023,
+          "D": 1.1328840052838651
+        },
+        "psi0_rad": 0.8670423573110543
+      },
+      "noise": {
+        "poisson_enabled": true,
+        "thermal_enabled": true,
+        "contamination_enabled": true,
+        "temperature_k": 319.2799977850878,
+        "bandwidth_hz": 11139.377159300075,
+        "contamination_rate": 0.12786185415089701,
+        "quadrant_offsets": {
+          "A": 0.09468893568726164,
+          "B": -0.002929036272538821,
+          "C": -0.14848596362624683,
+          "D": -0.12325865390223402
+        }
+      },
+      "slice": {
+        "voxel_depth_mm": 0.08,
+        "slice_offset_mm": -6.4,
+        "slice_tilt_deg": 0.0,
+        "slice_rotation_deg": 0.0
+      },
+      "defects": [
+        {
+          "type": "intrinsic_pore",
+          "params": {
+            "kind": "intrinsic_pore",
+            "effect": "open",
+            "diameter_mm": 0.20568363997482916,
+            "depth_mm": 0.20214211916197328,
+            "angle_rad": 4.172622254642307,
+            "radial_offset_mm": -1.05,
+            "coupling_fraction": 0.0,
+            "roof_mm": 0.15
+          }
+        }
+      ],
+      "randomize_defect_location": true
+    },
+    "raw_path": "C:\\Users\\sfleo\\OneDrive\\CompSciEng\\Thesis\\Thesis\\Codebase2\\DataSimulation\\data\\output\\count_diversity_20261027_v2\\datasets\\train\\065\\open_intrinsic_c4_r0.npy",
+    "raw_sha256": "a3e607a273b1c40d1b17b9b4cb2e79bd895dfbdcd6cbeaaa221ce0b8d56ec9f5",
+    "geometry_path": "C:\\Users\\sfleo\\OneDrive\\CompSciEng\\Thesis\\Thesis\\Codebase2\\DataSimulation\\data\\output\\count_diversity_20261027_v2\\datasets\\train\\065\\open_intrinsic_geometry.npz",
+    "geometry_sha256": "4b08e78c3be083cfe6aad8aeda14e1616fe63b56b28a4481a25f3e565b8fcdec",
+    "area_px": 14,
+    "diameter_mm": 0.20568363997482916,
+    "residual_rms": 0.030644362792372704,
+    "physical_validation": false
+  },
+  {
+    "scene_id": "train-065-open_intrinsic-c64-r0",
+    "background_id": "train-065",
+    "index": 65,
+    "seed": 2710100065,
+    "split": "train",
+    "source_class": "open_intrinsic",
+    "amplitude": 0.05,
+    "dwell_bin": 1,
+    "dwell_time_us": 0.526652541738606,
+    "count_multiplier": 64,
+    "repeat": 0,
+    "acquisition_seed": 2710100065,
+    "profile": {
+      "effective_count_rate": 110870070069.95346,
+      "readout_rms": 0.0004435997302456282,
+      "reference_dwell_us": 8.0,
+      "baseline_rms": 0.0002511174423320932,
+      "common_gain_rms": 0.002654031686654751,
+      "correlation_time_s": 0.36505471470092765,
+      "flyback_us": 20.0,
+      "contamination_per_s": 0.00013381952989950532,
+      "velocity_x_mm_s": 0.0,
+      "velocity_y_mm_s": 0.0,
+      "evidence": "assumed_sensitivity_range_not_measured"
+    },
+    "parameters": {
+      "seed": 2710100065,
+      "beam": {
+        "accelerating_voltage_kv": 60.0,
+        "beam_current_ma": 420.0,
+        "focusing_current_norm": 0.85,
+        "travel_speed_mm_min": 500.0,
+        "dwell_time_us": 0.526652541738606,
+        "focal_spot_mm": 0.7925605109848586,
+        "e0_kev": 60.0,
+        "power_w": 25200.0
+      },
+      "material": {
+        "name": "304SS",
+        "z": 25.4147,
+        "a": 54.5465,
+        "rho": 8.03,
+        "b": 0.19,
+        "n": 1.76
+      },
+      "detector": {
+        "height_mm": 12.668747851300363,
+        "radius_mm": 10.75229553684629,
+        "inner_radius_mm": 5.6368043534389,
+        "outer_radius_mm": 15.185085777734555,
+        "quadrants_deg": {
+          "A": 0.0,
+          "B": 90.0,
+          "C": 180.0,
+          "D": 270.0
+        },
+        "sensitivity": {
+          "A": 1.0160941537855597,
+          "B": 1.1522138405818776,
+          "C": 1.1161919914444023,
+          "D": 1.1328840052838651
+        },
+        "psi0_rad": 0.8670423573110543
+      },
+      "noise": {
+        "poisson_enabled": true,
+        "thermal_enabled": true,
+        "contamination_enabled": true,
+        "temperature_k": 319.2799977850878,
+        "bandwidth_hz": 11139.377159300075,
+        "contamination_rate": 0.12786185415089701,
+        "quadrant_offsets": {
+          "A": 0.09468893568726164,
+          "B": -0.002929036272538821,
+          "C": -0.14848596362624683,
+          "D": -0.12325865390223402
+        }
+      },
+      "slice": {
+        "voxel_depth_mm": 0.08,
+        "slice_offset_mm": -6.4,
+        "slice_tilt_deg": 0.0,
+        "slice_rotation_deg": 0.0
+      },
+      "defects": [
+        {
+          "type": "intrinsic_pore",
+          "params": {
+            "kind": "intrinsic_pore",
+            "effect": "open",
+            "diameter_mm": 0.20568363997482916,
+            "depth_mm": 0.20214211916197328,
+            "angle_rad": 4.172622254642307,
+            "radial_offset_mm": -1.05,
+            "coupling_fraction": 0.0,
+            "roof_mm": 0.15
+          }
+        }
+      ],
+      "randomize_defect_location": true
+    },
+    "raw_path": "C:\\Users\\sfleo\\OneDrive\\CompSciEng\\Thesis\\Thesis\\Codebase2\\DataSimulation\\data\\output\\count_diversity_20261027_v2\\datasets\\train\\065\\open_intrinsic_c64_r0.npy",
+    "raw_sha256": "97d928f0af5038983bcac5fbaa99e5b0fac4f8100f470cecc739b7b9bd9f3282",
+    "geometry_path": "C:\\Users\\sfleo\\OneDrive\\CompSciEng\\Thesis\\Thesis\\Codebase2\\DataSimulation\\data\\output\\count_diversity_20261027_v2\\datasets\\train\\065\\open_intrinsic_geometry.npz",
+    "geometry_sha256": "4b08e78c3be083cfe6aad8aeda14e1616fe63b56b28a4481a25f3e565b8fcdec",
+    "area_px": 14,
+    "diameter_mm": 0.20568363997482916,
+    "residual_rms": 0.03002968616783619,
+    "physical_validation": false
+  },
+  {
+    "scene_id": "train-065-open_intrinsic-c1-r1",
+    "background_id": "train-065",
+    "index": 65,
+    "seed": 2710100065,
+    "split": "train",
+    "source_class": "open_intrinsic",
+    "amplitude": 0.05,
+    "dwell_bin": 1,
+    "dwell_time_us": 0.526652541738606,
+    "count_multiplier": 1,
+    "repeat": 1,
+    "acquisition_seed": 2810100065,
+    "profile": {
+      "effective_count_rate": 1732344844.8430228,
+      "readout_rms": 0.0004435997302456282,
+      "reference_dwell_us": 8.0,
+      "baseline_rms": 0.0002511174423320932,
+      "common_gain_rms": 0.002654031686654751,
+      "correlation_time_s": 0.36505471470092765,
+      "flyback_us": 20.0,
+      "contamination_per_s": 0.00013381952989950532,
+      "velocity_x_mm_s": 0.0,
+      "velocity_y_mm_s": 0.0,
+      "evidence": "assumed_sensitivity_range_not_measured"
+    },
+    "parameters": {
+      "seed": 2710100065,
+      "beam": {
+        "accelerating_voltage_kv": 60.0,
+        "beam_current_ma": 420.0,
+        "focusing_current_norm": 0.85,
+        "travel_speed_mm_min": 500.0,
+        "dwell_time_us": 0.526652541738606,
+        "focal_spot_mm": 0.7925605109848586,
+        "e0_kev": 60.0,
+        "power_w": 25200.0
+      },
+      "material": {
+        "name": "304SS",
+        "z": 25.4147,
+        "a": 54.5465,
+        "rho": 8.03,
+        "b": 0.19,
+        "n": 1.76
+      },
+      "detector": {
+        "height_mm": 12.668747851300363,
+        "radius_mm": 10.75229553684629,
+        "inner_radius_mm": 5.6368043534389,
+        "outer_radius_mm": 15.185085777734555,
+        "quadrants_deg": {
+          "A": 0.0,
+          "B": 90.0,
+          "C": 180.0,
+          "D": 270.0
+        },
+        "sensitivity": {
+          "A": 1.0160941537855597,
+          "B": 1.1522138405818776,
+          "C": 1.1161919914444023,
+          "D": 1.1328840052838651
+        },
+        "psi0_rad": 0.8670423573110543
+      },
+      "noise": {
+        "poisson_enabled": true,
+        "thermal_enabled": true,
+        "contamination_enabled": true,
+        "temperature_k": 319.2799977850878,
+        "bandwidth_hz": 11139.377159300075,
+        "contamination_rate": 0.12786185415089701,
+        "quadrant_offsets": {
+          "A": 0.09468893568726164,
+          "B": -0.002929036272538821,
+          "C": -0.14848596362624683,
+          "D": -0.12325865390223402
+        }
+      },
+      "slice": {
+        "voxel_depth_mm": 0.08,
+        "slice_offset_mm": -6.4,
+        "slice_tilt_deg": 0.0,
+        "slice_rotation_deg": 0.0
+      },
+      "defects": [
+        {
+          "type": "intrinsic_pore",
+          "params": {
+            "kind": "intrinsic_pore",
+            "effect": "open",
+            "diameter_mm": 0.20568363997482916,
+            "depth_mm": 0.20214211916197328,
+            "angle_rad": 4.172622254642307,
+            "radial_offset_mm": -1.05,
+            "coupling_fraction": 0.0,
+            "roof_mm": 0.15
+          }
+        }
+      ],
+      "randomize_defect_location": true
+    },
+    "raw_path": "C:\\Users\\sfleo\\OneDrive\\CompSciEng\\Thesis\\Thesis\\Codebase2\\DataSimulation\\data\\output\\count_diversity_20261027_v2\\datasets\\train\\065\\open_intrinsic_c1_r1.npy",
+    "raw_sha256": "6891f3e554eeb0382676ee73c43248d5ab166e3bb9ef4b68d4c83a2c38595c24",
+    "geometry_path": "C:\\Users\\sfleo\\OneDrive\\CompSciEng\\Thesis\\Thesis\\Codebase2\\DataSimulation\\data\\output\\count_diversity_20261027_v2\\datasets\\train\\065\\open_intrinsic_geometry.npz",
+    "geometry_sha256": "4b08e78c3be083cfe6aad8aeda14e1616fe63b56b28a4481a25f3e565b8fcdec",
+    "area_px": 14,
+    "diameter_mm": 0.20568363997482916,
+    "residual_rms": 0.03321142867207527,
+    "physical_validation": false
+  },
+  {
+    "scene_id": "train-065-open_intrinsic-c4-r1",
+    "background_id": "train-065",
+    "index": 65,
+    "seed": 2710100065,
+    "split": "train",
+    "source_class": "open_intrinsic",
+    "amplitude": 0.05,
+    "dwell_bin": 1,
+    "dwell_time_us": 0.526652541738606,
+    "count_multiplier": 4,
+    "repeat": 1,
+    "acquisition_seed": 2810100065,
+    "profile": {
+      "effective_count_rate": 6929379379.372091,
+      "readout_rms": 0.0004435997302456282,
+      "reference_dwell_us": 8.0,
+      "baseline_rms": 0.0002511174423320932,
+      "common_gain_rms": 0.002654031686654751,
+      "correlation_time_s": 0.36505471470092765,
+      "flyback_us": 20.0,
+      "contamination_per_s": 0.00013381952989950532,
+      "velocity_x_mm_s": 0.0,
+      "velocity_y_mm_s": 0.0,
+      "evidence": "assumed_sensitivity_range_not_measured"
+    },
+    "parameters": {
+      "seed": 2710100065,
+      "beam": {
+        "accelerating_voltage_kv": 60.0,
+        "beam_current_ma": 420.0,
+        "focusing_current_norm": 0.85,
+        "travel_speed_mm_min": 500.0,
+        "dwell_time_us": 0.526652541738606,
+        "focal_spot_mm": 0.7925605109848586,
+        "e0_kev": 60.0,
+        "power_w": 25200.0
+      },
+      "material": {
+        "name": "304SS",
+        "z": 25.4147,
+        "a": 54.5465,
+        "rho": 8.03,
+        "b": 0.19,
+        "n": 1.76
+      },
+      "detector": {
+        "height_mm": 12.668747851300363,
+        "radius_mm": 10.75229553684629,
+        "inner_radius_mm": 5.6368043534389,
+        "outer_radius_mm": 15.185085777734555,
+        "quadrants_deg": {
+          "A": 0.0,
+          "B": 90.0,
+          "C": 180.0,
+          "D": 270.0
+        },
+        "sensitivity": {
+          "A": 1.0160941537855597,
+          "B": 1.1522138405818776,
+          "C": 1.1161919914444023,
+          "D": 1.1328840052838651
+        },
+        "psi0_rad": 0.8670423573110543
+      },
+      "noise": {
+        "poisson_enabled": true,
+        "thermal_enabled": true,
+        "contamination_enabled": true,
+        "temperature_k": 319.2799977850878,
+        "bandwidth_hz": 11139.377159300075,
+        "contamination_rate": 0.12786185415089701,
+        "quadrant_offsets": {
+          "A": 0.09468893568726164,
+          "B": -0.002929036272538821,
+          "C": -0.14848596362624683,
+          "D": -0.12325865390223402
+        }
+      },
+      "slice": {
+        "voxel_depth_mm": 0.08,
+        "slice_offset_mm": -6.4,
+        "slice_tilt_deg": 0.0,
+        "slice_rotation_deg": 0.0
+      },
+      "defects": [
+        {
+          "type": "intrinsic_pore",
+          "params": {
+            "kind": "intrinsic_pore",
+            "effect": "open",
+            "diameter_mm": 0.20568363997482916,
+            "depth_mm": 0.20214211916197328,
+            "angle_rad": 4.172622254642307,
+            "radial_offset_mm": -1.05,
+            "coupling_fraction": 0.0,
+            "roof_mm": 0.15
+          }
+        }
+      ],
+      "randomize_defect_location": true
+    },
+    "raw_path": "C:\\Users\\sfleo\\OneDrive\\CompSciEng\\Thesis\\Thesis\\Codebase2\\DataSimulation\\data\\output\\count_diversity_20261027_v2\\datasets\\train\\065\\open_intrinsic_c4_r1.npy",
+    "raw_sha256": "eccefc694acc8602e7f8b746304785062d6fd15b70d3171741347620b1ad15ea",
+    "geometry_path": "C:\\Users\\sfleo\\OneDrive\\CompSciEng\\Thesis\\Thesis\\Codebase2\\DataSimulation\\data\\output\\count_diversity_20261027_v2\\datasets\\train\\065\\open_intrinsic_geometry.npz",
+    "geometry_sha256": "4b08e78c3be083cfe6aad8aeda14e1616fe63b56b28a4481a25f3e565b8fcdec",
+    "area_px": 14,
+    "diameter_mm": 0.20568363997482916,
+    "residual_rms": 0.031228648498654366,
+    "physical_validation": false
+  },
+  {
+    "scene_id": "train-065-open_intrinsic-c64-r1",
+    "background_id": "train-065",
+    "index": 65,
+    "seed": 2710100065,
+    "split": "train",
+    "source_class": "open_intrinsic",
+    "amplitude": 0.05,
+    "dwell_bin": 1,
+    "dwell_time_us": 0.526652541738606,
+    "count_multiplier": 64,
+    "repeat": 1,
+    "acquisition_seed": 2810100065,
+    "profile": {
+      "effective_count_rate": 110870070069.95346,
+      "readout_rms": 0.0004435997302456282,
+      "reference_dwell_us": 8.0,
+      "baseline_rms": 0.0002511174423320932,
+      "common_gain_rms": 0.002654031686654751,
+      "correlation_time_s": 0.36505471470092765,
+      "flyback_us": 20.0,
+      "contamination_per_s": 0.00013381952989950532,
+      "velocity_x_mm_s": 0.0,
+      "velocity_y_mm_s": 0.0,
+      "evidence": "assumed_sensitivity_range_not_measured"
+    },
+    "parameters": {
+      "seed": 2710100065,
+      "beam": {
+        "accelerating_voltage_kv": 60.0,
+        "beam_current_ma": 420.0,
+        "focusing_current_norm": 0.85,
+        "travel_speed_mm_min": 500.0,
+        "dwell_time_us": 0.526652541738606,
+        "focal_spot_mm": 0.7925605109848586,
+        "e0_kev": 60.0,
+        "power_w": 25200.0
+      },
+      "material": {
+        "name": "304SS",
+        "z": 25.4147,
+        "a": 54.5465,
+        "rho": 8.03,
+        "b": 0.19,
+        "n": 1.76
+      },
+      "detector": {
+        "height_mm": 12.668747851300363,
+        "radius_mm": 10.75229553684629,
+        "inner_radius_mm": 5.6368043534389,
+        "outer_radius_mm": 15.185085777734555,
+        "quadrants_deg": {
+          "A": 0.0,
+          "B": 90.0,
+          "C": 180.0,
+          "D": 270.0
+        },
+        "sensitivity": {
+          "A": 1.0160941537855597,
+          "B": 1.1522138405818776,
+          "C": 1.1161919914444023,
+          "D": 1.1328840052838651
+        },
+        "psi0_rad": 0.8670423573110543
+      },
+      "noise": {
+        "poisson_enabled": true,
+        "thermal_enabled": true,
+        "contamination_enabled": true,
+        "temperature_k": 319.2799977850878,
+        "bandwidth_hz": 11139.377159300075,
+        "contamination_rate": 0.12786185415089701,
+        "quadrant_offsets": {
+          "A": 0.09468893568726164,
+          "B": -0.002929036272538821,
+          "C": -0.14848596362624683,
+          "D": -0.12325865390223402
+        }
+      },
+      "slice": {
+        "voxel_depth_mm": 0.08,
+        "slice_offset_mm": -6.4,
+        "slice_tilt_deg": 0.0,
+        "slice_rotation_deg": 0.0
+      },
+      "defects": [
+        {
+          "type": "intrinsic_pore",
+          "params": {
+            "kind": "intrinsic_pore",
+            "effect": "open",
+            "diameter_mm": 0.20568363997482916,
+            "depth_mm": 0.20214211916197328,
+            "angle_rad": 4.172622254642307,
+            "radial_offset_mm": -1.05,
+            "coupling_fraction": 0.0,
+            "roof_mm": 0.15
+          }
+        }
+      ],
+      "randomize_defect_location": true
+    },
+    "raw_path": "C:\\Users\\sfleo\\OneDrive\\CompSciEng\\Thesis\\Thesis\\Codebase2\\DataSimulation\\data\\output\\count_diversity_20261027_v2\\datasets\\train\\065\\open_intrinsic_c64_r1.npy",
+    "raw_sha256": "532a495e5d2828c5b1ec76f258100e9617e117162815b4648186a24a1ad56eb2",
+    "geometry_path": "C:\\Users\\sfleo\\OneDrive\\CompSciEng\\Thesis\\Thesis\\Codebase2\\DataSimulation\\data\\output\\count_diversity_20261027_v2\\datasets\\train\\065\\open_intrinsic_geometry.npz",
+    "geometry_sha256": "4b08e78c3be083cfe6aad8aeda14e1616fe63b56b28a4481a25f3e565b8fcdec",
+    "area_px": 14,
+    "diameter_mm": 0.20568363997482916,
+    "residual_rms": 0.030637260526418686,
+    "physical_validation": false
+  },
+  {
+    "scene_id": "train-065-open_keyhole-c1-r0",
+    "background_id": "train-065",
+    "index": 65,
+    "seed": 2710100065,
+    "split": "train",
+    "source_class": "open_keyhole",
+    "amplitude": 0.05,
+    "dwell_bin": 1,
+    "dwell_time_us": 0.526652541738606,
+    "count_multiplier": 1,
+    "repeat": 0,
+    "acquisition_seed": 2710100065,
+    "profile": {
+      "effective_count_rate": 1732344844.8430228,
+      "readout_rms": 0.0004435997302456282,
+      "reference_dwell_us": 8.0,
+      "baseline_rms": 0.0002511174423320932,
+      "common_gain_rms": 0.002654031686654751,
+      "correlation_time_s": 0.36505471470092765,
+      "flyback_us": 20.0,
+      "contamination_per_s": 0.00013381952989950532,
+      "velocity_x_mm_s": 0.0,
+      "velocity_y_mm_s": 0.0,
+      "evidence": "assumed_sensitivity_range_not_measured"
+    },
+    "parameters": {
+      "seed": 2710100065,
+      "beam": {
+        "accelerating_voltage_kv": 60.0,
+        "beam_current_ma": 420.0,
+        "focusing_current_norm": 0.85,
+        "travel_speed_mm_min": 500.0,
+        "dwell_time_us": 0.526652541738606,
+        "focal_spot_mm": 0.7925605109848586,
+        "e0_kev": 60.0,
+        "power_w": 25200.0
+      },
+      "material": {
+        "name": "304SS",
+        "z": 25.4147,
+        "a": 54.5465,
+        "rho": 8.03,
+        "b": 0.19,
+        "n": 1.76
+      },
+      "detector": {
+        "height_mm": 12.668747851300363,
+        "radius_mm": 10.75229553684629,
+        "inner_radius_mm": 5.6368043534389,
+        "outer_radius_mm": 15.185085777734555,
+        "quadrants_deg": {
+          "A": 0.0,
+          "B": 90.0,
+          "C": 180.0,
+          "D": 270.0
+        },
+        "sensitivity": {
+          "A": 1.0160941537855597,
+          "B": 1.1522138405818776,
+          "C": 1.1161919914444023,
+          "D": 1.1328840052838651
+        },
+        "psi0_rad": 0.8670423573110543
+      },
+      "noise": {
+        "poisson_enabled": true,
+        "thermal_enabled": true,
+        "contamination_enabled": true,
+        "temperature_k": 319.2799977850878,
+        "bandwidth_hz": 11139.377159300075,
+        "contamination_rate": 0.12786185415089701,
+        "quadrant_offsets": {
+          "A": 0.09468893568726164,
+          "B": -0.002929036272538821,
+          "C": -0.14848596362624683,
+          "D": -0.12325865390223402
+        }
+      },
+      "slice": {
+        "voxel_depth_mm": 0.08,
+        "slice_offset_mm": -6.4,
+        "slice_tilt_deg": 0.0,
+        "slice_rotation_deg": 0.0
+      },
+      "defects": [
+        {
+          "type": "keyhole_pore",
+          "params": {
+            "kind": "keyhole_pore",
+            "effect": "open",
+            "diameter_mm": 0.20568363997482916,
+            "depth_mm": 0.20214211916197328,
+            "angle_rad": 4.172622254642307,
+            "radial_offset_mm": -1.05,
+            "coupling_fraction": 0.0,
+            "roof_mm": 0.15
+          }
+        }
+      ],
+      "randomize_defect_location": true
+    },
+    "raw_path": "C:\\Users\\sfleo\\OneDrive\\CompSciEng\\Thesis\\Thesis\\Codebase2\\DataSimulation\\data\\output\\count_diversity_20261027_v2\\datasets\\train\\065\\open_keyhole_c1_r0.npy",
+    "raw_sha256": "172b72272cd5bb4460cc4d9226ff25cd3cd6ed89e690968c07ba9da742f51c9e",
+    "geometry_path": "C:\\Users\\sfleo\\OneDrive\\CompSciEng\\Thesis\\Thesis\\Codebase2\\DataSimulation\\data\\output\\count_diversity_20261027_v2\\datasets\\train\\065\\open_keyhole_geometry.npz",
+    "geometry_sha256": "376ba33e7ae5779e8a2b67d7d5db0a4f0227d0daf8148478c239055bad6be307",
+    "area_px": 22,
+    "diameter_mm": 0.20568363997482916,
+    "residual_rms": 0.032727863639593124,
+    "physical_validation": false
+  },
+  {
+    "scene_id": "train-065-open_keyhole-c4-r0",
+    "background_id": "train-065",
+    "index": 65,
+    "seed": 2710100065,
+    "split": "train",
+    "source_class": "open_keyhole",
+    "amplitude": 0.05,
+    "dwell_bin": 1,
+    "dwell_time_us": 0.526652541738606,
+    "count_multiplier": 4,
+    "repeat": 0,
+    "acquisition_seed": 2710100065,
+    "profile": {
+      "effective_count_rate": 6929379379.372091,
+      "readout_rms": 0.0004435997302456282,
+      "reference_dwell_us": 8.0,
+      "baseline_rms": 0.0002511174423320932,
+      "common_gain_rms": 0.002654031686654751,
+      "correlation_time_s": 0.36505471470092765,
+      "flyback_us": 20.0,
+      "contamination_per_s": 0.00013381952989950532,
+      "velocity_x_mm_s": 0.0,
+      "velocity_y_mm_s": 0.0,
+      "evidence": "assumed_sensitivity_range_not_measured"
+    },
+    "parameters": {
+      "seed": 2710100065,
+      "beam": {
+        "accelerating_voltage_kv": 60.0,
+        "beam_current_ma": 420.0,
+        "focusing_current_norm": 0.85,
+        "travel_speed_mm_min": 500.0,
+        "dwell_time_us": 0.526652541738606,
+        "focal_spot_mm": 0.7925605109848586,
+        "e0_kev": 60.0,
+        "power_w": 25200.0
+      },
+      "material": {
+        "name": "304SS",
+        "z": 25.4147,
+        "a": 54.5465,
+        "rho": 8.03,
+        "b": 0.19,
+        "n": 1.76
+      },
+      "detector": {
+        "height_mm": 12.668747851300363,
+        "radius_mm": 10.75229553684629,
+        "inner_radius_mm": 5.6368043534389,
+        "outer_radius_mm": 15.185085777734555,
+        "quadrants_deg": {
+          "A": 0.0,
+          "B": 90.0,
+          "C": 180.0,
+          "D": 270.0
+        },
+        "sensitivity": {
+          "A": 1.0160941537855597,
+          "B": 1.1522138405818776,
+          "C": 1.1161919914444023,
+          "D": 1.1328840052838651
+        },
+        "psi0_rad": 0.8670423573110543
+      },
+      "noise": {
+        "poisson_enabled": true,
+        "thermal_enabled": true,
+        "contamination_enabled": true,
+        "temperature_k": 319.2799977850878,
+        "bandwidth_hz": 11139.377159300075,
+        "contamination_rate": 0.12786185415089701,
+        "quadrant_offsets": {
+          "A": 0.09468893568726164,
+          "B": -0.002929036272538821,
+          "C": -0.14848596362624683,
+          "D": -0.12325865390223402
+        }
+      },
+      "slice": {
+        "voxel_depth_mm": 0.08,
+        "slice_offset_mm": -6.4,
+        "slice_tilt_deg": 0.0,
+        "slice_rotation_deg": 0.0
+      },
+      "defects": [
+        {
+          "type": "keyhole_pore",
+          "params": {
+            "kind": "keyhole_pore",
+            "effect": "open",
+            "diameter_mm": 0.20568363997482916,
+            "depth_mm": 0.20214211916197328,
+            "angle_rad": 4.172622254642307,
+            "radial_offset_mm": -1.05,
+            "coupling_fraction": 0.0,
+            "roof_mm": 0.15
+          }
+        }
+      ],
+      "randomize_defect_location": true
+    },
+    "raw_path": "C:\\Users\\sfleo\\OneDrive\\CompSciEng\\Thesis\\Thesis\\Codebase2\\DataSimulation\\data\\output\\count_diversity_20261027_v2\\datasets\\train\\065\\open_keyhole_c4_r0.npy",
+    "raw_sha256": "788d01c61feddd0b9336e90c254d1fc22185f174ea33b7a7e8ff5e477c42f43f",
+    "geometry_path": "C:\\Users\\sfleo\\OneDrive\\CompSciEng\\Thesis\\Thesis\\Codebase2\\DataSimulation\\data\\output\\count_diversity_20261027_v2\\datasets\\train\\065\\open_keyhole_geometry.npz",
+    "geometry_sha256": "376ba33e7ae5779e8a2b67d7d5db0a4f0227d0daf8148478c239055bad6be307",
+    "area_px": 22,
+    "diameter_mm": 0.20568363997482916,
+    "residual_rms": 0.030643267557024956,
+    "physical_validation": false
+  },
+  {
+    "scene_id": "train-065-open_keyhole-c64-r0",
+    "background_id": "train-065",
+    "index": 65,
+    "seed": 2710100065,
+    "split": "train",
+    "source_class": "open_keyhole",
+    "amplitude": 0.05,
+    "dwell_bin": 1,
+    "dwell_time_us": 0.526652541738606,
+    "count_multiplier": 64,
+    "repeat": 0,
+    "acquisition_seed": 2710100065,
+    "profile": {
+      "effective_count_rate": 110870070069.95346,
+      "readout_rms": 0.0004435997302456282,
+      "reference_dwell_us": 8.0,
+      "baseline_rms": 0.0002511174423320932,
+      "common_gain_rms": 0.002654031686654751,
+      "correlation_time_s": 0.36505471470092765,
+      "flyback_us": 20.0,
+      "contamination_per_s": 0.00013381952989950532,
+      "velocity_x_mm_s": 0.0,
+      "velocity_y_mm_s": 0.0,
+      "evidence": "assumed_sensitivity_range_not_measured"
+    },
+    "parameters": {
+      "seed": 2710100065,
+      "beam": {
+        "accelerating_voltage_kv": 60.0,
+        "beam_current_ma": 420.0,
+        "focusing_current_norm": 0.85,
+        "travel_speed_mm_min": 500.0,
+        "dwell_time_us": 0.526652541738606,
+        "focal_spot_mm": 0.7925605109848586,
+        "e0_kev": 60.0,
+        "power_w": 25200.0
+      },
+      "material": {
+        "name": "304SS",
+        "z": 25.4147,
+        "a": 54.5465,
+        "rho": 8.03,
+        "b": 0.19,
+        "n": 1.76
+      },
+      "detector": {
+        "height_mm": 12.668747851300363,
+        "radius_mm": 10.75229553684629,
+        "inner_radius_mm": 5.6368043534389,
+        "outer_radius_mm": 15.185085777734555,
+        "quadrants_deg": {
+          "A": 0.0,
+          "B": 90.0,
+          "C": 180.0,
+          "D": 270.0
+        },
+        "sensitivity": {
+          "A": 1.0160941537855597,
+          "B": 1.1522138405818776,
+          "C": 1.1161919914444023,
+          "D": 1.1328840052838651
+        },
+        "psi0_rad": 0.8670423573110543
+      },
+      "noise": {
+        "poisson_enabled": true,
+        "thermal_enabled": true,
+        "contamination_enabled": true,
+        "temperature_k": 319.2799977850878,
+        "bandwidth_hz": 11139.377159300075,
+        "contamination_rate": 0.12786185415089701,
+        "quadrant_offsets": {
+          "A": 0.09468893568726164,
+          "B": -0.002929036272538821,
+          "C": -0.14848596362624683,
+          "D": -0.12325865390223402
+        }
+      },
+      "slice": {
+        "voxel_depth_mm": 0.08,
+        "slice_offset_mm": -6.4,
+        "slice_tilt_deg": 0.0,
+        "slice_rotation_deg": 0.0
+      },
+      "defects": [
+        {
+          "type": "keyhole_pore",
+          "params": {
+            "kind": "keyhole_pore",
+            "effect": "open",
+            "diameter_mm": 0.20568363997482916,
+            "depth_mm": 0.20214211916197328,
+            "angle_rad": 4.172622254642307,
+            "radial_offset_mm": -1.05,
+            "coupling_fraction": 0.0,
+            "roof_mm": 0.15
+          }
+        }
+      ],
+      "randomize_defect_location": true
+    },
+    "raw_path": "C:\\Users\\sfleo\\OneDrive\\CompSciEng\\Thesis\\Thesis\\Codebase2\\DataSimulation\\data\\output\\count_diversity_20261027_v2\\datasets\\train\\065\\open_keyhole_c64_r0.npy",
+    "raw_sha256": "602402ee4be284d91acc3ff7e0e8071a5a627992f985ad3579e2fe4438e719e7",
+    "geometry_path": "C:\\Users\\sfleo\\OneDrive\\CompSciEng\\Thesis\\Thesis\\Codebase2\\DataSimulation\\data\\output\\count_diversity_20261027_v2\\datasets\\train\\065\\open_keyhole_geometry.npz",
+    "geometry_sha256": "376ba33e7ae5779e8a2b67d7d5db0a4f0227d0daf8148478c239055bad6be307",
+    "area_px": 22,
+    "diameter_mm": 0.20568363997482916,
+    "residual_rms": 0.030028529465198517,
+    "physical_validation": false
+  },
+  {
+    "scene_id": "train-065-open_keyhole-c1-r1",
+    "background_id": "train-065",
+    "index": 65,
+    "seed": 2710100065,
+    "split": "train",
+    "source_class": "open_keyhole",
+    "amplitude": 0.05,
+    "dwell_bin": 1,
+    "dwell_time_us": 0.526652541738606,
+    "count_multiplier": 1,
+    "repeat": 1,
+    "acquisition_seed": 2810100065,
+    "profile": {
+      "effective_count_rate": 1732344844.8430228,
+      "readout_rms": 0.0004435997302456282,
+      "reference_dwell_us": 8.0,
+      "baseline_rms": 0.0002511174423320932,
+      "common_gain_rms": 0.002654031686654751,
+      "correlation_time_s": 0.36505471470092765,
+      "flyback_us": 20.0,
+      "contamination_per_s": 0.00013381952989950532,
+      "velocity_x_mm_s": 0.0,
+      "velocity_y_mm_s": 0.0,
+      "evidence": "assumed_sensitivity_range_not_measured"
+    },
+    "parameters": {
+      "seed": 2710100065,
+      "beam": {
+        "accelerating_voltage_kv": 60.0,
+        "beam_current_ma": 420.0,
+        "focusing_current_norm": 0.85,
+        "travel_speed_mm_min": 500.0,
+        "dwell_time_us": 0.526652541738606,
+        "focal_spot_mm": 0.7925605109848586,
+        "e0_kev": 60.0,
+        "power_w": 25200.0
+      },
+      "material": {
+        "name": "304SS",
+        "z": 25.4147,
+        "a": 54.5465,
+        "rho": 8.03,
+        "b": 0.19,
+        "n": 1.76
+      },
+      "detector": {
+        "height_mm": 12.668747851300363,
+        "radius_mm": 10.75229553684629,
+        "inner_radius_mm": 5.6368043534389,
+        "outer_radius_mm": 15.185085777734555,
+        "quadrants_deg": {
+          "A": 0.0,
+          "B": 90.0,
+          "C": 180.0,
+          "D": 270.0
+        },
+        "sensitivity": {
+          "A": 1.0160941537855597,
+          "B": 1.1522138405818776,
+          "C": 1.1161919914444023,
+          "D": 1.1328840052838651
+        },
+        "psi0_rad": 0.8670423573110543
+      },
+      "noise": {
+        "poisson_enabled": true,
+        "thermal_enabled": true,
+        "contamination_enabled": true,
+        "temperature_k": 319.2799977850878,
+        "bandwidth_hz": 11139.377159300075,
+        "contamination_rate": 0.12786185415089701,
+        "quadrant_offsets": {
+          "A": 0.09468893568726164,
+          "B": -0.002929036272538821,
+          "C": -0.14848596362624683,
+          "D": -0.12325865390223402
+        }
+      },
+      "slice": {
+        "voxel_depth_mm": 0.08,
+        "slice_offset_mm": -6.4,
+        "slice_tilt_deg": 0.0,
+        "slice_rotation_deg": 0.0
+      },
+      "defects": [
+        {
+          "type": "keyhole_pore",
+          "params": {
+            "kind": "keyhole_pore",
+            "effect": "open",
+            "diameter_mm": 0.20568363997482916,
+            "depth_mm": 0.20214211916197328,
+            "angle_rad": 4.172622254642307,
+            "radial_offset_mm": -1.05,
+            "coupling_fraction": 0.0,
+            "roof_mm": 0.15
+          }
+        }
+      ],
+      "randomize_defect_location": true
+    },
+    "raw_path": "C:\\Users\\sfleo\\OneDrive\\CompSciEng\\Thesis\\Thesis\\Codebase2\\DataSimulation\\data\\output\\count_diversity_20261027_v2\\datasets\\train\\065\\open_keyhole_c1_r1.npy",
+    "raw_sha256": "3393eafd8385960b30443493c83f279a1b1fd9f26c2d607fed9190df67c2207f",
+    "geometry_path": "C:\\Users\\sfleo\\OneDrive\\CompSciEng\\Thesis\\Thesis\\Codebase2\\DataSimulation\\data\\output\\count_diversity_20261027_v2\\datasets\\train\\065\\open_keyhole_geometry.npz",
+    "geometry_sha256": "376ba33e7ae5779e8a2b67d7d5db0a4f0227d0daf8148478c239055bad6be307",
+    "area_px": 22,
+    "diameter_mm": 0.20568363997482916,
+    "residual_rms": 0.03320858255028725,
+    "physical_validation": false
+  },
+  {
+    "scene_id": "train-065-open_keyhole-c4-r1",
+    "background_id": "train-065",
+    "index": 65,
+    "seed": 2710100065,
+    "split": "train",
+    "source_class": "open_keyhole",
+    "amplitude": 0.05,
+    "dwell_bin": 1,
+    "dwell_time_us": 0.526652541738606,
+    "count_multiplier": 4,
+    "repeat": 1,
+    "acquisition_seed": 2810100065,
+    "profile": {
+      "effective_count_rate": 6929379379.372091,
+      "readout_rms": 0.0004435997302456282,
+      "reference_dwell_us": 8.0,
+      "baseline_rms": 0.0002511174423320932,
+      "common_gain_rms": 0.002654031686654751,
+      "correlation_time_s": 0.36505471470092765,
+      "flyback_us": 20.0,
+      "contamination_per_s": 0.00013381952989950532,
+      "velocity_x_mm_s": 0.0,
+      "velocity_y_mm_s": 0.0,
+      "evidence": "assumed_sensitivity_range_not_measured"
+    },
+    "parameters": {
+      "seed": 2710100065,
+      "beam": {
+        "accelerating_voltage_kv": 60.0,
+        "beam_current_ma": 420.0,
+        "focusing_current_norm": 0.85,
+        "travel_speed_mm_min": 500.0,
+        "dwell_time_us": 0.526652541738606,
+        "focal_spot_mm": 0.7925605109848586,
+        "e0_kev": 60.0,
+        "power_w": 25200.0
+      },
+      "material": {
+        "name": "304SS",
+        "z": 25.4147,
+        "a": 54.5465,
+        "rho": 8.03,
+        "b": 0.19,
+        "n": 1.76
+      },
+      "detector": {
+        "height_mm": 12.668747851300363,
+        "radius_mm": 10.75229553684629,
+        "inner_radius_mm": 5.6368043534389,
+        "outer_radius_mm": 15.185085777734555,
+        "quadrants_deg": {
+          "A": 0.0,
+          "B": 90.0,
+          "C": 180.0,
+          "D": 270.0
+        },
+        "sensitivity": {
+          "A": 1.0160941537855597,
+          "B": 1.1522138405818776,
+          "C": 1.1161919914444023,
+          "D": 1.1328840052838651
+        },
+        "psi0_rad": 0.8670423573110543
+      },
+      "noise": {
+        "poisson_enabled": true,
+        "thermal_enabled": true,
+        "contamination_enabled": true,
+        "temperature_k": 319.2799977850878,
+        "bandwidth_hz": 11139.377159300075,
+        "contamination_rate": 0.12786185415089701,
+        "quadrant_offsets": {
+          "A": 0.09468893568726164,
+          "B": -0.002929036272538821,
+          "C": -0.14848596362624683,
+          "D": -0.12325865390223402
+        }
+      },
+      "slice": {
+        "voxel_depth_mm": 0.08,
+        "slice_offset_mm": -6.4,
+        "slice_tilt_deg": 0.0,
+        "slice_rotation_deg": 0.0
+      },
+      "defects": [
+        {
+          "type": "keyhole_pore",
+          "params": {
+            "kind": "keyhole_pore",
+            "effect": "open",
+            "diameter_mm": 0.20568363997482916,
+            "depth_mm": 0.20214211916197328,
+            "angle_rad": 4.172622254642307,
+            "radial_offset_mm": -1.05,
+            "coupling_fraction": 0.0,
+            "roof_mm": 0.15
+          }
+        }
+      ],
+      "randomize_defect_location": true
+    },
+    "raw_path": "C:\\Users\\sfleo\\OneDrive\\CompSciEng\\Thesis\\Thesis\\Codebase2\\DataSimulation\\data\\output\\count_diversity_20261027_v2\\datasets\\train\\065\\open_keyhole_c4_r1.npy",
+    "raw_sha256": "d14f14f5a01e2f40d94145c1186d8585b62886dff29870105fe75d28f0ecc7ef",
+    "geometry_path": "C:\\Users\\sfleo\\OneDrive\\CompSciEng\\Thesis\\Thesis\\Codebase2\\DataSimulation\\data\\output\\count_diversity_20261027_v2\\datasets\\train\\065\\open_keyhole_geometry.npz",
+    "geometry_sha256": "376ba33e7ae5779e8a2b67d7d5db0a4f0227d0daf8148478c239055bad6be307",
+    "area_px": 22,
+    "diameter_mm": 0.20568363997482916,
+    "residual_rms": 0.031228207051753998,
+    "physical_validation": false
+  },
+  {
+    "scene_id": "train-065-open_keyhole-c64-r1",
+    "background_id": "train-065",
+    "index": 65,
+    "seed": 2710100065,
+    "split": "train",
+    "source_class": "open_keyhole",
+    "amplitude": 0.05,
+    "dwell_bin": 1,
+    "dwell_time_us": 0.526652541738606,
+    "count_multiplier": 64,
+    "repeat": 1,
+    "acquisition_seed": 2810100065,
+    "profile": {
+      "effective_count_rate": 110870070069.95346,
+      "readout_rms": 0.0004435997302456282,
+      "reference_dwell_us": 8.0,
+      "baseline_rms": 0.0002511174423320932,
+      "common_gain_rms": 0.002654031686654751,
+      "correlation_time_s": 0.36505471470092765,
+      "flyback_us": 20.0,
+      "contamination_per_s": 0.00013381952989950532,
+      "velocity_x_mm_s": 0.0,
+      "velocity_y_mm_s": 0.0,
+      "evidence": "assumed_sensitivity_range_not_measured"
+    },
+    "parameters": {
+      "seed": 2710100065,
+      "beam": {
+        "accelerating_voltage_kv": 60.0,
+        "beam_current_ma": 420.0,
+        "focusing_current_norm": 0.85,
+        "travel_speed_mm_min": 500.0,
+        "dwell_time_us": 0.526652541738606,
+        "focal_spot_mm": 0.7925605109848586,
+        "e0_kev": 60.0,
+        "power_w": 25200.0
+      },
+      "material": {
+        "name": "304SS",
+        "z": 25.4147,
+        "a": 54.5465,
+        "rho": 8.03,
+        "b": 0.19,
+        "n": 1.76
+      },
+      "detector": {
+        "height_mm": 12.668747851300363,
+        "radius_mm": 10.75229553684629,
+        "inner_radius_mm": 5.6368043534389,
+        "outer_radius_mm": 15.185085777734555,
+        "quadrants_deg": {
+          "A": 0.0,
+          "B": 90.0,
+          "C": 180.0,
+          "D": 270.0
+        },
+        "sensitivity": {
+          "A": 1.0160941537855597,
+          "B": 1.1522138405818776,
+          "C": 1.1161919914444023,
+          "D": 1.1328840052838651
+        },
+        "psi0_rad": 0.8670423573110543
+      },
+      "noise": {
+        "poisson_enabled": true,
+        "thermal_enabled": true,
+        "contamination_enabled": true,
+        "temperature_k": 319.2799977850878,
+        "bandwidth_hz": 11139.377159300075,
+        "contamination_rate": 0.12786185415089701,
+        "quadrant_offsets": {
+          "A": 0.09468893568726164,
+          "B": -0.002929036272538821,
+          "C": -0.14848596362624683,
+          "D": -0.12325865390223402
+        }
+      },
+      "slice": {
+        "voxel_depth_mm": 0.08,
+        "slice_offset_mm": -6.4,
+        "slice_tilt_deg": 0.0,
+        "slice_rotation_deg": 0.0
+      },
+      "defects": [
+        {
+          "type": "keyhole_pore",
+          "params": {
+            "kind": "keyhole_pore",
+            "effect": "open",
+            "diameter_mm": 0.20568363997482916,
+            "depth_mm": 0.20214211916197328,
+            "angle_rad": 4.172622254642307,
+            "radial_offset_mm": -1.05,
+            "coupling_fraction": 0.0,
+            "roof_mm": 0.15
+          }
+        }
+      ],
+      "randomize_defect_location": true
+    },
+    "raw_path": "C:\\Users\\sfleo\\OneDrive\\CompSciEng\\Thesis\\Thesis\\Codebase2\\DataSimulation\\data\\output\\count_diversity_20261027_v2\\datasets\\train\\065\\open_keyhole_c64_r1.npy",
+    "raw_sha256": "cb002ffa77179762e8cd3e353ecd0da9d80d9d5ec3ee23cf9a45d11511a42d91",
+    "geometry_path": "C:\\Users\\sfleo\\OneDrive\\CompSciEng\\Thesis\\Thesis\\Codebase2\\DataSimulation\\data\\output\\count_diversity_20261027_v2\\datasets\\train\\065\\open_keyhole_geometry.npz",
+    "geometry_sha256": "376ba33e7ae5779e8a2b67d7d5db0a4f0227d0daf8148478c239055bad6be307",
+    "area_px": 22,
+    "diameter_mm": 0.20568363997482916,
+    "residual_rms": 0.03063718043267727,
+    "physical_validation": false
+  }
+]

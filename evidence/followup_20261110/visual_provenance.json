@@ -1,0 +1,13 @@
+{
+  "alignment_examples": [
+    "train-014-open_intrinsic-c64-r0",
+    "train-003-open_intrinsic-c64-r0",
+    "train-001-open_keyhole-c64-r0"
+  ],
+  "selection": "Closest to median contrast displacement within each radial-position group; training data only.",
+  "confirmation_examples": [
+    "test-023-open_intrinsic-c64-r0",
+    "test-000-open_intrinsic-c64-r0"
+  ],
+  "confirmation_selection": "Largest pore improved over original, and largest pore still missed; 64x repeat 0. Boxes shown for all detectors."
+}

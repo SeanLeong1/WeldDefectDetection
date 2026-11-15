@@ -1,0 +1,50 @@
+classical:
+  blur_kernel: 3
+  thresh_c: 24
+  min_defect_area: 15
+  max_defect_area_fraction: 0.05
+  max_component_aspect_ratio: 20.0
+  max_component_span_fraction: 1.0
+  blackhat_kernel_size: 31
+  opening_kernel_size: 3
+  weld_roi_enabled: true
+  weld_roi_close_width: 31
+  weld_roi_close_height: 5
+  weld_roi_erode_size: 1
+  input_size: 0
+
+cnn:
+  checkpoint_path: ""
+  device: cpu
+  input_size: 128
+  threshold: 0.50
+  min_defect_area: 8
+  in_channels: 1
+  base_channels: 16
+
+data:
+  dataset_root: ../DataSimulation/data/output/progression_confirmation_topo_static_sine_20260901
+  development_dataset_root: ../DataSimulation/data/output/progression_final_topo_static_sine_20260831
+  contract_version: weld-topo-segmentation/v2
+  image_channel: topo
+  mask_key: mask
+  num_workers: 0
+
+train:
+  experiment_root: experiments/cnn_training
+  batch_size: 4
+  epochs: 10
+  learning_rate: 0.001
+  weight_decay: 0.0
+  checkpoint_metric: iou
+  seed: 20260833
+  loss: weighted_bce_dice
+  dice_weight: 0.5
+  max_positive_weight: 20.0
+  balance_clean_defective_batches: true
+
+eval:
+  experiment_root: experiments/evaluations
+  max_overlay_images: 250
+  bootstrap_iterations: 500
+  bootstrap_seed: 20260901

@@ -1,0 +1,62 @@
+version: 1
+scope: synthetic_functionality_only_no_real_sem_claim
+
+datasets:
+  static:
+    development: ../DataSimulation/data/output/completion_20260907/final_static_lambertian_dev_v1
+    confirmation: ../DataSimulation/data/output/completion_20260907/confirmation_static_lambertian_dev_v2
+    paired_variants:
+      - name: noiseless
+        path: ../DataSimulation/data/output/completion_20260908/confirmation_static_lambertian_noiseless_v2
+  sequence:
+    development: ../DataSimulation/data/output/completion_20260907/final_sequences_ctx4_lambertian_dev_v1
+    confirmation: ../DataSimulation/data/output/completion_20260907/confirmation_sequences_ctx4_lambertian_dev_v2
+
+checkpoints:
+  - name: cnn_seed_35012
+    path: experiments/completion_20260907/cnn_final/cnn_train_20260907-222736/best.pt
+    sha256: 175eacf613d6fe343181638f48668e175e128a2100a93e10f0231b99b997f5b2
+  - name: learned_spatial_context_seed_45011
+    path: experiments/completion_20260907/temporal_learned_final/best.pt
+    sha256: f5b6648031212cbe3e8fe6621f2b6f28338717459908de9e9364664e33d0e52b
+
+evaluations:
+  - name: development_noise_classical_confirmation
+    summary: experiments/completion_20260908/robustness_v2_development_classical/summary.json
+    algorithm: morphology
+    dataset: ../DataSimulation/data/output/completion_20260907/confirmation_static_lambertian_dev_v2
+    requires_confirmation_audit: true
+  - name: development_noise_cnn_confirmation
+    summary: experiments/completion_20260908/robustness_v2_development_cnn/summary.json
+    algorithm: cnn
+    dataset: ../DataSimulation/data/output/completion_20260907/confirmation_static_lambertian_dev_v2
+    checkpoint_sha256: 175eacf613d6fe343181638f48668e175e128a2100a93e10f0231b99b997f5b2
+    requires_confirmation_audit: true
+  - name: noiseless_classical_robustness
+    summary: experiments/completion_20260908/robustness_v2_noiseless_classical/summary.json
+    algorithm: morphology
+    dataset: ../DataSimulation/data/output/completion_20260908/confirmation_static_lambertian_noiseless_v2
+    requires_confirmation_audit: true
+  - name: noiseless_cnn_robustness
+    summary: experiments/completion_20260908/robustness_v2_noiseless_cnn/summary.json
+    algorithm: cnn
+    dataset: ../DataSimulation/data/output/completion_20260908/confirmation_static_lambertian_noiseless_v2
+    checkpoint_sha256: 175eacf613d6fe343181638f48668e175e128a2100a93e10f0231b99b997f5b2
+    requires_confirmation_audit: true
+  - name: mean_spatial_context_confirmation
+    summary: experiments/completion_20260908/confirmation_v2_temporal_mean_guarded/summary.json
+    method: unaligned mean of two previous and two future TOPO frames
+    dataset: ../DataSimulation/data/output/completion_20260907/confirmation_sequences_ctx4_lambertian_dev_v2
+    requires_confirmation_audit: true
+    frozen_parameters:
+      threshold: 0.14
+      min_area: 15
+  - name: learned_spatial_context_confirmation
+    summary: experiments/completion_20260908/confirmation_v2_temporal_learned_guarded/summary.json
+    method: learned bidirectional four-frame TOPO predictor
+    dataset: ../DataSimulation/data/output/completion_20260907/confirmation_sequences_ctx4_lambertian_dev_v2
+    checkpoint_sha256: f5b6648031212cbe3e8fe6621f2b6f28338717459908de9e9364664e33d0e52b
+    requires_confirmation_audit: true
+    frozen_parameters:
+      threshold: 0.1438175102122899
+      min_area: 240

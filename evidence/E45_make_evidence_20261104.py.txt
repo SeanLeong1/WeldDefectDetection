@@ -1,0 +1,176 @@
+"""Read saved weights, arrays and scores; write explanatory scientific figures only."""
+from pathlib import Path
+import sys,json,hashlib
+import numpy as np
+import torch
+import matplotlib
+matplotlib.use('Agg')
+import matplotlib.pyplot as plt
+from matplotlib.lines import Line2D
+ROOT=Path(__file__).resolve().parents[3]
+sys.path[:0]=[str(ROOT/'DataSimulation'),str(ROOT/'WeldDefectDetection')]
+from src.algorithms.classical.cnn_detector import TinyDefectSegNet
+from raised_crown import learning as base
+from circular_study import metrics
+from count_study import learning as learn
+OUT=ROOT/'docs/poster_20261101/output/supporting_visuals_20261104'
+DATA=ROOT/'DataSimulation/data/output/count_diversity_20261027_v2'
+read=lambda p:json.loads(Path(p).read_text(encoding='utf-8'))
+sha=lambda p:hashlib.sha256(Path(p).read_bytes()).hexdigest()
+frozen=read(DATA/'frozen_models.json');norm=read(DATA/'normalization.json')
+spec=frozen['arms']['mixed_96'];seed=spec['cnn']['seed']
+source_files=[DATA/'frozen_models.json',DATA/'normalization.json',DATA/'results.json']
+paths={e:DATA/f'development/mixed_96/cnn_{seed}_e{e}.pt' for e in (10,20)}
+source_files+=list(paths.values())
+hashes={str(p.relative_to(ROOT)):sha(p) for p in source_files}
+assert sha(paths[20])==spec['cnn']['checkpoint_sha256']
+torch.set_num_threads(4)
+plt.rcParams.update({'font.family':'DejaVu Sans','font.size':11,'axes.spines.top':False,'axes.spines.right':False,'svg.fonttype':'none'})
+def save(fig,name):
+    for ext in ('png','svg'):fig.savefig(OUT/f'{name}.{ext}',dpi=190,bbox_inches='tight',facecolor='white')
+    plt.close(fig)
+def asset_hash(p):hashes[str(Path(p).relative_to(ROOT))]=sha(p)
+
+# A fixed, valid candidate patch from the training population.
+train=read(DATA/'datasets/train/index.json')
+row=next(r for r in train if r['scene_id']=='train-000-open_intrinsic-c4-r0')
+asset_hash(row['raw_path']);asset_hash(row['geometry_path'])
+raw=np.load(row['raw_path']);img=base.normalize(raw,norm)
+with np.load(row['geometry_path']) as z:mask=z['mask']
+candidates=[(int(base.tile(mask,y,x).sum()),y,x) for y in (32,64,96,128) for x in range(16,5024,32)]
+_,cy,cx=max(candidates,key=lambda q:q[0])
+patch=base.tile(img,cy,cx);target=base.tile(mask,cy,cx)
+x=torch.from_numpy(patch.copy())[None,None]
+stage_names=['enc1','enc2','bottleneck','dec2','dec1']
+acts={};weights={};probs={};layer_stats=[]
+for epoch,path in paths.items():
+    model=TinyDefectSegNet(in_channels=1,base_channels=24)
+    model.load_state_dict(torch.load(path,map_location='cpu',weights_only=False)['state_dict']);model.eval()
+    captured={};handles=[]
+    for name in stage_names:
+        handles.append(getattr(model,name).register_forward_hook(lambda m,i,o,n=name:captured.__setitem__(n,o.detach().cpu().numpy()[0].copy())))
+    leaf=[]
+    if epoch==20:
+        for name,module in model.named_modules():
+            if isinstance(module,(torch.nn.Conv2d,torch.nn.ConvTranspose2d,torch.nn.MaxPool2d,torch.nn.BatchNorm2d)):
+                def hook(m,i,o,n=name):
+                    leaf.append(dict(name=n,type=type(m).__name__,input=list(i[0].shape),output=list(o.shape),parameters=sum(p.numel() for p in m.parameters()),kernel=list(m.kernel_size) if hasattr(m,'kernel_size') and isinstance(m.kernel_size,tuple) else getattr(m,'kernel_size',None)))
+                handles.append(module.register_forward_hook(hook))
+    with torch.inference_mode():probs[epoch]=torch.sigmoid(model(x)).numpy()[0,0]
+    acts[epoch]=captured;weights[epoch]=model.enc1.block[0].weight.detach().numpy()[:,0].copy()
+    for h in handles:h.remove()
+    if epoch==20:
+        layer_stats=leaf
+        parameters=sum(p.numel() for p in model.parameters())
+        block_params={name:sum(p.numel() for p in getattr(model,name).parameters()) for name in ['enc1','enc2','bottleneck','up2','dec2','up1','dec1','head']}
+assert parameters==262777
+selected_channels={n:np.argsort(acts[20][n].var(axis=(1,2)))[-4:][::-1].tolist() for n in stage_names}
+
+fig,axes=plt.subplots(1,7,figsize=(17,3.3),layout='constrained')
+arrays=[patch]+[acts[20][n].mean(0) for n in stage_names]+[probs[20]]
+titles=['Input TOPO\n1 × 64 × 64']+[f'{n}\n'+ ' × '.join(map(str,acts[20][n].shape)) for n in stage_names]+['Sigmoid score\n1 × 64 × 64']
+for i,(ax,a,title) in enumerate(zip(axes,arrays,titles)):
+    ax.imshow(a,origin='lower',cmap='gray' if i==0 else 'magma',vmin=0,vmax=1 if i in (0,6) else max(float(a.max()),1e-8));ax.set_title(title,fontsize=11);ax.set_xticks([]);ax.set_yticks([])
+    if i in (0,6):ax.contour(target,levels=[.5],colors=['#00c878'],linewidths=.8)
+fig.suptitle('One training patch through the saved epoch-20 CNN | hidden panels show mean channel activity',fontsize=13)
+fig.supxlabel('Hidden panels use separate display scales. Green contour: geometric target. Channel activity is a numerical response, not a labelled physical feature.',fontsize=10)
+save(fig,'cnn_forward_stages')
+
+fig,axes=plt.subplots(5,4,figsize=(11,13.5),layout='constrained')
+for r,n in enumerate(stage_names):
+    vmax=max(float(acts[20][n][selected_channels[n]].max()),1e-8)
+    for col,k in enumerate(selected_channels[n]):
+        ax=axes[r,col];ax.imshow(acts[20][n][k],origin='lower',cmap='magma',vmin=0,vmax=vmax)
+        ax.set_title(f'{n} · channel {k}',fontsize=11);ax.set_xticks([]);ax.set_yticks([])
+        if col==0:ax.set_ylabel(' × '.join(map(str,acts[20][n].shape)),fontsize=10)
+fig.suptitle('Actual feature maps from the saved trained CNN\nFour channels with highest spatial variance in this patch, selected separately per layer',fontsize=14)
+fig.supxlabel('Channel indices are zero-based. Each row shares a scale; scales differ between layers. Fixed training patch: train-000, intrinsic pore, 4×, repeat 0.',fontsize=10)
+save(fig,'cnn_feature_channels')
+
+fig,axes=plt.subplots(2,4,figsize=(12,6.7),layout='constrained')
+chosen={n:selected_channels[n][0] for n in ['enc1','bottleneck']}
+vmax={n:max(float(acts[e][n][k].max()) for e in (10,20)) for n,k in chosen.items()}
+for r,e in enumerate((10,20)):
+    data=[patch,acts[e]['enc1'][chosen['enc1']],acts[e]['bottleneck'][chosen['bottleneck']],probs[e]]
+    for col,a in enumerate(data):
+        ax=axes[r,col];ax.imshow(a,origin='lower',cmap='gray' if col==0 else 'magma',vmin=0,vmax=1 if col in (0,3) else vmax[['enc1','bottleneck'][col-1]])
+        ax.set_xticks([]);ax.set_yticks([])
+        if col in (0,3):ax.contour(target,levels=[.5],colors=['#00c878'],linewidths=1)
+        if r==0:ax.set_title(['Same input',f"enc1 channel {chosen['enc1']}",f"bottleneck channel {chosen['bottleneck']}",'Sigmoid score'][col])
+    axes[r,0].set_ylabel(f'Saved epoch {e}',fontsize=12)
+fig.suptitle('Training checkpoints: the same patch, channels and display scales',fontsize=14)
+fig.supxlabel('Only epochs 10 and 20 were saved as evaluation checkpoints. These are training-set illustrations, separate from confirmation performance.',fontsize=10)
+save(fig,'cnn_training_checkpoints')
+
+fig,axes=plt.subplots(8,6,figsize=(10,12),layout='constrained')
+limit=max(abs(w).max() for w in weights.values())
+for block,e in enumerate((10,20)):
+    for k in range(24):
+        ax=axes[block*4+k//6,k%6];im=ax.imshow(weights[e][k],cmap='RdBu',vmin=-limit,vmax=limit,interpolation='nearest')
+        ax.set_title(f'e{e} · filter {k}',fontsize=10);ax.set_xticks([]);ax.set_yticks([])
+fig.suptitle('All 24 learned 3 × 3 kernels in the first convolution\nBlue: positive weight; red: negative weight; one common symmetric scale',fontsize=13)
+fig.supxlabel('Each kernel acts on the single TOPO input channel. Hidden-layer kernels combine multiple input channels.',fontsize=10)
+save(fig,'cnn_first_layer_kernels')
+
+resume=DATA/f'development/mixed_96/cnn_{seed}_resume.pt';asset_hash(resume)
+history=torch.load(resume,map_location='cpu',weights_only=False)['history']
+fig,ax=plt.subplots(figsize=(8,3.6),layout='constrained');ax.plot([h['epoch'] for h in history],[h['loss'] for h in history],'-o',color='#176384',ms=4)
+ax.set(xlabel='Epoch',ylabel='Mean minibatch training loss',title='Saved mixed-96 training history · seed 1027001',xticks=[1,5,10,15,20]);ax.grid(alpha=.2)
+save(fig,'cnn_training_loss')
+
+# Validate and illustrate actual failure masks from full-ring saved predictions.
+index=read(DATA/'datasets/test/index.json');lookup={r['scene_id']:i for i,r in enumerate(index)}
+scores={k:np.load(DATA/f'confirmation/{fname}.npy',mmap_mode='r') for k,fname in [('median','mixed_96_median'),('cnn',f'mixed_96_cnn_{seed}')]}
+results=read(DATA/'results.json')
+selected={k:next(v for v in results.values() if v['kind']==k and v['arm']=='mixed_96' and (k=='median' or v['seed']==seed)) for k in ['median','cnn']}
+failures={};poster_panels=[]
+fig,axes=plt.subplots(2,3,figsize=(11,7.6),layout='constrained')
+for r,sid in enumerate(['test-004-open_intrinsic-c64-r0','test-006-open_intrinsic-c64-r0']):
+    row=index[lookup[sid]];asset_hash(row['raw_path']);asset_hash(row['geometry_path'])
+    image=base.normalize(np.load(row['raw_path']),norm)[16:144]
+    with np.load(row['geometry_path']) as z:truth=z['mask'][16:144]
+    tb=metrics.regions(truth)[1];b=tb[0];yc=int(round((b[1]+b[3])/2));xc=int(round((b[0]+b[2])/2))%5024
+    y0=min(max(0,yc-16),96);ys=slice(y0,y0+32);xs=(np.arange(32)+xc-16)%5024
+    predictions={};summ={}
+    for k in ['median','cnn']:
+        op=spec[k]['selection']['best'];pred,boxes=metrics.binary(scores[k][lookup[sid]],op['threshold'],op['min_area'],op['closing'])
+        rec=next(v for v in selected[k]['rows'] if v['scene_id']==sid);calc=metrics.match(boxes,tb,5024)
+        for key in ['tp','fp','fn']:assert calc[key]==rec[key]
+        iou=max([metrics.circular_iou(a,b,5024) for a in boxes for b in tb] or [0.])
+        predictions[k]=pred;summ[k]={**{key:int(rec[key]) for key in ['tp','fp','fn','predicted_pixels']},'best_box_iou':float(iou)}
+    for col,k in enumerate(['input','median','cnn']):
+        ax=axes[r,col];a=image if k=='input' else predictions[k]
+        ax.imshow(a[ys][:,xs],origin='lower',cmap='gray',vmin=0,vmax=1);ax.contour(truth[ys][:,xs],levels=[.5],colors=['#00c878'],linestyles='--',linewidths=1.3)
+        ax.set_xticks([]);ax.set_yticks([])
+        ax.set_title('Input TOPO' if k=='input' else f"{k.upper()} mask · box IoU {summ[k]['best_box_iou']:.3f}",fontsize=11)
+        if col==0:ax.set_ylabel(f"{row['background_id']}\nD = {row['diameter_mm']:.3f} mm\n{int(truth.sum())} target pixels",fontsize=11)
+    failures[sid]=dict(diameter_mm=row['diameter_mm'],truth_pixels=int(truth.sum()),methods=summ)
+    poster_panels.append(([image[ys][:,xs],predictions['median'][ys][:,xs],predictions['cnn'][ys][:,xs]],truth[ys][:,xs]))
+fig.suptitle('Observed failures at 64× counts · frozen mixed-96 detectors',fontsize=14)
+fig.supxlabel('Green: geometric opening. Top: median partial localisation, CNN match. Bottom: both methods miss a small pore.\nLocal crops of full-ring predictions. A valid detection requires box IoU ≥ 0.5.',fontsize=10)
+save(fig,'median_and_cnn_failures')
+fig,axes=plt.subplots(2,3,figsize=(8,5.1),layout='constrained')
+for r,(arrays,truth_crop) in enumerate(poster_panels):
+    for col,a in enumerate(arrays):
+        ax=axes[r,col];ax.imshow(a,origin='lower',cmap='gray',vmin=0,vmax=1)
+        ax.contour(truth_crop,levels=[.5],colors=['#00c878'],linestyles='--',linewidths=1.6)
+        ax.set_xticks([]);ax.set_yticks([])
+        if r==0:ax.set_title(['TOPO','Median','CNN'][col],fontsize=18)
+save(fig,'poster_failure_cases')
+
+# Validation-only sigma comparison, with each scale's best operating point.
+sigma_rows=[]
+for s in [0,.5,1,2,4,8]:
+    record=read(DATA/f'development/mixed_96/median_sigma{s:g}.json');op=record['selection']['best']
+    sigma_rows.append(dict(sigma=s,**{k:op[k] for k in ['threshold','min_area','closing','macro_f1']}))
+fig,ax=plt.subplots(figsize=(8,3.7),layout='constrained')
+ax.plot([r['sigma'] for r in sigma_rows],[r['macro_f1'] for r in sigma_rows],'o-',color='#176384')
+ax.scatter([1],[spec['median']['selection']['best']['macro_f1']],s=90,color='#c5281c',zorder=4,label='Validation-selected σ = 1 px')
+ax.set(xlabel='Gaussian standard deviation σ (pixels)',ylabel='Mean validation detection F1',title='Gaussian scale selection · mixed-96 median',xticks=[0,.5,1,2,4,8]);ax.legend();ax.grid(alpha=.2)
+save(fig,'median_gaussian_tuning')
+
+table=[[str(m)+'×',f"{selected['median']['by_count'][str(m)]['f1']:.3f}",f"{selected['cnn']['by_count'][str(m)]['f1']:.3f}"] for m in (1,4,64)]
+receipt=dict(campaign=DATA.name,arm='mixed_96',seed=seed,training_patch=dict(scene_id='train-000-open_intrinsic-c4-r0',radial_centre=cy,angular_centre=cx,mask_pixels=int(target.sum()),selection='valid candidate patch with largest target area; illustration only'),parameters=parameters,block_parameters=block_params,layer_stats=layer_stats,feature_channels=selected_channels,epochs=[10,20],sigma_validation=sigma_rows,table=table,failures=failures,source_hashes=hashes,interpretation='Activations describe response to one patch. They do not identify physical feature semantics. Checkpoint comparisons use the same channels/scales.',changes_to_frozen_artifacts=False)
+for name,h in hashes.items():assert sha(ROOT/name)==h
+(OUT/'visual_provenance.json').write_text(json.dumps(receipt,indent=2),encoding='utf-8')
+print(json.dumps({'parameters':parameters,'block_parameters':block_params,'table':table,'failures':failures,'training_patch':receipt['training_patch']},indent=2),flush=True)

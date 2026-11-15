@@ -1,0 +1,118 @@
+{
+  "status": "passed",
+  "scope": "final",
+  "data": {
+    "splits": {
+      "train": {
+        "backgrounds": 96,
+        "scenes": 1728
+      },
+      "val": {
+        "backgrounds": 32,
+        "scenes": 576
+      },
+      "test": {
+        "backgrounds": 48,
+        "scenes": 864
+      }
+    },
+    "checked_file_hashes": 3696,
+    "minimum_pore_area_px": 4,
+    "background_and_acquisition_seeds_disjoint": true,
+    "matched_variants": true
+  },
+  "selections": {
+    "single1_96": [
+      {
+        "method": "cnn",
+        "validation_scenes": 192,
+        "original_metric_replay": true,
+        "fresh_prediction_parity": true
+      },
+      {
+        "method": "median",
+        "validation_scenes": 192,
+        "original_metric_replay": true,
+        "fresh_prediction_parity": true
+      }
+    ],
+    "single4_96": [
+      {
+        "method": "cnn",
+        "validation_scenes": 192,
+        "original_metric_replay": true,
+        "fresh_prediction_parity": true
+      },
+      {
+        "method": "median",
+        "validation_scenes": 192,
+        "original_metric_replay": true,
+        "fresh_prediction_parity": true
+      }
+    ],
+    "single64_96": [
+      {
+        "method": "cnn",
+        "validation_scenes": 192,
+        "original_metric_replay": true,
+        "fresh_prediction_parity": true
+      },
+      {
+        "method": "median",
+        "validation_scenes": 192,
+        "original_metric_replay": true,
+        "fresh_prediction_parity": true
+      }
+    ],
+    "mixed_96": [
+      {
+        "method": "cnn",
+        "validation_scenes": 576,
+        "original_metric_replay": true,
+        "fresh_prediction_parity": true
+      },
+      {
+        "method": "median",
+        "validation_scenes": 576,
+        "original_metric_replay": true,
+        "fresh_prediction_parity": true
+      }
+    ],
+    "single1_24": [
+      {
+        "method": "cnn",
+        "validation_scenes": 192,
+        "original_metric_replay": true,
+        "fresh_prediction_parity": true
+      },
+      {
+        "method": "median",
+        "validation_scenes": 192,
+        "original_metric_replay": true,
+        "fresh_prediction_parity": true
+      }
+    ],
+    "mixed_24": [
+      {
+        "method": "cnn",
+        "validation_scenes": 576,
+        "original_metric_replay": true,
+        "fresh_prediction_parity": true
+      },
+      {
+        "method": "median",
+        "validation_scenes": 576,
+        "original_metric_replay": true,
+        "fresh_prediction_parity": true
+      }
+    ]
+  },
+  "no_model_or_selection_changes": true,
+  "source_sha256": "c2646c09e1b702c5d133df6596181fb6de4f89973741403eb553154d6a45d15b",
+  "utc": "2026-10-27T19:45:25Z",
+  "confirmation": {
+    "results": 26,
+    "scenes_per_result": 864,
+    "saved_row_aggregates_match": true
+  }
+}

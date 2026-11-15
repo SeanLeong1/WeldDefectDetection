@@ -1,0 +1,23 @@
+poisson_enabled: false
+thermal_enabled: false
+contamination_enabled: false
+temperature_k:
+  min: 280
+  max: 360
+  default: 300
+  unit: K
+bandwidth_hz:
+  min: 500
+  max: 20000
+  default: 5000
+  unit: Hz
+contamination_rate:
+  min: 0.0
+  max: 0.2
+  default: 0.04
+  unit: ratio
+quadrant_offset:
+  min: -0.15
+  max: 0.15
+  default: 0.0
+  unit: ratio

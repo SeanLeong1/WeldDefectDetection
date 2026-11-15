@@ -1,0 +1,4314 @@
+[
+  {
+    "path": "DataSimulation/bse_renderer/__init__.py",
+    "lines": 6,
+    "sha256": "ddecea6701a508f38cc199855e8271506bca8b84a8eed0b775e13d4cf301f195",
+    "inspection": "source inventory and syntax scan",
+    "definitions": []
+  },
+  {
+    "path": "DataSimulation/bse_renderer/comparison_metrics.py",
+    "lines": 56,
+    "sha256": "257d193b62ecec2330bc4cc0b6c925f2185de9682d6dcb1956399ae1fce414a6",
+    "inspection": "source inventory and syntax scan",
+    "definitions": [
+      {
+        "name": "_masked_mean",
+        "line": 6
+      },
+      {
+        "name": "_masked_max",
+        "line": 12
+      },
+      {
+        "name": "compute_topography_delta_metrics",
+        "line": 18
+      }
+    ]
+  },
+  {
+    "path": "DataSimulation/bse_renderer/config_loader.py",
+    "lines": 234,
+    "sha256": "3471434b046c8abd89eb84e64506f2822763427ebbce8c0009312d12aa0f6948",
+    "inspection": "source inventory and syntax scan",
+    "definitions": [
+      {
+        "name": "ConfigError",
+        "line": 26
+      },
+      {
+        "name": "ConfigBundle",
+        "line": 31
+      },
+      {
+        "name": "_read_yaml",
+        "line": 41
+      },
+      {
+        "name": "_range_spec",
+        "line": 51
+      },
+      {
+        "name": "_load_beam",
+        "line": 66
+      },
+      {
+        "name": "_load_material",
+        "line": 78
+      },
+      {
+        "name": "_load_detector",
+        "line": 99
+      },
+      {
+        "name": "_load_defect",
+        "line": 114
+      },
+      {
+        "name": "_load_noise",
+        "line": 142
+      },
+      {
+        "name": "_load_slice",
+        "line": 155
+      },
+      {
+        "name": "load_config_bundle",
+        "line": 165
+      },
+      {
+        "name": "default_beam_runtime",
+        "line": 178
+      },
+      {
+        "name": "default_material",
+        "line": 197
+      },
+      {
+        "name": "default_detector_runtime",
+        "line": 201
+      },
+      {
+        "name": "default_noise_runtime",
+        "line": 216
+      },
+      {
+        "name": "default_slice_runtime",
+        "line": 228
+      }
+    ]
+  },
+  {
+    "path": "DataSimulation/bse_renderer/domain_randomisation/__init__.py",
+    "lines": 3,
+    "sha256": "186ec518c9d7d0a1293e846f645056a0d64737902e3cb15d4c2117785a716cbb",
+    "inspection": "source inventory and syntax scan",
+    "definitions": []
+  },
+  {
+    "path": "DataSimulation/bse_renderer/domain_randomisation/batch_generator.py",
+    "lines": 317,
+    "sha256": "c887af7b193c6a8f39e3f34e27fd78e9a31d3e92f21bb20bc8986a0fc5ca83b6",
+    "inspection": "source inventory and syntax scan",
+    "definitions": [
+      {
+        "name": "BatchOptions",
+        "line": 21
+      },
+      {
+        "name": "BatchGenerator",
+        "line": 51
+      }
+    ]
+  },
+  {
+    "path": "DataSimulation/bse_renderer/domain_randomisation/dataset_forms.py",
+    "lines": 945,
+    "sha256": "64fc5c37de5ce36823559aa049b86ba7893cebebe5faee9f98a64a5bca428613",
+    "inspection": "source inventory and syntax scan",
+    "definitions": [
+      {
+        "name": "_prepare_new_output_root",
+        "line": 38
+      },
+      {
+        "name": "_preflight_frozen_normalization",
+        "line": 49
+      },
+      {
+        "name": "_sha256_path",
+        "line": 76
+      },
+      {
+        "name": "_git_revision",
+        "line": 84
+      },
+      {
+        "name": "_freeze_generation_provenance",
+        "line": 97
+      },
+      {
+        "name": "_beam_overrides",
+        "line": 156
+      },
+      {
+        "name": "_set_regime",
+        "line": 179
+      },
+      {
+        "name": "_disable_noise",
+        "line": 190
+      },
+      {
+        "name": "_apply_noise_profile",
+        "line": 204
+      },
+      {
+        "name": "_sample_defect",
+        "line": 223
+      },
+      {
+        "name": "_split_for_repetition",
+        "line": 264
+      },
+      {
+        "name": "_regime_for_sample",
+        "line": 278
+      },
+      {
+        "name": "_planned_target_frame",
+        "line": 283
+      },
+      {
+        "name": "_relative",
+        "line": 296
+      },
+      {
+        "name": "_raw_topo_path",
+        "line": 300
+      },
+      {
+        "name": "_normalised_topo_path",
+        "line": 306
+      },
+      {
+        "name": "_save_raw_topo",
+        "line": 310
+      },
+      {
+        "name": "_write_u16",
+        "line": 316
+      },
+      {
+        "name": "_write_u8",
+        "line": 321
+      },
+      {
+        "name": "_apply_training_global_topo_normalisation",
+        "line": 326
+      },
+      {
+        "name": "_emission_fields",
+        "line": 402
+      },
+      {
+        "name": "_write_contract_bundle",
+        "line": 409
+      },
+      {
+        "name": "generate_balanced_topo_dataset",
+        "line": 459
+      },
+      {
+        "name": "generate_topo_sequence_dataset",
+        "line": 623
+      }
+    ]
+  },
+  {
+    "path": "DataSimulation/bse_renderer/domain_randomisation/parameter_sampler.py",
+    "lines": 130,
+    "sha256": "df7c0a6dc1c7ee4be4a68220f7458dc01278f4cd1156b3346c4701eb962b73f2",
+    "inspection": "source inventory and syntax scan",
+    "definitions": [
+      {
+        "name": "SampledParameters",
+        "line": 21
+      },
+      {
+        "name": "_sample",
+        "line": 32
+      },
+      {
+        "name": "sample_parameters",
+        "line": 40
+      }
+    ]
+  },
+  {
+    "path": "DataSimulation/bse_renderer/geometry/__init__.py",
+    "lines": 11,
+    "sha256": "ce4fa0d8199b3d322d3207882ecf3fb3711ab7c7e0b0a3f312017cceb2264587",
+    "inspection": "source inventory and syntax scan",
+    "definitions": []
+  },
+  {
+    "path": "DataSimulation/bse_renderer/geometry/cad_loader.py",
+    "lines": 35,
+    "sha256": "68bc8aa4ce9090ac862d2a616c79d9c0189628cf4838780b4b0999daf04f187d",
+    "inspection": "source inventory and syntax scan",
+    "definitions": [
+      {
+        "name": "load_cad_heightmap",
+        "line": 8
+      }
+    ]
+  },
+  {
+    "path": "DataSimulation/bse_renderer/geometry/defect_injection.py",
+    "lines": 719,
+    "sha256": "6a658ea072e231ed73f92156071954832b454b0216d5d369829a6ae3e6be2ce7",
+    "inspection": "source inventory and syntax scan",
+    "definitions": [
+      {
+        "name": "_sample_range",
+        "line": 27
+      },
+      {
+        "name": "sample_defect_plan",
+        "line": 32
+      },
+      {
+        "name": "parse_defect_plan",
+        "line": 51
+      },
+      {
+        "name": "validate_defect_plan",
+        "line": 97
+      },
+      {
+        "name": "_bbox_from_mask",
+        "line": 121
+      },
+      {
+        "name": "_draw_disk",
+        "line": 128
+      },
+      {
+        "name": "_draw_line",
+        "line": 133
+      },
+      {
+        "name": "_rotated_coords",
+        "line": 143
+      },
+      {
+        "name": "_ellipse_profile",
+        "line": 157
+      },
+      {
+        "name": "_segment_profile",
+        "line": 172
+      },
+      {
+        "name": "_profile_mask",
+        "line": 205
+      },
+      {
+        "name": "_fusion_centerline",
+        "line": 209
+      },
+      {
+        "name": "_fusion_geometry",
+        "line": 214
+      },
+      {
+        "name": "_region_masks",
+        "line": 224
+      },
+      {
+        "name": "_sample_from_mask",
+        "line": 235
+      },
+      {
+        "name": "_apply_defect_response",
+        "line": 256
+      },
+      {
+        "name": "_apply_section_body",
+        "line": 272
+      },
+      {
+        "name": "_apply_keyhole_or_intrinsic",
+        "line": 299
+      },
+      {
+        "name": "_apply_crack",
+        "line": 427
+      },
+      {
+        "name": "_apply_undercut",
+        "line": 499
+      },
+      {
+        "name": "_apply_lof_like",
+        "line": 555
+      },
+      {
+        "name": "_apply_spiking",
+        "line": 634
+      },
+      {
+        "name": "apply_defect_plan",
+        "line": 687
+      }
+    ]
+  },
+  {
+    "path": "DataSimulation/bse_renderer/geometry/surface_mesh.py",
+    "lines": 111,
+    "sha256": "4eaa9289814cabb45b44b1d6fff37060a8756f2be304b7ef11a3ba4ff511603c",
+    "inspection": "source inventory and syntax scan",
+    "definitions": [
+      {
+        "name": "SurfaceState",
+        "line": 12
+      },
+      {
+        "name": "_initial_normals",
+        "line": 44
+      },
+      {
+        "name": "build_surface_from_config",
+        "line": 53
+      }
+    ]
+  },
+  {
+    "path": "DataSimulation/bse_renderer/geometry/voxel_volume.py",
+    "lines": 1195,
+    "sha256": "aa548b113a77bbb8ba3a27fd6187d238a1fe3b0cd27e2c2065883fe357b3c4c1",
+    "inspection": "source inventory and syntax scan",
+    "definitions": [
+      {
+        "name": "_mm_coords",
+        "line": 34
+      },
+      {
+        "name": "_bbox_from_mask",
+        "line": 41
+      },
+      {
+        "name": "_xy_grids",
+        "line": 48
+      },
+      {
+        "name": "_ellipse_profile_mm",
+        "line": 52
+      },
+      {
+        "name": "_segment_profile_mm",
+        "line": 71
+      },
+      {
+        "name": "_z_profile",
+        "line": 110
+      },
+      {
+        "name": "_pick_mm_from_mask",
+        "line": 121
+      },
+      {
+        "name": "_pick_mm_from_mask_by_score",
+        "line": 136
+      },
+      {
+        "name": "_select_fixed_occurrence_target",
+        "line": 152
+      },
+      {
+        "name": "_bias_mask_near_slice",
+        "line": 173
+      },
+      {
+        "name": "_surface_z_reference_mm",
+        "line": 186
+      },
+      {
+        "name": "_volume_weld_layout",
+        "line": 197
+      },
+      {
+        "name": "_anchored_center_x_mm",
+        "line": 210
+      },
+      {
+        "name": "_fusion_edge_y_mm",
+        "line": 219
+      },
+      {
+        "name": "_anchored_weld_point_mm",
+        "line": 225
+      },
+      {
+        "name": "_fixed_occurrence_anchor_point_mm",
+        "line": 248
+      },
+      {
+        "name": "_local_weld_tangent_theta_rad",
+        "line": 294
+      },
+      {
+        "name": "_safe_normalize",
+        "line": 306
+      },
+      {
+        "name": "build_section_plane",
+        "line": 313
+      },
+      {
+        "name": "build_voxel_volume",
+        "line": 340
+      },
+      {
+        "name": "_apply_body_to_volume",
+        "line": 498
+      },
+      {
+        "name": "apply_defect_bodies",
+        "line": 526
+      },
+      {
+        "name": "_sample_field",
+        "line": 1049
+      },
+      {
+        "name": "slice_volume",
+        "line": 1071
+      },
+      {
+        "name": "slice_metadata",
+        "line": 1177
+      }
+    ]
+  },
+  {
+    "path": "DataSimulation/bse_renderer/geometry/weld_profile.py",
+    "lines": 413,
+    "sha256": "36284dba55102616c325ace018ac2b7741c1cc837a0eb99630576d0a98ad4fa0",
+    "inspection": "source inventory and syntax scan",
+    "definitions": [
+      {
+        "name": "validate_weld_geometry_mode",
+        "line": 25
+      },
+      {
+        "name": "validate_weld_layout_mode",
+        "line": 35
+      },
+      {
+        "name": "normalize_weld_layout",
+        "line": 45
+      },
+      {
+        "name": "_coord_grid_mm",
+        "line": 57
+      },
+      {
+        "name": "resolve_layout_sampling_grid",
+        "line": 67
+      },
+      {
+        "name": "build_weld_layout_maps",
+        "line": 103
+      },
+      {
+        "name": "_sample_axial_line",
+        "line": 159
+      },
+      {
+        "name": "generate_ebw_butt_weld_profile",
+        "line": 172
+      },
+      {
+        "name": "generate_weld_profile",
+        "line": 379
+      }
+    ]
+  },
+  {
+    "path": "DataSimulation/bse_renderer/gui.py",
+    "lines": 1542,
+    "sha256": "d474cd822df0096c27de197f1baf31932f49a18c74c7dabae683513d13fa64bb",
+    "inspection": "source inventory and syntax scan",
+    "definitions": [
+      {
+        "name": "App",
+        "line": 178
+      }
+    ]
+  },
+  {
+    "path": "DataSimulation/bse_renderer/materials.py",
+    "lines": 78,
+    "sha256": "69a55557abbedd7e4d96aab92e09126ad4fe8dbbea241dd74b6c237c81c86b11",
+    "inspection": "source inventory and syntax scan",
+    "definitions": [
+      {
+        "name": "_interp_with_extrapolation",
+        "line": 23
+      },
+      {
+        "name": "_build_reference_table",
+        "line": 36
+      },
+      {
+        "name": "material_from_average_atomic_number",
+        "line": 46
+      }
+    ]
+  },
+  {
+    "path": "DataSimulation/bse_renderer/models.py",
+    "lines": 196,
+    "sha256": "719b8878d064d93eccda332787d29874cda8cbd1458f1cf440945bfa11222889",
+    "inspection": "source inventory and syntax scan",
+    "definitions": [
+      {
+        "name": "RangeSpec",
+        "line": 8
+      },
+      {
+        "name": "BeamSpec",
+        "line": 23
+      },
+      {
+        "name": "MaterialPreset",
+        "line": 33
+      },
+      {
+        "name": "MaterialSpec",
+        "line": 43
+      },
+      {
+        "name": "DetectorSpec",
+        "line": 49
+      },
+      {
+        "name": "DefectSpec",
+        "line": 59
+      },
+      {
+        "name": "NoiseSpec",
+        "line": 65
+      },
+      {
+        "name": "SliceSpec",
+        "line": 76
+      },
+      {
+        "name": "BeamRuntime",
+        "line": 84
+      },
+      {
+        "name": "DetectorRuntime",
+        "line": 96
+      },
+      {
+        "name": "NoiseRuntime",
+        "line": 107
+      },
+      {
+        "name": "SliceRuntime",
+        "line": 118
+      },
+      {
+        "name": "WeldLayoutRuntime",
+        "line": 126
+      },
+      {
+        "name": "SectionPlaneSpec",
+        "line": 135
+      },
+      {
+        "name": "DefectInstance",
+        "line": 143
+      },
+      {
+        "name": "RenderChannels",
+        "line": 152
+      },
+      {
+        "name": "VoxelVolumeState",
+        "line": 162
+      },
+      {
+        "name": "SectionSliceState",
+        "line": 179
+      },
+      {
+        "name": "RenderResult",
+        "line": 192
+      }
+    ]
+  },
+  {
+    "path": "DataSimulation/bse_renderer/noise/__init__.py",
+    "lines": 6,
+    "sha256": "a5602429f865469734168a6c3174b42e1641c3860ca4a83ef298e4c7f3e02fd9",
+    "inspection": "source inventory and syntax scan",
+    "definitions": []
+  },
+  {
+    "path": "DataSimulation/bse_renderer/noise/contamination_model.py",
+    "lines": 26,
+    "sha256": "2afe74881c178500ca39cd022b3a2711ead4de65b2bf4745e5541ed8205705fc",
+    "inspection": "source inventory and syntax scan",
+    "definitions": [
+      {
+        "name": "apply_contamination",
+        "line": 6
+      }
+    ]
+  },
+  {
+    "path": "DataSimulation/bse_renderer/noise/poisson_noise.py",
+    "lines": 17,
+    "sha256": "3ef273a5440cd20174504ae52370eefc937dace3d0bf5e6d0cd2725d65923aae",
+    "inspection": "source inventory and syntax scan",
+    "definitions": [
+      {
+        "name": "apply_poisson_noise",
+        "line": 6
+      }
+    ]
+  },
+  {
+    "path": "DataSimulation/bse_renderer/noise/thermal_drift.py",
+    "lines": 56,
+    "sha256": "6b01dbda9ccac287433cae78250662c69dd3a8a8edf3288d007125047cf0034d",
+    "inspection": "source inventory and syntax scan",
+    "definitions": [
+      {
+        "name": "_smooth_1d",
+        "line": 9
+      },
+      {
+        "name": "apply_thermal_drift",
+        "line": 17
+      }
+    ]
+  },
+  {
+    "path": "DataSimulation/bse_renderer/output/__init__.py",
+    "lines": 5,
+    "sha256": "d15df6a048da36a647dfc4f83aeecd9058612d90d237de38a2866620ebc81da8",
+    "inspection": "source inventory and syntax scan",
+    "definitions": []
+  },
+  {
+    "path": "DataSimulation/bse_renderer/output/image_writer.py",
+    "lines": 133,
+    "sha256": "8675ab80d96f7ef626bd83d9d937125cb653fcab35b2b16b671090d05b83f17a",
+    "inspection": "source inventory and syntax scan",
+    "definitions": [
+      {
+        "name": "_save_u16",
+        "line": 11
+      },
+      {
+        "name": "_save_u8",
+        "line": 17
+      },
+      {
+        "name": "save_channel_images",
+        "line": 23
+      },
+      {
+        "name": "save_mask",
+        "line": 127
+      }
+    ]
+  },
+  {
+    "path": "DataSimulation/bse_renderer/output/label_generator.py",
+    "lines": 96,
+    "sha256": "3e4785c8f0117792618372deedc1c00faa6d8cec9db403861d962ef48610b790",
+    "inspection": "source inventory and syntax scan",
+    "definitions": [
+      {
+        "name": "_bbox_xyxy_to_coco",
+        "line": 11
+      },
+      {
+        "name": "_bbox_xyxy_to_yolo",
+        "line": 17
+      },
+      {
+        "name": "write_yolo_labels",
+        "line": 25
+      },
+      {
+        "name": "CocoBuilder",
+        "line": 46
+      }
+    ]
+  },
+  {
+    "path": "DataSimulation/bse_renderer/physics/__init__.py",
+    "lines": 16,
+    "sha256": "691fe2dfe0e72107d9362c2445430a83c4e30ecab42125c4721909f80193ecb9",
+    "inspection": "source inventory and syntax scan",
+    "definitions": []
+  },
+  {
+    "path": "DataSimulation/bse_renderer/physics/bse_yield.py",
+    "lines": 32,
+    "sha256": "bd27dc911142318ef5d2c8f073962cbf764bff72035b5e43eedb13bf9655b860",
+    "inspection": "source inventory and syntax scan",
+    "definitions": [
+      {
+        "name": "eta_z",
+        "line": 6
+      },
+      {
+        "name": "eta_oblique",
+        "line": 13
+      },
+      {
+        "name": "eta_void",
+        "line": 29
+      }
+    ]
+  },
+  {
+    "path": "DataSimulation/bse_renderer/physics/emission_model.py",
+    "lines": 62,
+    "sha256": "9263d9ee58336dbdcb75b841f6676e7264bee0dac7a70a0eddef2f16a08a0479",
+    "inspection": "source inventory and syntax scan",
+    "definitions": [
+      {
+        "name": "emission_distribution",
+        "line": 6
+      },
+      {
+        "name": "solid_angle_integral",
+        "line": 33
+      }
+    ]
+  },
+  {
+    "path": "DataSimulation/bse_renderer/physics/energy_spectrum.py",
+    "lines": 15,
+    "sha256": "137627f682592251cbb65611035b396d410d29acd933c12738baadca76bfa26a",
+    "inspection": "source inventory and syntax scan",
+    "definitions": [
+      {
+        "name": "depth_attenuation",
+        "line": 6
+      }
+    ]
+  },
+  {
+    "path": "DataSimulation/bse_renderer/physics/interaction_volume.py",
+    "lines": 25,
+    "sha256": "75b1f2ffe723a9bd4ef9f69805f44801aa9ca166b253b9c662d1502dec697a7c",
+    "inspection": "source inventory and syntax scan",
+    "definitions": [
+      {
+        "name": "kanaya_okayama_range",
+        "line": 6
+      },
+      {
+        "name": "defect_visible",
+        "line": 13
+      },
+      {
+        "name": "depth_decay",
+        "line": 20
+      }
+    ]
+  },
+  {
+    "path": "DataSimulation/bse_renderer/pipeline/__init__.py",
+    "lines": 3,
+    "sha256": "75679a9ef9421cd81bcc08ab60804e608335c3e58b9f6b2e05b130b2e94ac381",
+    "inspection": "source inventory and syntax scan",
+    "definitions": []
+  },
+  {
+    "path": "DataSimulation/bse_renderer/pipeline/generate.py",
+    "lines": 374,
+    "sha256": "110043d5b16644c32dea9177f55d0ccae0c0960eb9b4318cfbc7533ce29f41a4",
+    "inspection": "source inventory and syntax scan",
+    "definitions": [
+      {
+        "name": "_json_ready",
+        "line": 23
+      },
+      {
+        "name": "_build_weld_layout",
+        "line": 36
+      },
+      {
+        "name": "_build_sampled_parameters",
+        "line": 52
+      },
+      {
+        "name": "_result_delta",
+        "line": 99
+      },
+      {
+        "name": "generate_single_sample",
+        "line": 115
+      },
+      {
+        "name": "generate_batch_dataset",
+        "line": 180
+      },
+      {
+        "name": "render_comparison_case",
+        "line": 235
+      }
+    ]
+  },
+  {
+    "path": "DataSimulation/bse_renderer/renderer/__init__.py",
+    "lines": 69,
+    "sha256": "cb7c14d0da7869cb9fb14a5315177e9d8dd8033f8368fca79ce1564969cfaf7c",
+    "inspection": "source inventory and syntax scan",
+    "definitions": []
+  },
+  {
+    "path": "DataSimulation/bse_renderer/renderer/calibration.py",
+    "lines": 365,
+    "sha256": "01a1c4b01d5a09dfa6753ac296e2c06bf0a5c759fab7cf2a5c368d33f5c1e745",
+    "inspection": "source inventory and syntax scan",
+    "definitions": [
+      {
+        "name": "ChannelCalibration",
+        "line": 22
+      },
+      {
+        "name": "YieldSurrogateCalibration",
+        "line": 28
+      },
+      {
+        "name": "BlurSurrogateCalibration",
+        "line": 38
+      },
+      {
+        "name": "DepthSurrogateCalibration",
+        "line": 47
+      },
+      {
+        "name": "DefectSurrogateCalibration",
+        "line": 56
+      },
+      {
+        "name": "GeometryResponseProfile",
+        "line": 63
+      },
+      {
+        "name": "SurrogateCalibration",
+        "line": 77
+      },
+      {
+        "name": "RendererCalibration",
+        "line": 98
+      },
+      {
+        "name": "interpolate_tilt_scale",
+        "line": 114
+      },
+      {
+        "name": "interpolate_tilt_scale_map",
+        "line": 143
+      },
+      {
+        "name": "parameter_only_calibration",
+        "line": 170
+      },
+      {
+        "name": "validate_render_model_mode",
+        "line": 186
+      },
+      {
+        "name": "infer_render_model_mode",
+        "line": 197
+      },
+      {
+        "name": "load_renderer_calibration",
+        "line": 205
+      },
+      {
+        "name": "resolve_renderer_calibration",
+        "line": 321
+      },
+      {
+        "name": "save_renderer_calibration",
+        "line": 344
+      }
+    ]
+  },
+  {
+    "path": "DataSimulation/bse_renderer/renderer/emission_b.py",
+    "lines": 202,
+    "sha256": "a425c28396a67abcaa0fe03f56df53fc3f101f38fe2f2ccbd6f899a6a172ac3f",
+    "inspection": "source inventory and syntax scan",
+    "definitions": [
+      {
+        "name": "EmissionBFit",
+        "line": 30
+      },
+      {
+        "name": "validate_emission_b_mode",
+        "line": 64
+      },
+      {
+        "name": "_build_constant_fit",
+        "line": 75
+      },
+      {
+        "name": "_build_quadratic_fit",
+        "line": 88
+      },
+      {
+        "name": "_build_sin_fit",
+        "line": 102
+      },
+      {
+        "name": "_load_from_gui_summary",
+        "line": 116
+      },
+      {
+        "name": "_load_from_report",
+        "line": 140
+      },
+      {
+        "name": "load_emission_b_fit",
+        "line": 169
+      }
+    ]
+  },
+  {
+    "path": "DataSimulation/bse_renderer/renderer/image_formation.py",
+    "lines": 28,
+    "sha256": "6b6aec8bce1f433b2aaa6f9eec10fe6b3a2a419fa5383d298d5f520ffad0d6e3",
+    "inspection": "source inventory and syntax scan",
+    "definitions": [
+      {
+        "name": "form_channels",
+        "line": 8
+      }
+    ]
+  },
+  {
+    "path": "DataSimulation/bse_renderer/renderer/quadrant_detector.py",
+    "lines": 148,
+    "sha256": "ace3574e8c4f99c664be0fa22a544652d22fd1da98e739f0a261d4cb1d499b21",
+    "inspection": "source inventory and syntax scan",
+    "definitions": [
+      {
+        "name": "_wrap_pi",
+        "line": 10
+      },
+      {
+        "name": "_gauss_legendre_interval",
+        "line": 14
+      },
+      {
+        "name": "_integrated_quadrant_directional_term",
+        "line": 23
+      },
+      {
+        "name": "compute_quadrant_signals",
+        "line": 78
+      }
+    ]
+  },
+  {
+    "path": "DataSimulation/bse_renderer/renderer/scan_engine.py",
+    "lines": 1002,
+    "sha256": "ce1c5b529edb2e5684169fb656051cb8c55a1fa07518be08e38fecb6d5515235",
+    "inspection": "source inventory and syntax scan",
+    "definitions": [
+      {
+        "name": "_sha256_if_file",
+        "line": 70
+      },
+      {
+        "name": "ScanEngine",
+        "line": 83
+      }
+    ]
+  },
+  {
+    "path": "DataSimulation/bse_renderer/utils.py",
+    "lines": 111,
+    "sha256": "1f7491895ea2e3dc77b8d90ca4306fb7cd1c9aa13cd757208b1f4c9c423177e1",
+    "inspection": "source inventory and syntax scan",
+    "definitions": [
+      {
+        "name": "normalize_01",
+        "line": 9
+      },
+      {
+        "name": "normalize_with_window",
+        "line": 18
+      },
+      {
+        "name": "build_linear_display_map",
+        "line": 25
+      },
+      {
+        "name": "build_signed_display_map",
+        "line": 53
+      },
+      {
+        "name": "apply_display_map",
+        "line": 72
+      },
+      {
+        "name": "apply_sem_tone_curve",
+        "line": 85
+      },
+      {
+        "name": "resize_image",
+        "line": 98
+      },
+      {
+        "name": "seed_rng",
+        "line": 106
+      },
+      {
+        "name": "ensure_dir",
+        "line": 110
+      }
+    ]
+  },
+  {
+    "path": "DataSimulation/bse_renderer/validation/__init__.py",
+    "lines": 34,
+    "sha256": "b9a4b918ae7113f7a485cb86833ed70955dcf2bee60ee05e7a46029e70c221ce",
+    "inspection": "source inventory and syntax scan",
+    "definitions": []
+  },
+  {
+    "path": "DataSimulation/bse_renderer/validation/casino_adapter.py",
+    "lines": 217,
+    "sha256": "aab8608343342232bf86903e30a6444ccbb5309759c07984721754c2e13fede4",
+    "inspection": "source inventory and syntax scan",
+    "definitions": [
+      {
+        "name": "_resolve_executable",
+        "line": 16
+      },
+      {
+        "name": "run_casino_probe",
+        "line": 25
+      },
+      {
+        "name": "_parse_quadrants_from_json",
+        "line": 70
+      },
+      {
+        "name": "_parse_quadrants_from_csv",
+        "line": 81
+      },
+      {
+        "name": "parse_casino_case_output",
+        "line": 96
+      },
+      {
+        "name": "run_casino_case",
+        "line": 136
+      }
+    ]
+  },
+  {
+    "path": "DataSimulation/bse_renderer/validation/casino_benchmarks.py",
+    "lines": 1507,
+    "sha256": "2629397e6b3ad31944331a395852d826ff7f79570c52201230e63c6b2e959e5f",
+    "inspection": "source inventory and syntax scan",
+    "definitions": [
+      {
+        "name": "CasinoBenchmarkRecord",
+        "line": 19
+      },
+      {
+        "name": "CasinoBenchmarkCampaign",
+        "line": 42
+      },
+      {
+        "name": "CasinoAssemblyDefaults",
+        "line": 52
+      },
+      {
+        "name": "CasinoAssemblyRunSpec",
+        "line": 62
+      },
+      {
+        "name": "CasinoAssemblyRecordSpec",
+        "line": 83
+      },
+      {
+        "name": "CasinoAssemblyConfig",
+        "line": 100
+      },
+      {
+        "name": "ParsedCasinoRunMetrics",
+        "line": 113
+      },
+      {
+        "name": "_require_positive",
+        "line": 141
+      },
+      {
+        "name": "_require_non_negative",
+        "line": 148
+      },
+      {
+        "name": "_parse_tabbed_key_value",
+        "line": 155
+      },
+      {
+        "name": "_safe_float",
+        "line": 166
+      },
+      {
+        "name": "_parse_scale_vector",
+        "line": 173
+      },
+      {
+        "name": "_load_distribution_file",
+        "line": 181
+      },
+      {
+        "name": "_weighted_mean_and_peak",
+        "line": 207
+      },
+      {
+        "name": "_quantiles_from_density",
+        "line": 218
+      },
+      {
+        "name": "_quantiles_from_histogram",
+        "line": 237
+      },
+      {
+        "name": "_parse_casino_summary_dat",
+        "line": 252
+      },
+      {
+        "name": "_fallback_depth_quantiles_from_summary_dat",
+        "line": 327
+      },
+      {
+        "name": "_normalize_artifact_root",
+        "line": 344
+      },
+      {
+        "name": "_discover_graph_file",
+        "line": 351
+      },
+      {
+        "name": "_discover_optional_graph_file",
+        "line": 368
+      },
+      {
+        "name": "_discover_summary_dat",
+        "line": 390
+      },
+      {
+        "name": "parse_casino_export_run",
+        "line": 412
+      },
+      {
+        "name": "_infer_run_context",
+        "line": 488
+      },
+      {
+        "name": "_build_obsidian_value_table",
+        "line": 504
+      },
+      {
+        "name": "extract_casino_run_note_values",
+        "line": 524
+      },
+      {
+        "name": "_load_assembly_run",
+        "line": 610
+      },
+      {
+        "name": "_load_assembly_record",
+        "line": 649
+      },
+      {
+        "name": "load_casino_assembly_config",
+        "line": 688
+      },
+      {
+        "name": "_load_record",
+        "line": 740
+      },
+      {
+        "name": "load_casino_benchmark_campaign",
+        "line": 775
+      },
+      {
+        "name": "_is_usable",
+        "line": 796
+      },
+      {
+        "name": "_pick_material_preset",
+        "line": 800
+      },
+      {
+        "name": "_median",
+        "line": 816
+      },
+      {
+        "name": "_fit_obliquity_scale",
+        "line": 822
+      },
+      {
+        "name": "_default_blur_sigma_px",
+        "line": 845
+      },
+      {
+        "name": "_fit_defect_scale",
+        "line": 853
+      },
+      {
+        "name": "_fit_tilt_response_curve",
+        "line": 864
+      },
+      {
+        "name": "_predict_eta_response",
+        "line": 889
+      },
+      {
+        "name": "_fit_yield_tilt_response_curve",
+        "line": 913
+      },
+      {
+        "name": "_geometry_topo_gain",
+        "line": 948
+      },
+      {
+        "name": "_geometry_openness_scale",
+        "line": 957
+      },
+      {
+        "name": "build_geometry_profile_library",
+        "line": 966
+      },
+      {
+        "name": "fit_casino_benchmark_calibration",
+        "line": 1004
+      },
+      {
+        "name": "evaluate_casino_benchmark_fit",
+        "line": 1172
+      },
+      {
+        "name": "_median_int",
+        "line": 1284
+      },
+      {
+        "name": "_mean",
+        "line": 1292
+      },
+      {
+        "name": "_mean_int",
+        "line": 1298
+      },
+      {
+        "name": "_reduce_float",
+        "line": 1306
+      },
+      {
+        "name": "_reduce_int",
+        "line": 1314
+      },
+      {
+        "name": "_resolve_metadata_value",
+        "line": 1322
+      },
+      {
+        "name": "_make_auto_record",
+        "line": 1340
+      },
+      {
+        "name": "assemble_casino_benchmark_campaign",
+        "line": 1358
+      },
+      {
+        "name": "benchmark_campaign_to_dict",
+        "line": 1499
+      }
+    ]
+  },
+  {
+    "path": "DataSimulation/bse_renderer/validation/casino_calibration.py",
+    "lines": 183,
+    "sha256": "f110bd92a190714f97d5f0d6c99b064e64ddddf1b12cd363738e013c82f1b4b9",
+    "inspection": "source inventory and syntax scan",
+    "definitions": [
+      {
+        "name": "_regime_overrides",
+        "line": 27
+      },
+      {
+        "name": "_fit_linear",
+        "line": 50
+      },
+      {
+        "name": "run_casino_calibration",
+        "line": 59
+      }
+    ]
+  },
+  {
+    "path": "DataSimulation/bse_renderer/validation/casino_campaign_summary.py",
+    "lines": 143,
+    "sha256": "c9d76faac544d70de2d5d5666c6c2dd9ebbfd390a69bda8349e36abcfb4a715c",
+    "inspection": "source inventory and syntax scan",
+    "definitions": [
+      {
+        "name": "_safe_mean",
+        "line": 11
+      },
+      {
+        "name": "_safe_std",
+        "line": 15
+      },
+      {
+        "name": "_group_key",
+        "line": 21
+      },
+      {
+        "name": "summarize_casino_benchmark_campaign",
+        "line": 25
+      }
+    ]
+  },
+  {
+    "path": "DataSimulation/bse_renderer/validation/casino_comparison.py",
+    "lines": 344,
+    "sha256": "22c5ee0e51e72be21859c842e252e02f969c3447c58418b10fd407f08e173038",
+    "inspection": "source inventory and syntax scan",
+    "definitions": [
+      {
+        "name": "_beam_overrides_for_regime",
+        "line": 22
+      },
+      {
+        "name": "_write_threshold_csv",
+        "line": 45
+      },
+      {
+        "name": "_save_threshold_plot",
+        "line": 81
+      },
+      {
+        "name": "_run_threshold_slices",
+        "line": 111
+      },
+      {
+        "name": "run_casino_comparison",
+        "line": 218
+      }
+    ]
+  },
+  {
+    "path": "DataSimulation/bse_renderer/validation/casino_emission_fit.py",
+    "lines": 3444,
+    "sha256": "59725023bd6376971d0b74579c38998f0f6ae05994912bbcba871c74b4d17d01",
+    "inspection": "source inventory and syntax scan",
+    "definitions": [
+      {
+        "name": "SummaryRow",
+        "line": 26
+      },
+      {
+        "name": "ExitSample",
+        "line": 39
+      },
+      {
+        "name": "RunSummaryFitData",
+        "line": 61
+      },
+      {
+        "name": "ScanPointSummaryFitData",
+        "line": 113
+      },
+      {
+        "name": "BFoldResult",
+        "line": 143
+      },
+      {
+        "name": "BAlphaFoldResult",
+        "line": 155
+      },
+      {
+        "name": "_parse_run_id",
+        "line": 167
+      },
+      {
+        "name": "_sha256_file",
+        "line": 174
+      },
+      {
+        "name": "_fit_entry_frame",
+        "line": 182
+      },
+      {
+        "name": "_direction_to_angles",
+        "line": 212
+      },
+      {
+        "name": "_parse_collision_row",
+        "line": 224
+      },
+      {
+        "name": "_extract_label_value",
+        "line": 247
+      },
+      {
+        "name": "_parse_distribution_file",
+        "line": 256
+      },
+      {
+        "name": "_normalize_histogram",
+        "line": 277
+      },
+      {
+        "name": "_cross_entropy",
+        "line": 285
+      },
+      {
+        "name": "_l1_distance",
+        "line": 291
+      },
+      {
+        "name": "_angle_bin_edges_from_centers",
+        "line": 297
+      },
+      {
+        "name": "_empirical_histogram",
+        "line": 312
+      },
+      {
+        "name": "_rr_polar_histogram",
+        "line": 317
+      },
+      {
+        "name": "_histogram_to_mean",
+        "line": 327
+      },
+      {
+        "name": "_energy_histogram_from_samples",
+        "line": 333
+      },
+      {
+        "name": "_angle_histogram_from_samples",
+        "line": 340
+      },
+      {
+        "name": "_parse_summary_file",
+        "line": 347
+      },
+      {
+        "name": "build_trajectory_angle_audit",
+        "line": 663
+      },
+      {
+        "name": "write_trajectory_angle_audit",
+        "line": 812
+      },
+      {
+        "name": "_collect_run_data",
+        "line": 894
+      },
+      {
+        "name": "_build_b_grid",
+        "line": 1028
+      },
+      {
+        "name": "_group_samples_by_run",
+        "line": 1037
+      },
+      {
+        "name": "_vector_from_run",
+        "line": 1044
+      },
+      {
+        "name": "_build_coordinate_frame_diagnostics",
+        "line": 1051
+      },
+      {
+        "name": "_harmonic_statistics",
+        "line": 1165
+      },
+      {
+        "name": "_repeat_metric_summary",
+        "line": 1265
+      },
+      {
+        "name": "_make_harmonic_row",
+        "line": 1287
+      },
+      {
+        "name": "_build_azimuth_harmonic_diagnostics",
+        "line": 1320
+      },
+      {
+        "name": "_sample_emission_components",
+        "line": 1506
+      },
+      {
+        "name": "_pooled_negative_log_likelihood",
+        "line": 1515
+      },
+      {
+        "name": "_pooled_nll_derivative",
+        "line": 1542
+      },
+      {
+        "name": "_pooled_nll_second_derivative",
+        "line": 1562
+      },
+      {
+        "name": "_finite_or_none",
+        "line": 1582
+      },
+      {
+        "name": "_observed_feasible_interval",
+        "line": 1586
+      },
+      {
+        "name": "_domain_feasible_interval",
+        "line": 1598
+      },
+      {
+        "name": "_fit_linear_trend",
+        "line": 1606
+      },
+      {
+        "name": "_fit_pooled_b_with_diagnostics",
+        "line": 1625
+      },
+      {
+        "name": "_evaluate_objective_for_samples",
+        "line": 1733
+      },
+      {
+        "name": "_fit_b_from_samples",
+        "line": 1759
+      },
+      {
+        "name": "_evaluate_b_alpha_sin_objective_for_samples",
+        "line": 1770
+      },
+      {
+        "name": "_build_run_objective_rows",
+        "line": 1802
+      },
+      {
+        "name": "_fit_b_alpha_sin_from_run_objectives",
+        "line": 1827
+      },
+      {
+        "name": "_fit_b_alpha_sin_from_samples",
+        "line": 1923
+      },
+      {
+        "name": "_weighted_lstsq",
+        "line": 1948
+      },
+      {
+        "name": "_evaluate_parametric_curve_objective",
+        "line": 1959
+      },
+      {
+        "name": "_refine_parametric_coeffs_pattern_search",
+        "line": 1983
+      },
+      {
+        "name": "_evaluate_b_alpha_quadratic_objective_for_samples",
+        "line": 2027
+      },
+      {
+        "name": "_fit_b_alpha_quadratic_from_samples",
+        "line": 2059
+      },
+      {
+        "name": "_fit_per_run",
+        "line": 2144
+      },
+      {
+        "name": "_fit_per_tilt",
+        "line": 2167
+      },
+      {
+        "name": "_leave_one_repeat_out",
+        "line": 2191
+      },
+      {
+        "name": "_leave_one_repeat_out_b_alpha_sin",
+        "line": 2219
+      },
+      {
+        "name": "_fit_b_alpha_sin_per_tilt",
+        "line": 2262
+      },
+      {
+        "name": "_leave_one_repeat_out_b_alpha_quadratic",
+        "line": 2284
+      },
+      {
+        "name": "_fit_b_alpha_quadratic_per_tilt",
+        "line": 2334
+      },
+      {
+        "name": "_residual_metrics",
+        "line": 2356
+      },
+      {
+        "name": "_summarize_parametric_model",
+        "line": 2364
+      },
+      {
+        "name": "_get_primary_constant_fit",
+        "line": 2387
+      },
+      {
+        "name": "_get_primary_parametric_fit",
+        "line": 2392
+      },
+      {
+        "name": "_rr_density_mass",
+        "line": 2397
+      },
+      {
+        "name": "_build_rr_normalization_check",
+        "line": 2407
+      },
+      {
+        "name": "_choose_recommended_model",
+        "line": 2426
+      },
+      {
+        "name": "_write_per_tilt_comparison_plot",
+        "line": 2480
+      },
+      {
+        "name": "_write_objective_diagnostics_plot",
+        "line": 2511
+      },
+      {
+        "name": "_write_run_trend_plot",
+        "line": 2545
+      },
+      {
+        "name": "_write_azimuth_harmonics_plot",
+        "line": 2587
+      },
+      {
+        "name": "_write_azimuth_histograms_plot",
+        "line": 2655
+      },
+      {
+        "name": "_write_coordinate_frame_plot",
+        "line": 2707
+      },
+      {
+        "name": "_build_gui_summary",
+        "line": 2765
+      },
+      {
+        "name": "_build_constant_vs_quadratic_per_tilt_rows",
+        "line": 2852
+      },
+      {
+        "name": "_write_csv",
+        "line": 2917
+      },
+      {
+        "name": "_write_markdown_summary",
+        "line": 2929
+      },
+      {
+        "name": "fit_casino_emission_b",
+        "line": 3053
+      }
+    ]
+  },
+  {
+    "path": "DataSimulation/bse_renderer/validation/comparison_summary.py",
+    "lines": 185,
+    "sha256": "2c609d87fe982e9de273d94bd8f91c2e09e438075da423dc114238a7527c3f57",
+    "inspection": "source inventory and syntax scan",
+    "definitions": [
+      {
+        "name": "_parse_case_stem",
+        "line": 20
+      },
+      {
+        "name": "_profile_names",
+        "line": 36
+      },
+      {
+        "name": "_load_row",
+        "line": 50
+      },
+      {
+        "name": "summarize_comparison_cases",
+        "line": 96
+      }
+    ]
+  },
+  {
+    "path": "DataSimulation/bse_renderer/validation/emission_b_render_comparison.py",
+    "lines": 639,
+    "sha256": "0a23c720a03d24c793b2bcec3846f5f39882f614fbd8b2dd4440baba92f77759",
+    "inspection": "source inventory and syntax scan",
+    "definitions": [
+      {
+        "name": "_json_ready",
+        "line": 23
+      },
+      {
+        "name": "_write_csv",
+        "line": 36
+      },
+      {
+        "name": "_load_b_fit_report",
+        "line": 48
+      },
+      {
+        "name": "_per_tilt_b_rows",
+        "line": 55
+      },
+      {
+        "name": "_winner_from_combined_delta",
+        "line": 63
+      },
+      {
+        "name": "_delta_vs_target",
+        "line": 71
+      },
+      {
+        "name": "_bbox_from_mask",
+        "line": 87
+      },
+      {
+        "name": "_crop",
+        "line": 101
+      },
+      {
+        "name": "_profile_rows",
+        "line": 106
+      },
+      {
+        "name": "_write_plot",
+        "line": 147
+      },
+      {
+        "name": "_write_full_frame_figure",
+        "line": 177
+      },
+      {
+        "name": "_write_roi_figure",
+        "line": 232
+      },
+      {
+        "name": "_write_profile_figure",
+        "line": 279
+      },
+      {
+        "name": "_write_markdown_summary",
+        "line": 324
+      },
+      {
+        "name": "compare_emission_b_render_modes",
+        "line": 363
+      }
+    ]
+  },
+  {
+    "path": "DataSimulation/bse_renderer/validation/emission_b_topo_ablation.py",
+    "lines": 163,
+    "sha256": "dd38397e2371fd2de09286180c049e8f349b07d1f79b47097cc1af3e1926549c",
+    "inspection": "source inventory and syntax scan",
+    "definitions": [
+      {
+        "name": "_write_csv",
+        "line": 29
+      },
+      {
+        "name": "_panel",
+        "line": 36
+      },
+      {
+        "name": "_save_triptych",
+        "line": 41
+      },
+      {
+        "name": "run_emission_b_topo_ablation",
+        "line": 58
+      }
+    ]
+  },
+  {
+    "path": "DataSimulation/bse_renderer/validation/geant4/DetectorConstruction.cc",
+    "lines": 26,
+    "sha256": "01bfeeb11506c478787b3cfb1544e624c9eaca556cff5aaf3459b73570563058",
+    "inspection": "source inventory and syntax scan"
+  },
+  {
+    "path": "DataSimulation/bse_renderer/validation/geant4/PrimaryGeneratorAction.cc",
+    "lines": 14,
+    "sha256": "ac968f36f0e397a1d27769b4efc7734863ffa4ed7d93c07b60d3e5a3d19b40b7",
+    "inspection": "source inventory and syntax scan"
+  },
+  {
+    "path": "DataSimulation/bse_renderer/validation/geant4_runner.py",
+    "lines": 29,
+    "sha256": "0ba56e34b59eb3c9f73d650c5e7e3986226658e504ddd979cbde2a9abc1ef040",
+    "inspection": "source inventory and syntax scan",
+    "definitions": [
+      {
+        "name": "geant4_available",
+        "line": 8
+      },
+      {
+        "name": "run_geant4_probe",
+        "line": 12
+      },
+      {
+        "name": "geant4_sources_dir",
+        "line": 27
+      }
+    ]
+  },
+  {
+    "path": "DataSimulation/bse_renderer/validation/regime_validation.py",
+    "lines": 201,
+    "sha256": "e0c3f0108cc3c6a694a443a9bdc76d4c6739113e5ca3679483f418b802a9f972",
+    "inspection": "source inventory and syntax scan",
+    "definitions": [
+      {
+        "name": "_session_state",
+        "line": 49
+      },
+      {
+        "name": "_beam_with_regime",
+        "line": 66
+      },
+      {
+        "name": "run_regime_sweep_validation",
+        "line": 76
+      }
+    ]
+  },
+  {
+    "path": "DataSimulation/bse_renderer/validation/signal_tests.py",
+    "lines": 30,
+    "sha256": "ef4cc62e0454905e5b7f21a0b019b634f198501cb3395f47c789eb6d6298c516",
+    "inspection": "source inventory and syntax scan",
+    "definitions": [
+      {
+        "name": "run_signal_tests",
+        "line": 9
+      }
+    ]
+  },
+  {
+    "path": "DataSimulation/bse_renderer/validation/standards.py",
+    "lines": 263,
+    "sha256": "fab55e3bb4a1c56fd7803cd5614ece0f8af47c61e95f2a6cf914fe85a7c1be8b",
+    "inspection": "source inventory and syntax scan",
+    "definitions": [
+      {
+        "name": "StandardsDefaults",
+        "line": 24
+      },
+      {
+        "name": "load_standards_defaults",
+        "line": 33
+      },
+      {
+        "name": "level_b_threshold_mm",
+        "line": 64
+      },
+      {
+        "name": "defect_size_depth_mm",
+        "line": 80
+      },
+      {
+        "name": "_expand_mask",
+        "line": 93
+      },
+      {
+        "name": "defect_detected_proxy",
+        "line": 103
+      },
+      {
+        "name": "_wilson_interval",
+        "line": 128
+      },
+      {
+        "name": "_build_bins",
+        "line": 140
+      },
+      {
+        "name": "_bin_label",
+        "line": 156
+      },
+      {
+        "name": "evaluate_standards_report",
+        "line": 162
+      }
+    ]
+  },
+  {
+    "path": "DataSimulation/bse_renderer/validation/visibility_pilot.py",
+    "lines": 438,
+    "sha256": "cd6c99781159990f7379573793fbe3204541e805da7a20c33c1eb4ce3626454b",
+    "inspection": "source inventory and syntax scan",
+    "definitions": [
+      {
+        "name": "_beam_overrides",
+        "line": 33
+      },
+      {
+        "name": "_quiet_sample",
+        "line": 56
+      },
+      {
+        "name": "_set_regime",
+        "line": 70
+      },
+      {
+        "name": "_robust_background_threshold",
+        "line": 81
+      },
+      {
+        "name": "_write_csv",
+        "line": 104
+      },
+      {
+        "name": "_save_plot",
+        "line": 114
+      },
+      {
+        "name": "run_visibility_pilot",
+        "line": 169
+      }
+    ]
+  },
+  {
+    "path": "DataSimulation/bse_renderer/visualisation/__init__.py",
+    "lines": 5,
+    "sha256": "b97c682b5fa5fe814dad45ae692d5ff43ec5dcbddce9b4c765f0c4eb0cacd180",
+    "inspection": "source inventory and syntax scan",
+    "definitions": []
+  },
+  {
+    "path": "DataSimulation/bse_renderer/visualisation/image_preview.py",
+    "lines": 490,
+    "sha256": "cfbc2563a612d2db9cda1e11efe250ae7d59fcfd6244e86980dd0363f0b24322",
+    "inspection": "source inventory and syntax scan",
+    "definitions": [
+      {
+        "name": "_mapped",
+        "line": 14
+      },
+      {
+        "name": "preview_channels",
+        "line": 22
+      },
+      {
+        "name": "preview_defect_impact",
+        "line": 74
+      },
+      {
+        "name": "preview_calibration_modes",
+        "line": 147
+      },
+      {
+        "name": "_connected_region_count",
+        "line": 321
+      },
+      {
+        "name": "_show_scrollable_figure",
+        "line": 354
+      },
+      {
+        "name": "_comparison_metric_lines",
+        "line": 424
+      },
+      {
+        "name": "_fmt_metric",
+        "line": 468
+      },
+      {
+        "name": "_fmt_fixed",
+        "line": 479
+      },
+      {
+        "name": "_as_float",
+        "line": 487
+      }
+    ]
+  },
+  {
+    "path": "DataSimulation/bse_renderer/visualisation/mesh_viewer.py",
+    "lines": 234,
+    "sha256": "08633ca1661c15bb92c2260211ca0039d1992d569e303a18c125dff0ea8d1ac5",
+    "inspection": "source inventory and syntax scan",
+    "definitions": [
+      {
+        "name": "_coord_vectors",
+        "line": 6
+      },
+      {
+        "name": "_resolve_z_exaggeration",
+        "line": 23
+      },
+      {
+        "name": "preview_surface_mesh",
+        "line": 51
+      },
+      {
+        "name": "_preview_matplotlib",
+        "line": 100
+      },
+      {
+        "name": "preview_volume_geometry",
+        "line": 139
+      },
+      {
+        "name": "_preview_volume_matplotlib",
+        "line": 202
+      }
+    ]
+  },
+  {
+    "path": "DataSimulation/entrypoints/generate.py",
+    "lines": 60,
+    "sha256": "517bb32f269fc2a409cbf927738f3aa7764a2747de3c96dcde1ec39f734c5928",
+    "inspection": "source inventory and syntax scan",
+    "definitions": [
+      {
+        "name": "build_parser",
+        "line": 11
+      },
+      {
+        "name": "main",
+        "line": 35
+      }
+    ]
+  },
+  {
+    "path": "DataSimulation/entrypoints/main.py",
+    "lines": 805,
+    "sha256": "49c15fe17dd0669c077508789b71de5e2d26d1e35d6e1c47a868424f7ad2b2b2",
+    "inspection": "source inventory and syntax scan",
+    "definitions": [
+      {
+        "name": "build_parser",
+        "line": 58
+      },
+      {
+        "name": "main",
+        "line": 489
+      }
+    ]
+  },
+  {
+    "path": "DataSimulation/main.py",
+    "lines": 8,
+    "sha256": "e437ffef2ea597080a7f698daa03c20a261a99a92c5f86962a319c356bf9ff01",
+    "inspection": "source inventory and syntax scan",
+    "definitions": []
+  },
+  {
+    "path": "DataSimulation/tests/test_batch_e2e.py",
+    "lines": 141,
+    "sha256": "acaddddc8a051d38142e7718989d4648d8c7868b15873fa4f14fe3e121996e77",
+    "inspection": "source inventory and syntax scan",
+    "definitions": [
+      {
+        "name": "test_batch_outputs",
+        "line": 10
+      },
+      {
+        "name": "test_batch_outputs_can_disable_noise",
+        "line": 54
+      },
+      {
+        "name": "test_batch_outputs_with_pooled_constant_emission_b_fit",
+        "line": 72
+      },
+      {
+        "name": "test_top_surface_batch_records_surface_visible_label_scope",
+        "line": 114
+      }
+    ]
+  },
+  {
+    "path": "DataSimulation/tests/test_bse_yield.py",
+    "lines": 29,
+    "sha256": "b9d0d58dbb301230d6c805a717046972a6954087f51e5bc003f004553fea0592",
+    "inspection": "source inventory and syntax scan",
+    "definitions": [
+      {
+        "name": "test_eta_z_bounds",
+        "line": 6
+      },
+      {
+        "name": "test_eta_oblique_increases_with_angle",
+        "line": 14
+      },
+      {
+        "name": "test_eta_void",
+        "line": 24
+      }
+    ]
+  },
+  {
+    "path": "DataSimulation/tests/test_casino_benchmarks.py",
+    "lines": 560,
+    "sha256": "9c7bc89b7b19a3d21d359e45cb173f4e9a6c3bc0e74f9fa3515e51ff083e3523",
+    "inspection": "source inventory and syntax scan",
+    "definitions": [
+      {
+        "name": "_write_campaign",
+        "line": 22
+      },
+      {
+        "name": "_write_run_export",
+        "line": 147
+      },
+      {
+        "name": "test_load_casino_benchmark_campaign",
+        "line": 266
+      },
+      {
+        "name": "test_fit_casino_benchmark_calibration",
+        "line": 274
+      },
+      {
+        "name": "test_evaluate_casino_benchmark_fit_report",
+        "line": 302
+      },
+      {
+        "name": "test_scan_engine_uses_surrogate_calibration",
+        "line": 320
+      },
+      {
+        "name": "test_parse_casino_export_run",
+        "line": 352
+      },
+      {
+        "name": "test_parse_casino_export_run_falls_back_for_degenerate_zmax",
+        "line": 364
+      },
+      {
+        "name": "test_extract_casino_run_note_values_infers_context_and_builds_table",
+        "line": 379
+      },
+      {
+        "name": "test_assemble_casino_benchmark_campaign_with_median_reducer",
+        "line": 398
+      },
+      {
+        "name": "test_assemble_casino_benchmark_campaign_with_mean_reducer",
+        "line": 463
+      },
+      {
+        "name": "test_assemble_casino_benchmark_campaign_auto_single_run_records",
+        "line": 511
+      }
+    ]
+  },
+  {
+    "path": "DataSimulation/tests/test_casino_emission_fit.py",
+    "lines": 663,
+    "sha256": "0919bf8d31d967df0b7c3c0ce26a399578769632e18ef2d3015effc9570c761d",
+    "inspection": "source inventory and syntax scan",
+    "definitions": [
+      {
+        "name": "test_parse_summary_file_extracts_backscattered_second_row",
+        "line": 28
+      },
+      {
+        "name": "test_parse_summary_file_preserves_multiple_scan_point_blocks",
+        "line": 82
+      },
+      {
+        "name": "test_parse_summary_file_classifies_single_missing_exported_trajectory",
+        "line": 150
+      },
+      {
+        "name": "test_build_trajectory_angle_audit_recomputes_known_geometry",
+        "line": 189
+      },
+      {
+        "name": "_make_rr_harmonic_samples",
+        "line": 247
+      },
+      {
+        "name": "test_harmonic_diagnostic_recovers_rr_cosine_and_b",
+        "line": 283
+      },
+      {
+        "name": "test_harmonic_tangent_reversal_changes_phase_not_amplitude",
+        "line": 294
+      },
+      {
+        "name": "test_azimuth_harmonic_diagnostics_include_uniform_control",
+        "line": 308
+      },
+      {
+        "name": "test_coordinate_frame_diagnostics_detect_tangent_flip",
+        "line": 320
+      },
+      {
+        "name": "test_chunked_likelihood_derivative_matches_grazing_angle_finite_difference",
+        "line": 357
+      },
+      {
+        "name": "test_fit_b_from_samples_recovers_known_value",
+        "line": 374
+      },
+      {
+        "name": "test_fit_pooled_b_with_diagnostics_agrees_with_grid_and_derivative",
+        "line": 420
+      },
+      {
+        "name": "test_rr_polar_histogram_is_normalized",
+        "line": 471
+      },
+      {
+        "name": "test_rr_density_normalization_check_near_one",
+        "line": 479
+      },
+      {
+        "name": "test_fit_b_alpha_sin_from_samples_recovers_known_law",
+        "line": 486
+      },
+      {
+        "name": "test_fit_b_alpha_quadratic_from_samples_recovers_known_law",
+        "line": 551
+      },
+      {
+        "name": "test_build_constant_vs_quadratic_per_tilt_rows_marks_winners",
+        "line": 617
+      }
+    ]
+  },
+  {
+    "path": "DataSimulation/tests/test_casino_runner.py",
+    "lines": 48,
+    "sha256": "5ec63bc60e9376f83856a623ffb770ab038bd0bf5c3cc8ef464762f81d71ab01",
+    "inspection": "source inventory and syntax scan",
+    "definitions": [
+      {
+        "name": "test_casino_runner_emit_mock",
+        "line": 9
+      }
+    ]
+  },
+  {
+    "path": "DataSimulation/tests/test_config_loader.py",
+    "lines": 15,
+    "sha256": "71ab2a855777154ec865f6a419fd85e6edb66908a743b5ecbd4090c766103d62",
+    "inspection": "source inventory and syntax scan",
+    "definitions": [
+      {
+        "name": "test_load_config_bundle",
+        "line": 6
+      }
+    ]
+  },
+  {
+    "path": "DataSimulation/tests/test_dataset_forms.py",
+    "lines": 219,
+    "sha256": "0bcd4880dc12ba0f14149e3f8eba1ee61e4b3d7a847bfbd6946099c110f19da8",
+    "inspection": "source inventory and syntax scan",
+    "definitions": [
+      {
+        "name": "_records",
+        "line": 19
+      },
+      {
+        "name": "test_beam_regime_cycle_is_offset_between_classes",
+        "line": 27
+      },
+      {
+        "name": "test_planned_sequence_targets_cycle_across_all_eligible_frames",
+        "line": 32
+      },
+      {
+        "name": "test_balanced_static_topo_dataset_contract",
+        "line": 45
+      },
+      {
+        "name": "test_static_dataset_can_reuse_frozen_training_normalization",
+        "line": 80
+      },
+      {
+        "name": "test_static_dataset_refuses_nonempty_output_directory",
+        "line": 113
+      },
+      {
+        "name": "test_static_dataset_rejects_invalid_normalization_before_writing",
+        "line": 128
+      },
+      {
+        "name": "test_ordered_topo_sequences_are_split_as_complete_groups",
+        "line": 154
+      },
+      {
+        "name": "test_sequence_dataset_can_reuse_frozen_training_normalization",
+        "line": 186
+      }
+    ]
+  },
+  {
+    "path": "DataSimulation/tests/test_defect_injection.py",
+    "lines": 38,
+    "sha256": "241d001256530a88fb59c2a789cdcf69118b3197b73e90f63d8b6e03ae1b6b4e",
+    "inspection": "source inventory and syntax scan",
+    "definitions": [
+      {
+        "name": "test_apply_defects_mutates_surface",
+        "line": 11
+      },
+      {
+        "name": "test_defects_populate_section_plane_fields",
+        "line": 26
+      }
+    ]
+  },
+  {
+    "path": "DataSimulation/tests/test_emission_b.py",
+    "lines": 254,
+    "sha256": "36037fc2b372b2785f5d481437400a2fddd4a607cb5aae485e5ca1cbca563914",
+    "inspection": "source inventory and syntax scan",
+    "definitions": [
+      {
+        "name": "test_validate_emission_b_mode_defaults_to_constant",
+        "line": 21
+      },
+      {
+        "name": "test_scan_engine_lambertian_mode_is_explicit_zero_b",
+        "line": 29
+      },
+      {
+        "name": "test_load_pooled_constant_emission_b_fit_from_gui_summary",
+        "line": 43
+      },
+      {
+        "name": "test_load_pooled_constant_emission_b_fit_from_report",
+        "line": 66
+      },
+      {
+        "name": "test_load_quadratic_emission_b_fit_from_report_prefers_sample_weighted",
+        "line": 86
+      },
+      {
+        "name": "test_load_sine_emission_b_fit_from_gui_summary",
+        "line": 117
+      },
+      {
+        "name": "test_scan_engine_sine_emission_b_uses_local_surface_tilt",
+        "line": 140
+      },
+      {
+        "name": "test_scan_engine_pooled_constant_emission_b_ignores_incidence_tilt",
+        "line": 168
+      },
+      {
+        "name": "test_scan_engine_quadratic_emission_b_uses_incidence_tilt",
+        "line": 210
+      }
+    ]
+  },
+  {
+    "path": "DataSimulation/tests/test_emission_b_render_comparison.py",
+    "lines": 29,
+    "sha256": "629320c8cfcc8cf446fc6f6541531258fd1ad42d667dee2aa10f5407b0cc6840",
+    "inspection": "source inventory and syntax scan",
+    "definitions": [
+      {
+        "name": "test_per_tilt_b_rows_indexes_by_nominal_tilt",
+        "line": 9
+      },
+      {
+        "name": "test_winner_from_combined_delta_prefers_lower_delta",
+        "line": 26
+      }
+    ]
+  },
+  {
+    "path": "DataSimulation/tests/test_emission_model.py",
+    "lines": 47,
+    "sha256": "ba7eb8071e1753d9be5288d95d3043618a49648e1bc9625a47222d55f1a53936",
+    "inspection": "source inventory and syntax scan",
+    "definitions": [
+      {
+        "name": "test_lambert_mode_positive",
+        "line": 7
+      },
+      {
+        "name": "test_solid_angle_integral_shape",
+        "line": 15
+      },
+      {
+        "name": "test_invalid_b_density_raises_instead_of_clipping",
+        "line": 30
+      },
+      {
+        "name": "test_phi_outside_outward_hemisphere_raises",
+        "line": 40
+      }
+    ]
+  },
+  {
+    "path": "DataSimulation/tests/test_feature_extensions.py",
+    "lines": 1063,
+    "sha256": "71d79073f89200d99c960e95014370b0f740bee58780ec1d30717a7d59e4a33b",
+    "inspection": "source inventory and syntax scan",
+    "definitions": [
+      {
+        "name": "_quiet_sampled_parameters",
+        "line": 38
+      },
+      {
+        "name": "test_manual_defect_plan_parse_and_validate",
+        "line": 51
+      },
+      {
+        "name": "test_average_z_material_estimation",
+        "line": 62
+      },
+      {
+        "name": "test_scan_engine_beam_parameter_sensitivity",
+        "line": 77
+      },
+      {
+        "name": "test_single_sample_overrides_for_avg_z_and_defect_plan",
+        "line": 123
+      },
+      {
+        "name": "test_keyhole_pores_are_bounded_but_visible_in_compo_channel",
+        "line": 138
+      },
+      {
+        "name": "test_defects_couple_compo_and_directional_channels",
+        "line": 164
+      },
+      {
+        "name": "test_intrinsic_pore_has_bounded_section_plane_contrast",
+        "line": 189
+      },
+      {
+        "name": "test_local_depression_produces_signed_directional_relief",
+        "line": 212
+      },
+      {
+        "name": "test_defect_difference_is_localized_above_background_in_compo_and_topo",
+        "line": 238
+      },
+      {
+        "name": "test_default_ebw_profile_is_recessed_not_crowned",
+        "line": 261
+      },
+      {
+        "name": "test_seam_depth_parameter_increases_recess_depth_monotonically",
+        "line": 283
+      },
+      {
+        "name": "test_closed_fusion_profile_is_not_a_recessed_through_slit",
+        "line": 313
+      },
+      {
+        "name": "test_clean_topo_baseline_avoids_dominant_periodic_stripng",
+        "line": 335
+      },
+      {
+        "name": "test_geometry_adaptive_profiles_modulate_local_rendering",
+        "line": 352
+      },
+      {
+        "name": "test_render_comparison_case_writes_mode_outputs",
+        "line": 441
+      },
+      {
+        "name": "test_parameter_only_calibration_strips_geometry_profiles",
+        "line": 529
+      },
+      {
+        "name": "test_resolve_renderer_calibration_explicit_modes",
+        "line": 557
+      },
+      {
+        "name": "test_casino_render_mode_rejects_missing_calibration",
+        "line": 599
+      },
+      {
+        "name": "test_compute_topography_delta_metrics_tracks_defect_vs_background",
+        "line": 607
+      },
+      {
+        "name": "test_summarize_comparison_cases_writes_table",
+        "line": 622
+      },
+      {
+        "name": "test_connected_region_count_counts_disjoint_regions",
+        "line": 670
+      },
+      {
+        "name": "test_comparison_metric_lines_explain_localized_change",
+        "line": 684
+      },
+      {
+        "name": "test_circular_weld_layout_fits_the_full_ring_into_view",
+        "line": 705
+      },
+      {
+        "name": "test_circular_weld_layout_changes_the_local_profile_shape",
+        "line": 733
+      },
+      {
+        "name": "test_local_patch_layout_is_more_localized_than_straight_seam",
+        "line": 760
+      },
+      {
+        "name": "test_single_sample_records_pixel_scale_and_weld_layout_metadata",
+        "line": 788
+      },
+      {
+        "name": "test_screenshot_weld_layout_controls_have_expected_active_and_inactive_cases",
+        "line": 807
+      },
+      {
+        "name": "test_voxel_depth_changes_volume_depth_sampling",
+        "line": 900
+      },
+      {
+        "name": "test_slice_controls_have_expected_active_and_inactive_cases",
+        "line": 925
+      },
+      {
+        "name": "test_top_surface_render_ignores_slice_plane_controls_but_slice_render_uses_them",
+        "line": 973
+      }
+    ]
+  },
+  {
+    "path": "DataSimulation/tests/test_gui_smoke.py",
+    "lines": 7,
+    "sha256": "45976dbbd5199e7ec1ab76f9794a1ddbc528d85e7bc60d60c30ed83f637ab564",
+    "inspection": "source inventory and syntax scan",
+    "definitions": [
+      {
+        "name": "test_gui_module_importable",
+        "line": 4
+      }
+    ]
+  },
+  {
+    "path": "DataSimulation/tests/test_image_formation.py",
+    "lines": 17,
+    "sha256": "2ada00a1e05384d9602fed96e0b07ccd76892d9de74bf48bdf051b5fc62cc752",
+    "inspection": "source inventory and syntax scan",
+    "definitions": [
+      {
+        "name": "test_image_formation_outputs",
+        "line": 6
+      }
+    ]
+  },
+  {
+    "path": "DataSimulation/tests/test_noise_models.py",
+    "lines": 68,
+    "sha256": "41670bff1a42d0fa246dc650909d4b917a571f1c3c7d837fda15becbd49a8d90",
+    "inspection": "source inventory and syntax scan",
+    "definitions": [
+      {
+        "name": "test_poisson_noise_shape",
+        "line": 8
+      },
+      {
+        "name": "test_thermal_drift_changes_signal",
+        "line": 16
+      },
+      {
+        "name": "test_contamination_quadrants",
+        "line": 26
+      },
+      {
+        "name": "test_session_progress_and_mismatch_shift_quadrants_directionally",
+        "line": 33
+      },
+      {
+        "name": "test_thermal_session_baseline_accumulates_and_resets",
+        "line": 45
+      }
+    ]
+  },
+  {
+    "path": "DataSimulation/tests/test_quadrant_detector.py",
+    "lines": 125,
+    "sha256": "4cff4baf711f6160c71c0e6eed2e89f8f7221f4da06fb9953e75959748c612a6",
+    "inspection": "source inventory and syntax scan",
+    "definitions": [
+      {
+        "name": "_material",
+        "line": 12
+      },
+      {
+        "name": "_detector",
+        "line": 16
+      },
+      {
+        "name": "_signals",
+        "line": 28
+      },
+      {
+        "name": "test_flat_surface_has_equal_integrated_quadrants",
+        "line": 40
+      },
+      {
+        "name": "test_flat_quadrants_sum_to_full_annulus_integral",
+        "line": 50
+      },
+      {
+        "name": "test_quadrant_sensitivity_is_applied_to_only_that_channel",
+        "line": 78
+      },
+      {
+        "name": "test_rotating_surface_gradient_permutes_integrated_quadrants",
+        "line": 91
+      },
+      {
+        "name": "test_annular_quadrature_converges",
+        "line": 101
+      },
+      {
+        "name": "test_sampled_detector_center_always_lies_in_annulus",
+        "line": 121
+      }
+    ]
+  },
+  {
+    "path": "DataSimulation/tests/test_scan_engine.py",
+    "lines": 116,
+    "sha256": "6315b2d29e71eddea996323958a2f35fc6da4fa96a85b0d992c227b0bc9eff74",
+    "inspection": "source inventory and syntax scan",
+    "definitions": [
+      {
+        "name": "test_scan_engine_runs",
+        "line": 12
+      },
+      {
+        "name": "test_heightmap_normals_match_analytical_plane",
+        "line": 29
+      },
+      {
+        "name": "test_heightmap_normals_are_resolution_invariant",
+        "line": 43
+      },
+      {
+        "name": "test_heightmap_normals_match_sinusoidal_gradient_away_from_edges",
+        "line": 57
+      },
+      {
+        "name": "test_heightmap_normals_reject_nonpositive_spacing",
+        "line": 81
+      },
+      {
+        "name": "test_scan_engine_session_state_changes_output",
+        "line": 86
+      }
+    ]
+  },
+  {
+    "path": "DataSimulation/tests/test_validation.py",
+    "lines": 109,
+    "sha256": "612f0117dcd7072fd004d9a2bc953fb49755492039e10cddabd48f8d20d533c2",
+    "inspection": "source inventory and syntax scan",
+    "definitions": [
+      {
+        "name": "test_signal_tests_contract",
+        "line": 15
+      },
+      {
+        "name": "test_casino_comparison_contract",
+        "line": 22
+      },
+      {
+        "name": "test_casino_probe_contract",
+        "line": 46
+      },
+      {
+        "name": "test_casino_case_unavailable_contract",
+        "line": 53
+      },
+      {
+        "name": "test_casino_calibration_unavailable_contract",
+        "line": 62
+      },
+      {
+        "name": "test_casino_case_parser_contract",
+        "line": 74
+      },
+      {
+        "name": "test_visibility_pilot_balances_surface_classes_and_derives_channel_thresholds",
+        "line": 83
+      },
+      {
+        "name": "test_standards_use_separate_data_derived_channel_thresholds",
+        "line": 106
+      }
+    ]
+  },
+  {
+    "path": "DataSimulation/tests/test_voxel_volume.py",
+    "lines": 266,
+    "sha256": "f55a76cfdd0b1a47eb5fc53d35e7a8d06149a53d4489c29b550ff9a9ee26c5e4",
+    "inspection": "source inventory and syntax scan",
+    "definitions": [
+      {
+        "name": "_build_volume",
+        "line": 21
+      },
+      {
+        "name": "test_each_defect_type_stamps_non_empty_3d_body",
+        "line": 42
+      },
+      {
+        "name": "test_slice_sampling_is_deterministic_for_fixed_plane",
+        "line": 65
+      },
+      {
+        "name": "test_default_slice_plane_is_cross_section_oriented",
+        "line": 87
+      },
+      {
+        "name": "test_slice_orientation_changes_intersection_geometry",
+        "line": 100
+      },
+      {
+        "name": "test_far_slice_can_miss_defect_body_entirely",
+        "line": 130
+      },
+      {
+        "name": "test_closed_fusion_mode_varies_body_width_through_depth_and_localizes_relief",
+        "line": 150
+      },
+      {
+        "name": "test_fixed_spiking_is_anchored_inside_straight_seam_weld_area",
+        "line": 177
+      },
+      {
+        "name": "test_fixed_spiking_is_anchored_inside_circular_weld_area",
+        "line": 197
+      },
+      {
+        "name": "test_fixed_multiple_spiking_expands_visible_coverage_on_straight_seam",
+        "line": 221
+      },
+      {
+        "name": "test_fixed_multiple_spiking_expands_visible_coverage_on_circular_weld",
+        "line": 243
+      }
+    ]
+  },
+  {
+    "path": "DataSimulation/tools/casino/casino_adapter.cmd",
+    "lines": 7,
+    "sha256": "a34b86c630e0ee61405f5f3d3379cd65cac8b99cc40921b780e3fd56cc6717b0",
+    "inspection": "source inventory and syntax scan"
+  },
+  {
+    "path": "DataSimulation/tools/casino/casino_adapter.py",
+    "lines": 367,
+    "sha256": "b0c562d8fd486983fdddb210dd87deb7f8c165a55e5c32d5e8be4cad4bda7c18",
+    "inspection": "source inventory and syntax scan",
+    "definitions": [
+      {
+        "name": "_clip",
+        "line": 18
+      },
+      {
+        "name": "_load_case",
+        "line": 22
+      },
+      {
+        "name": "_defect_severity",
+        "line": 30
+      },
+      {
+        "name": "_mock_quadrants",
+        "line": 58
+      },
+      {
+        "name": "_extract_quadrants_from_json",
+        "line": 99
+      },
+      {
+        "name": "_extract_quadrants_from_csv",
+        "line": 114
+      },
+      {
+        "name": "_discover_quadrants",
+        "line": 128
+      },
+      {
+        "name": "_write_output",
+        "line": 157
+      },
+      {
+        "name": "_format_runner_cmd",
+        "line": 170
+      },
+      {
+        "name": "_run_external",
+        "line": 186
+      },
+      {
+        "name": "main",
+        "line": 286
+      }
+    ]
+  },
+  {
+    "path": "DataSimulation/tools/casino/casino_export_benchmark_persistent_window.ahk",
+    "lines": 226,
+    "sha256": "59993b4a5492ca1a82ff39e984814253b3d69243b9477eeb8eb23c042baca0b5",
+    "inspection": "source inventory and syntax scan"
+  },
+  {
+    "path": "DataSimulation/tools/casino/casino_export_benchmark_template_v2.ahk",
+    "lines": 116,
+    "sha256": "029070a1db4c25e892fe2f2af69d21ea1a36d9792807fdc6ea4602061582a3a4",
+    "inspection": "source inventory and syntax scan"
+  },
+  {
+    "path": "DataSimulation/tools/casino/casino_runner_template.py",
+    "lines": 424,
+    "sha256": "dfdec85388b34e2dae4347c90e40a6858273cdbdb2353f6300f9899938711265",
+    "inspection": "source inventory and syntax scan",
+    "definitions": [
+      {
+        "name": "_load_case",
+        "line": 18
+      },
+      {
+        "name": "_emit_mock_from_case",
+        "line": 25
+      },
+      {
+        "name": "_default_profile_path",
+        "line": 43
+      },
+      {
+        "name": "_default_ahk_candidates",
+        "line": 47
+      },
+      {
+        "name": "_resolve_ahk_exe",
+        "line": 55
+      },
+      {
+        "name": "_load_profile",
+        "line": 76
+      },
+      {
+        "name": "_lookup_path",
+        "line": 88
+      },
+      {
+        "name": "_flatten_case_vars",
+        "line": 101
+      },
+      {
+        "name": "_substitute",
+        "line": 119
+      },
+      {
+        "name": "_ahk_escape_text",
+        "line": 129
+      },
+      {
+        "name": "_render_ahk_script",
+        "line": 138
+      },
+      {
+        "name": "_run_ahk_script",
+        "line": 234
+      },
+      {
+        "name": "_resolve_path",
+        "line": 244
+      },
+      {
+        "name": "_parse_quadrants_from_json",
+        "line": 251
+      },
+      {
+        "name": "_parse_quadrants_from_csv",
+        "line": 257
+      },
+      {
+        "name": "_parse_quadrants_from_regex",
+        "line": 267
+      },
+      {
+        "name": "_parse_quadrants_from_numbers",
+        "line": 281
+      },
+      {
+        "name": "_load_quadrants_from_profile",
+        "line": 290
+      },
+      {
+        "name": "_write_adapter_output",
+        "line": 314
+      },
+      {
+        "name": "main",
+        "line": 332
+      }
+    ]
+  },
+  {
+    "path": "DataSimulation/tools/casino/run_casino_console_queue.py",
+    "lines": 235,
+    "sha256": "1c4745d2ce35abe37deb248b752034e41acbd4593ff540bc246ea329f94ff4e6",
+    "inspection": "source inventory and syntax scan",
+    "definitions": [
+      {
+        "name": "_load_summary",
+        "line": 11
+      },
+      {
+        "name": "_discover_script_dir",
+        "line": 37
+      },
+      {
+        "name": "_launch",
+        "line": 53
+      },
+      {
+        "name": "_terminate_running_jobs",
+        "line": 62
+      },
+      {
+        "name": "run_queue",
+        "line": 98
+      },
+      {
+        "name": "build_parser",
+        "line": 201
+      },
+      {
+        "name": "main",
+        "line": 219
+      }
+    ]
+  },
+  {
+    "path": "DataSimulation/tools/casino/run_sample_manifest.py",
+    "lines": 141,
+    "sha256": "abf894115be85b810d9b9c1af18860792e366bdc383cc38ddd197779d870fcd1",
+    "inspection": "source inventory and syntax scan",
+    "definitions": [
+      {
+        "name": "_load_json",
+        "line": 11
+      },
+      {
+        "name": "_resolve_adapter",
+        "line": 18
+      },
+      {
+        "name": "_build_case",
+        "line": 27
+      },
+      {
+        "name": "run_manifest",
+        "line": 50
+      },
+      {
+        "name": "build_parser",
+        "line": 113
+      },
+      {
+        "name": "main",
+        "line": 129
+      }
+    ]
+  },
+  {
+    "path": "DataSimulation/tools/casino/run_sim_batch.py",
+    "lines": 289,
+    "sha256": "cde86ac97684fbf5cf8fe397a2a13714d74c9ceb290494dd4b50800cfe7771b6",
+    "inspection": "source inventory and syntax scan",
+    "definitions": [
+      {
+        "name": "_discover_sim_entries",
+        "line": 11
+      },
+      {
+        "name": "_load_manifest",
+        "line": 28
+      },
+      {
+        "name": "_write_load_sim_script",
+        "line": 51
+      },
+      {
+        "name": "_write_per_entry_scripts",
+        "line": 65
+      },
+      {
+        "name": "_write_console_runner_ps1",
+        "line": 83
+      },
+      {
+        "name": "_resolve_casino_exe",
+        "line": 120
+      },
+      {
+        "name": "_launch_casino",
+        "line": 129
+      },
+      {
+        "name": "run_batch",
+        "line": 158
+      },
+      {
+        "name": "build_parser",
+        "line": 240
+      },
+      {
+        "name": "main",
+        "line": 271
+      }
+    ]
+  },
+  {
+    "path": "DataSimulation/tools/generate_b_calibration_graphs.py",
+    "lines": 1020,
+    "sha256": "a118befae37455a5bb2033985d6b6027a32594d2ef1c7a9a11b82078a8c3c144",
+    "inspection": "source inventory and syntax scan",
+    "definitions": [
+      {
+        "name": "FitPaths",
+        "line": 19
+      },
+      {
+        "name": "ConstantModeSpec",
+        "line": 76
+      },
+      {
+        "name": "parse_args",
+        "line": 84
+      },
+      {
+        "name": "configure_matplotlib",
+        "line": 103
+      },
+      {
+        "name": "read_json",
+        "line": 118
+      },
+      {
+        "name": "read_csv_rows",
+        "line": 122
+      },
+      {
+        "name": "sort_rows",
+        "line": 138
+      },
+      {
+        "name": "values",
+        "line": 142
+      },
+      {
+        "name": "mean",
+        "line": 146
+      },
+      {
+        "name": "std",
+        "line": 150
+      },
+      {
+        "name": "mean_abs",
+        "line": 157
+      },
+      {
+        "name": "read_exit_sample_arrays",
+        "line": 161
+      },
+      {
+        "name": "_build_b_grid",
+        "line": 193
+      },
+      {
+        "name": "_observed_feasible_interval",
+        "line": 202
+      },
+      {
+        "name": "_sample_weighted_nll",
+        "line": 214
+      },
+      {
+        "name": "_sample_weighted_derivative",
+        "line": 224
+      },
+      {
+        "name": "_sample_weighted_curvature",
+        "line": 233
+      },
+      {
+        "name": "_build_run_groups",
+        "line": 242
+      },
+      {
+        "name": "_equal_run_curves",
+        "line": 249
+      },
+      {
+        "name": "fit_constant_from_arrays",
+        "line": 277
+      },
+      {
+        "name": "determine_constant_mode",
+        "line": 366
+      },
+      {
+        "name": "prepare_data",
+        "line": 406
+      },
+      {
+        "name": "save_constant_solve",
+        "line": 609
+      },
+      {
+        "name": "save_b_vs_tilt",
+        "line": 672
+      },
+      {
+        "name": "save_residuals_by_tilt",
+        "line": 754
+      },
+      {
+        "name": "save_model_selection",
+        "line": 813
+      },
+      {
+        "name": "save_tilt_cutoff_stability",
+        "line": 858
+      },
+      {
+        "name": "save_asymmetry_by_tilt",
+        "line": 888
+      },
+      {
+        "name": "save_summary",
+        "line": 924
+      },
+      {
+        "name": "main",
+        "line": 993
+      }
+    ]
+  },
+  {
+    "path": "DataSimulation/tools/generate_b_likelihood_audit.py",
+    "lines": 276,
+    "sha256": "54d54f5b8b95d4e930667cb36f96db40db80d227471825497d446e49f0e86f13",
+    "inspection": "source inventory and syntax scan",
+    "definitions": [
+      {
+        "name": "_load_emission_components",
+        "line": 24
+      },
+      {
+        "name": "build_audit",
+        "line": 45
+      },
+      {
+        "name": "write_audit",
+        "line": 168
+      },
+      {
+        "name": "main",
+        "line": 260
+      }
+    ]
+  },
+  {
+    "path": "DataSimulation/tools/generate_b_story_figure_bundle.py",
+    "lines": 478,
+    "sha256": "724ebc41934e05e11260ca54671d5e8cd2ecc1365668921ea9abc021a7378659",
+    "inspection": "source inventory and syntax scan",
+    "definitions": [
+      {
+        "name": "parse_args",
+        "line": 26
+      },
+      {
+        "name": "configure_matplotlib",
+        "line": 45
+      },
+      {
+        "name": "ensure_stage_graphs",
+        "line": 60
+      },
+      {
+        "name": "_save",
+        "line": 86
+      },
+      {
+        "name": "save_local_frame_geometry",
+        "line": 93
+      },
+      {
+        "name": "_add_box",
+        "line": 196
+      },
+      {
+        "name": "_add_arrow",
+        "line": 211
+      },
+      {
+        "name": "save_casino_pipeline",
+        "line": 224
+      },
+      {
+        "name": "_polar_lobe",
+        "line": 274
+      },
+      {
+        "name": "save_b_sign_flip",
+        "line": 282
+      },
+      {
+        "name": "copy_story_graphs",
+        "line": 338
+      },
+      {
+        "name": "save_contact_sheet",
+        "line": 387
+      },
+      {
+        "name": "write_manifest",
+        "line": 402
+      },
+      {
+        "name": "main",
+        "line": 427
+      }
+    ]
+  },
+  {
+    "path": "DataSimulation/tools/generate_per_tilt_b_reliability_audit.py",
+    "lines": 296,
+    "sha256": "d1b8275d27f8b9728c0b01a71837262408b6765675cb3d7d3dba7ea5c2db869d",
+    "inspection": "source inventory and syntax scan",
+    "definitions": [
+      {
+        "name": "_read_csv",
+        "line": 13
+      },
+      {
+        "name": "_float",
+        "line": 18
+      },
+      {
+        "name": "_group_by_tilt",
+        "line": 23
+      },
+      {
+        "name": "_polar_heterogeneity",
+        "line": 30
+      },
+      {
+        "name": "build_audit",
+        "line": 64
+      },
+      {
+        "name": "write_audit",
+        "line": 213
+      },
+      {
+        "name": "main",
+        "line": 283
+      }
+    ]
+  },
+  {
+    "path": "DataSimulation/tools/generate_renderer_physics_audit.py",
+    "lines": 97,
+    "sha256": "83fe028e5845810363f38b04e45831c97667c6380ea299bd9e943f30db0851a9",
+    "inspection": "source inventory and syntax scan",
+    "definitions": [
+      {
+        "name": "main",
+        "line": 23
+      }
+    ]
+  },
+  {
+    "path": "DataSimulation/tools/generate_trajectory_angle_audit.py",
+    "lines": 46,
+    "sha256": "d48dfe17b9675d600c444cca95a9b50860ff6eaef27963662d9d27df2959966a",
+    "inspection": "source inventory and syntax scan",
+    "definitions": [
+      {
+        "name": "main",
+        "line": 14
+      }
+    ]
+  },
+  {
+    "path": "WeldDefectDetection/audit_paired_static.py",
+    "lines": 27,
+    "sha256": "50130b453fbfb1c29f87231c4915461b86180aeac1e61d431e7fa7d21109f48d",
+    "inspection": "source inventory and syntax scan",
+    "definitions": [
+      {
+        "name": "main",
+        "line": 10
+      }
+    ]
+  },
+  {
+    "path": "WeldDefectDetection/audit_sequences.py",
+    "lines": 25,
+    "sha256": "6eddf59e85efe4f29f5b901ed94041fdc95f8b7a9820a679fb30313491f3c559",
+    "inspection": "source inventory and syntax scan",
+    "definitions": [
+      {
+        "name": "main",
+        "line": 10
+      }
+    ]
+  },
+  {
+    "path": "WeldDefectDetection/audit_static_dataset.py",
+    "lines": 27,
+    "sha256": "a2c856a9e8743e3d9cf3209c95ab59a659d9a9c89873d1172498fb1ed58c091f",
+    "inspection": "source inventory and syntax scan",
+    "definitions": [
+      {
+        "name": "main",
+        "line": 10
+      }
+    ]
+  },
+  {
+    "path": "WeldDefectDetection/compare_robustness.py",
+    "lines": 29,
+    "sha256": "469d8cf5402e67ab686d561e33fb580f4dfc5b8c50bc44ec1bcc8e08260fd037",
+    "inspection": "source inventory and syntax scan",
+    "definitions": [
+      {
+        "name": "main",
+        "line": 9
+      }
+    ]
+  },
+  {
+    "path": "WeldDefectDetection/debug_visualisation.py",
+    "lines": 79,
+    "sha256": "de09468f6ec6ccbbe007172a8216cc1504510986edfd401e3e0afe0facd4c399",
+    "inspection": "source inventory and syntax scan",
+    "definitions": [
+      {
+        "name": "get_boxes_from_mask",
+        "line": 7
+      },
+      {
+        "name": "main",
+        "line": 26
+      }
+    ]
+  },
+  {
+    "path": "WeldDefectDetection/evaluate_dataset.py",
+    "lines": 58,
+    "sha256": "e5c1cbffeeb4e5de41f665b6e14ee69bbfa1832418ff7ed0e5367128e5537fd8",
+    "inspection": "source inventory and syntax scan",
+    "definitions": [
+      {
+        "name": "build_parser",
+        "line": 9
+      },
+      {
+        "name": "main",
+        "line": 43
+      }
+    ]
+  },
+  {
+    "path": "WeldDefectDetection/evaluate_gdxray.py",
+    "lines": 35,
+    "sha256": "f6a7dec4912153b905f10acba1280b5962c4046c3dc00ecea2c471d8b8e332e6",
+    "inspection": "source inventory and syntax scan",
+    "definitions": [
+      {
+        "name": "main",
+        "line": 9
+      }
+    ]
+  },
+  {
+    "path": "WeldDefectDetection/evaluate_masks.py",
+    "lines": 19,
+    "sha256": "15f5e642fddc211b6e0af679dc6a11433551b4fac437046a8d7fe0681221f3f7",
+    "inspection": "source inventory and syntax scan",
+    "definitions": [
+      {
+        "name": "main",
+        "line": 8
+      }
+    ]
+  },
+  {
+    "path": "WeldDefectDetection/evaluate_temporal.py",
+    "lines": 41,
+    "sha256": "5ee731d9d21127858caeef8ade78debdcf1ff5f5a3d655765d08c60d3ae2ee47",
+    "inspection": "source inventory and syntax scan",
+    "definitions": [
+      {
+        "name": "main",
+        "line": 9
+      }
+    ]
+  },
+  {
+    "path": "WeldDefectDetection/evaluate_temporal_predictor.py",
+    "lines": 29,
+    "sha256": "70d636177c5a7828e0ac619307cbfd7afb883531f1d07b19bd1b46876ccdb368",
+    "inspection": "source inventory and syntax scan",
+    "definitions": [
+      {
+        "name": "main",
+        "line": 9
+      }
+    ]
+  },
+  {
+    "path": "WeldDefectDetection/generate_temporal_report.py",
+    "lines": 140,
+    "sha256": "87009e48a62a2650007ceed81eacd789dc3890ed910d31147beee26eb557c257",
+    "inspection": "source inventory and syntax scan",
+    "definitions": [
+      {
+        "name": "_json",
+        "line": 18
+      },
+      {
+        "name": "_csv",
+        "line": 22
+      },
+      {
+        "name": "_per_class",
+        "line": 27
+      },
+      {
+        "name": "main",
+        "line": 36
+      }
+    ]
+  },
+  {
+    "path": "WeldDefectDetection/main.py",
+    "lines": 77,
+    "sha256": "6e3ad26163f901714f3e3149a74867a89fbc504ee222717c50ecee15b875a21c",
+    "inspection": "source inventory and syntax scan",
+    "definitions": [
+      {
+        "name": "load_config",
+        "line": 8
+      },
+      {
+        "name": "main",
+        "line": 12
+      }
+    ]
+  },
+  {
+    "path": "WeldDefectDetection/src/__init__.py",
+    "lines": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "inspection": "source inventory and syntax scan",
+    "definitions": []
+  },
+  {
+    "path": "WeldDefectDetection/src/algorithms/__init__.py",
+    "lines": 3,
+    "sha256": "f93f168e10c6351f64e6e7573c6a1e6394c08842cc5ca6bf35b7a8fc5cf670da",
+    "inspection": "source inventory and syntax scan",
+    "definitions": []
+  },
+  {
+    "path": "WeldDefectDetection/src/algorithms/classical/__init__.py",
+    "lines": 4,
+    "sha256": "2a9e444c773e9911482fd946866c23e48c0a1e501eaee6001073f15854a78d66",
+    "inspection": "source inventory and syntax scan",
+    "definitions": []
+  },
+  {
+    "path": "WeldDefectDetection/src/algorithms/classical/cnn_detector.py",
+    "lines": 209,
+    "sha256": "00b7e4918db7981cc54eca8484c7e19f1738ade3f42bbb259f58d2ccb6275931",
+    "inspection": "source inventory and syntax scan",
+    "definitions": [
+      {
+        "name": "TorchNotInstalledError",
+        "line": 21
+      },
+      {
+        "name": "CNNDebugOutput",
+        "line": 83
+      },
+      {
+        "name": "CNNDetector",
+        "line": 88
+      }
+    ]
+  },
+  {
+    "path": "WeldDefectDetection/src/algorithms/classical/morphology_detector.py",
+    "lines": 158,
+    "sha256": "07acbd5fd0d3f7fee46364e97ffb872b501ec9dfaefc270ca63ef6c9d58620c3",
+    "inspection": "source inventory and syntax scan",
+    "definitions": [
+      {
+        "name": "MorphologyDetector",
+        "line": 10
+      }
+    ]
+  },
+  {
+    "path": "WeldDefectDetection/src/algorithms/classical/preprocessor.py",
+    "lines": 16,
+    "sha256": "1b8ca5c761b4f9b26d98e348085dcd91ba7d6c9a84df9fd57d12eef0069a8ce0",
+    "inspection": "source inventory and syntax scan",
+    "definitions": [
+      {
+        "name": "ClassicalPreprocessor",
+        "line": 4
+      }
+    ]
+  },
+  {
+    "path": "WeldDefectDetection/src/algorithms/temporal_predictor.py",
+    "lines": 16,
+    "sha256": "9e873536c90cdb20ad5aed903e264570c922808ce952f501809ee2b5474cdaff",
+    "inspection": "source inventory and syntax scan",
+    "definitions": [
+      {
+        "name": "BidirectionalSurfacePredictor",
+        "line": 6
+      }
+    ]
+  },
+  {
+    "path": "WeldDefectDetection/src/core/__init__.py",
+    "lines": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "inspection": "source inventory and syntax scan",
+    "definitions": []
+  },
+  {
+    "path": "WeldDefectDetection/src/core/base_detector.py",
+    "lines": 16,
+    "sha256": "1e201f98f4d70cadd8914ab05057cbd94b31d06cac5dbe2f393d0eec7b00824f",
+    "inspection": "source inventory and syntax scan",
+    "definitions": [
+      {
+        "name": "BaseDetector",
+        "line": 6
+      }
+    ]
+  },
+  {
+    "path": "WeldDefectDetection/src/core/interfaces.py",
+    "lines": 12,
+    "sha256": "08b0973abb08eb19d3bcc3e9ec7e06268574a5e5e43122342b42275b1bb46ee1",
+    "inspection": "source inventory and syntax scan",
+    "definitions": [
+      {
+        "name": "DetectionResult",
+        "line": 5
+      }
+    ]
+  },
+  {
+    "path": "WeldDefectDetection/src/evaluation/__init__.py",
+    "lines": 3,
+    "sha256": "93988d49760a96c133e86555add282cdcaa42743f6e6c466a0873c4f2e77cdf6",
+    "inspection": "source inventory and syntax scan",
+    "definitions": []
+  },
+  {
+    "path": "WeldDefectDetection/src/evaluation/compare_robustness.py",
+    "lines": 99,
+    "sha256": "d5297ccc5a2b09e4632096381190835131185db01cd5d2ac95a8a20280338c14",
+    "inspection": "source inventory and syntax scan",
+    "definitions": [
+      {
+        "name": "_read_json",
+        "line": 10
+      },
+      {
+        "name": "_delta",
+        "line": 18
+      },
+      {
+        "name": "compare_robustness_evaluations",
+        "line": 22
+      }
+    ]
+  },
+  {
+    "path": "WeldDefectDetection/src/evaluation/completion_verifier.py",
+    "lines": 178,
+    "sha256": "e3e0239e84c00473ee2cefd3a9dba5209e2524db4c728568641044750b7e72b6",
+    "inspection": "source inventory and syntax scan",
+    "definitions": [
+      {
+        "name": "_sha256",
+        "line": 16
+      },
+      {
+        "name": "_resolve",
+        "line": 24
+      },
+      {
+        "name": "_safe_check",
+        "line": 29
+      },
+      {
+        "name": "verify_completion_manifest",
+        "line": 40
+      }
+    ]
+  },
+  {
+    "path": "WeldDefectDetection/src/evaluation/evaluate_dataset.py",
+    "lines": 346,
+    "sha256": "fe2a41e63b0cf3bcea6959cfbb0cf7ef6495c9365017c260cb8d5d77409c824e",
+    "inspection": "source inventory and syntax scan",
+    "definitions": [
+      {
+        "name": "_sha256",
+        "line": 20
+      },
+      {
+        "name": "_classification_summary",
+        "line": 28
+      },
+      {
+        "name": "_per_class_summary",
+        "line": 51
+      },
+      {
+        "name": "_per_regime_summary",
+        "line": 68
+      },
+      {
+        "name": "_subgroup_summary",
+        "line": 78
+      },
+      {
+        "name": "_defect_size_band",
+        "line": 93
+      },
+      {
+        "name": "_defect_contrast_band",
+        "line": 103
+      },
+      {
+        "name": "_bootstrap_by_image",
+        "line": 113
+      },
+      {
+        "name": "_overlay_image",
+        "line": 150
+      },
+      {
+        "name": "_predict_mask",
+        "line": 161
+      },
+      {
+        "name": "evaluate_dataset",
+        "line": 170
+      }
+    ]
+  },
+  {
+    "path": "WeldDefectDetection/src/evaluation/evaluate_gdxray.py",
+    "lines": 217,
+    "sha256": "44fd104a9cabfd4827590c28609854ddb8fc23d75018838439d3dcac9ee8a6ab",
+    "inspection": "source inventory and syntax scan",
+    "definitions": [
+      {
+        "name": "_tile_starts",
+        "line": 14
+      },
+      {
+        "name": "predict_tiled_probability",
+        "line": 24
+      },
+      {
+        "name": "_read_gray",
+        "line": 65
+      },
+      {
+        "name": "_save_overlay",
+        "line": 74
+      },
+      {
+        "name": "_bootstrap_by_image",
+        "line": 100
+      },
+      {
+        "name": "evaluate_gdxray_cnn",
+        "line": 120
+      }
+    ]
+  },
+  {
+    "path": "WeldDefectDetection/src/evaluation/evaluate_temporal_predictor.py",
+    "lines": 133,
+    "sha256": "83e3635c50f36d989f7dd1cfeab4c495b3eb798d830811c0adb729bc79f96731",
+    "inspection": "source inventory and syntax scan",
+    "definitions": [
+      {
+        "name": "_sha256",
+        "line": 25
+      },
+      {
+        "name": "_save_overlays",
+        "line": 33
+      },
+      {
+        "name": "evaluate_temporal_predictor",
+        "line": 61
+      }
+    ]
+  },
+  {
+    "path": "WeldDefectDetection/src/evaluation/temporal_reconstruction.py",
+    "lines": 338,
+    "sha256": "c8b278bc82f112981b139d7679147623b9c4c5a10453292be2a4ffc0413b5fb5",
+    "inspection": "source inventory and syntax scan",
+    "definitions": [
+      {
+        "name": "_load_jsonl",
+        "line": 18
+      },
+      {
+        "name": "_load_gray",
+        "line": 22
+      },
+      {
+        "name": "_load_mask",
+        "line": 33
+      },
+      {
+        "name": "_filter_components",
+        "line": 40
+      },
+      {
+        "name": "_classification_metrics",
+        "line": 51
+      },
+      {
+        "name": "_prepare_windows",
+        "line": 69
+      },
+      {
+        "name": "_evaluate_candidate",
+        "line": 122
+      },
+      {
+        "name": "_bootstrap_by_sequence",
+        "line": 156
+      },
+      {
+        "name": "_save_overlays",
+        "line": 189
+      },
+      {
+        "name": "run_temporal_reconstruction",
+        "line": 226
+      }
+    ]
+  },
+  {
+    "path": "WeldDefectDetection/src/evaluation/tune_classical.py",
+    "lines": 183,
+    "sha256": "bc947381f0ff36fb26c2eb3f1955b76f8133321a8d89f4e47fa3ba5638b5e808",
+    "inspection": "source inventory and syntax scan",
+    "definitions": [
+      {
+        "name": "_parameter_candidates",
+        "line": 28
+      },
+      {
+        "name": "_load_native_samples",
+        "line": 36
+      },
+      {
+        "name": "_score_candidate",
+        "line": 58
+      },
+      {
+        "name": "tune_classical_baseline",
+        "line": 115
+      }
+    ]
+  },
+  {
+    "path": "WeldDefectDetection/src/training/__init__.py",
+    "lines": 3,
+    "sha256": "dd15a43c4926e6cc8067ed33aa87ce2695d8b09711ee97aaea53e58498368812",
+    "inspection": "source inventory and syntax scan",
+    "definitions": []
+  },
+  {
+    "path": "WeldDefectDetection/src/training/train_cnn.py",
+    "lines": 335,
+    "sha256": "9a7dba8a950a24edd0365774eb1b090d83b2cf92e1877e3e4a3fa3bf6501fb8c",
+    "inspection": "source inventory and syntax scan",
+    "definitions": [
+      {
+        "name": "_iterate",
+        "line": 30
+      },
+      {
+        "name": "_segmentation_collate",
+        "line": 36
+      },
+      {
+        "name": "_build_dataloader",
+        "line": 47
+      },
+      {
+        "name": "WeightedBCEDiceLoss",
+        "line": 89
+      },
+      {
+        "name": "_set_deterministic_seed",
+        "line": 109
+      },
+      {
+        "name": "_positive_pixel_weight",
+        "line": 120
+      },
+      {
+        "name": "_metrics_for_thresholds",
+        "line": 135
+      },
+      {
+        "name": "_evaluate_model",
+        "line": 153
+      },
+      {
+        "name": "train_cnn",
+        "line": 181
+      }
+    ]
+  },
+  {
+    "path": "WeldDefectDetection/src/training/train_temporal_predictor.py",
+    "lines": 205,
+    "sha256": "b10dcc14c90db8c9d6cf78a4d1e6c662ea147758f97bbcc805ab517d4ff9704f",
+    "inspection": "source inventory and syntax scan",
+    "definitions": [
+      {
+        "name": "_set_seed",
+        "line": 20
+      },
+      {
+        "name": "_reconstruction_loss",
+        "line": 28
+      },
+      {
+        "name": "_prediction_rows",
+        "line": 35
+      },
+      {
+        "name": "_select_residual_parameters",
+        "line": 59
+      },
+      {
+        "name": "train_temporal_predictor",
+        "line": 89
+      }
+    ]
+  },
+  {
+    "path": "WeldDefectDetection/src/utils/__init__.py",
+    "lines": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "inspection": "source inventory and syntax scan",
+    "definitions": []
+  },
+  {
+    "path": "WeldDefectDetection/src/utils/file_io.py",
+    "lines": 55,
+    "sha256": "07ed0931f12fb95257ee1f2848939d843bd8ff4f42bf42199524a44a2983f9c3",
+    "inspection": "source inventory and syntax scan",
+    "definitions": [
+      {
+        "name": "load_config",
+        "line": 12
+      },
+      {
+        "name": "ensure_dir",
+        "line": 17
+      },
+      {
+        "name": "create_run_dir",
+        "line": 23
+      },
+      {
+        "name": "write_json",
+        "line": 31
+      },
+      {
+        "name": "write_csv",
+        "line": 38
+      },
+      {
+        "name": "save_config_snapshot",
+        "line": 51
+      }
+    ]
+  },
+  {
+    "path": "WeldDefectDetection/src/utils/metrics.py",
+    "lines": 104,
+    "sha256": "b5353409039283e214dffa00878bf4768d820cc3de2beb51637182e5b5ba5d70",
+    "inspection": "source inventory and syntax scan",
+    "definitions": [
+      {
+        "name": "calculate_iou",
+        "line": 8
+      },
+      {
+        "name": "evaluate_detections",
+        "line": 23
+      },
+      {
+        "name": "binary_confusion_counts",
+        "line": 53
+      },
+      {
+        "name": "segmentation_metrics_from_counts",
+        "line": 65
+      },
+      {
+        "name": "evaluate_segmentation_masks",
+        "line": 82
+      },
+      {
+        "name": "aggregate_segmentation_metrics",
+        "line": 92
+      }
+    ]
+  },
+  {
+    "path": "WeldDefectDetection/src/utils/parse_gdxray.py",
+    "lines": 93,
+    "sha256": "c8173c2ca9d19ecd732c9ffe412597b810b57d1dc281d64957545cbd4cc09e43",
+    "inspection": "source inventory and syntax scan",
+    "definitions": [
+      {
+        "name": "convert_gdxray_to_yolo",
+        "line": 5
+      }
+    ]
+  },
+  {
+    "path": "WeldDefectDetection/src/utils/visualisation.py",
+    "lines": 77,
+    "sha256": "284ebfb7da4f80222ea2ca3cdea67b243c4be759946ebeaf5fe274afe8b76b63",
+    "inspection": "source inventory and syntax scan",
+    "definitions": [
+      {
+        "name": "draw_detections",
+        "line": 6
+      },
+      {
+        "name": "build_stage_montage",
+        "line": 17
+      },
+      {
+        "name": "fit_to_bounds",
+        "line": 63
+      }
+    ]
+  },
+  {
+    "path": "WeldDefectDetection/tests/test_dataset_audits.py",
+    "lines": 220,
+    "sha256": "76edffa64f51a1b0656b6c00696e40df9a7fa7a1a4ee20d107405815f933e7f4",
+    "inspection": "source inventory and syntax scan",
+    "definitions": [
+      {
+        "name": "_record",
+        "line": 15
+      },
+      {
+        "name": "_write_static",
+        "line": 58
+      },
+      {
+        "name": "_write_sequence",
+        "line": 99
+      },
+      {
+        "name": "test_static_audit_accepts_independent_confirmation",
+        "line": 174
+      },
+      {
+        "name": "test_static_audit_rejects_shared_seed_and_content",
+        "line": 187
+      },
+      {
+        "name": "test_sequence_audit_rejects_shared_seed_and_content",
+        "line": 196
+      },
+      {
+        "name": "test_paired_static_audit_accepts_same_cases_with_changed_images",
+        "line": 205
+      },
+      {
+        "name": "test_paired_static_audit_rejects_case_identity_change",
+        "line": 215
+      }
+    ]
+  },
+  {
+    "path": "WeldDefectDetection/tests/test_dataset_contract.py",
+    "lines": 165,
+    "sha256": "6ef8a449039266f1f4d188818a8921f321feefcd9105851838fdc98e908eac1b",
+    "inspection": "source inventory and syntax scan",
+    "definitions": [
+      {
+        "name": "_write_dataset",
+        "line": 15
+      },
+      {
+        "name": "test_contract_validator_accepts_valid_static_dataset",
+        "line": 76
+      },
+      {
+        "name": "test_contract_validator_rejects_sequence_split_leakage",
+        "line": 86
+      },
+      {
+        "name": "test_contract_validator_checks_sliding_window_order",
+        "line": 94
+      },
+      {
+        "name": "test_segmentation_dataset_prefers_contract_records",
+        "line": 138
+      },
+      {
+        "name": "test_segmentation_dataset_all_split_preserves_original_split_labels",
+        "line": 156
+      }
+    ]
+  },
+  {
+    "path": "WeldDefectDetection/tests/test_model_selection_guards.py",
+    "lines": 145,
+    "sha256": "b619acbc239cc6afb2146eee5015e20e71e3fd84c6a34fa4e2d7b70b7230010b",
+    "inspection": "source inventory and syntax scan",
+    "definitions": [
+      {
+        "name": "test_classical_tuner_refuses_test_split",
+        "line": 17
+      },
+      {
+        "name": "test_temporal_tuner_refuses_test_split",
+        "line": 22
+      },
+      {
+        "name": "test_temporal_frozen_parameters_must_be_supplied_together",
+        "line": 29
+      },
+      {
+        "name": "test_temporal_confirmation_requires_development_root",
+        "line": 38
+      },
+      {
+        "name": "test_static_bootstrap_reports_image_resampling",
+        "line": 49
+      },
+      {
+        "name": "test_static_robustness_bands_use_fixed_physical_boundaries",
+        "line": 74
+      },
+      {
+        "name": "test_cnn_threshold_selection_prefers_separating_threshold",
+        "line": 86
+      },
+      {
+        "name": "test_cnn_loader_accepts_variable_length_defect_metadata",
+        "line": 99
+      },
+      {
+        "name": "test_tile_starts_cover_last_edge",
+        "line": 125
+      },
+      {
+        "name": "test_tiled_prediction_preserves_shape_and_covers_edges",
+        "line": 130
+      }
+    ]
+  },
+  {
+    "path": "WeldDefectDetection/tests/test_morphology_detector.py",
+    "lines": 57,
+    "sha256": "02b9255ca816a8df48a14cc00257432ddd39d2bd3d961fdeff364e9f3c9d1358",
+    "inspection": "source inventory and syntax scan",
+    "definitions": [
+      {
+        "name": "_config",
+        "line": 9
+      },
+      {
+        "name": "test_predict_binary_mask_is_filtered_and_binary",
+        "line": 28
+      },
+      {
+        "name": "test_minimum_area_filter_applies_to_scored_mask",
+        "line": 46
+      }
+    ]
+  },
+  {
+    "path": "WeldDefectDetection/tests/test_robustness_comparison.py",
+    "lines": 69,
+    "sha256": "6dbdc3a6e6f7cabef92f30d882572145f646aa3aacaf388a292677ad73bdd1e3",
+    "inspection": "source inventory and syntax scan",
+    "definitions": [
+      {
+        "name": "_summary",
+        "line": 11
+      },
+      {
+        "name": "test_robustness_comparison_requires_same_frozen_model",
+        "line": 35
+      },
+      {
+        "name": "test_robustness_comparison_calculates_variant_deltas",
+        "line": 50
+      }
+    ]
+  },
+  {
+    "path": "WeldDefectDetection/tests/test_temporal_predictor.py",
+    "lines": 24,
+    "sha256": "a9c37ef74d4210e217e9603e59006563e4ec1cff9ef8e248310b6e307713f572",
+    "inspection": "source inventory and syntax scan",
+    "definitions": [
+      {
+        "name": "test_registered_context_recovers_target_coordinates",
+        "line": 10
+      },
+      {
+        "name": "test_temporal_predictor_preserves_target_shape",
+        "line": 20
+      }
+    ]
+  },
+  {
+    "path": "WeldDefectDetection/train_cnn.py",
+    "lines": 24,
+    "sha256": "ad302be0e8de827b354a557199dcb6feada78e6bb692aca32385b1416d14002c",
+    "inspection": "source inventory and syntax scan",
+    "definitions": [
+      {
+        "name": "build_parser",
+        "line": 9
+      },
+      {
+        "name": "main",
+        "line": 16
+      }
+    ]
+  },
+  {
+    "path": "WeldDefectDetection/train_temporal.py",
+    "lines": 35,
+    "sha256": "63b9ce6eba2da31c03a7f8f04a9c0edf1440d3c987db693854d46a7dd9db0ae9",
+    "inspection": "source inventory and syntax scan",
+    "definitions": [
+      {
+        "name": "main",
+        "line": 9
+      }
+    ]
+  },
+  {
+    "path": "WeldDefectDetection/tune_classical.py",
+    "lines": 29,
+    "sha256": "8c584be0e6fc7d5ead219486e755218ecb11b3a5f8c96aa5739e65b67567c455",
+    "inspection": "source inventory and syntax scan",
+    "definitions": [
+      {
+        "name": "main",
+        "line": 9
+      }
+    ]
+  },
+  {
+    "path": "WeldDefectDetection/validate_dataset_contract.py",
+    "lines": 39,
+    "sha256": "40586e9fc26bce5beaf2c58b00f205679df6e79977e8e9a2a03d60c05349994d",
+    "inspection": "source inventory and syntax scan",
+    "definitions": [
+      {
+        "name": "build_parser",
+        "line": 10
+      },
+      {
+        "name": "main",
+        "line": 24
+      }
+    ]
+  },
+  {
+    "path": "WeldDefectDetection/verify_project_functionality.py",
+    "lines": 22,
+    "sha256": "93af985e8dfc811b8cd3164dd30084eeffcd2a4d6ce3f38fcd36af7816864ba2",
+    "inspection": "source inventory and syntax scan",
+    "definitions": [
+      {
+        "name": "main",
+        "line": 9
+      }
+    ]
+  }
+]
